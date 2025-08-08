@@ -1,0 +1,39 @@
+1. Hildegard von Bingen
+2. Léonin
+3. Pérotin
+4. Guillaume de Machaut
+5. Josquin des Prez
+6. Giovanni Pierluigi da Palestrina
+7. Thomas Tallis
+8. Orlando di Lasso
+9. William Byrd
+10. Claudio Monteverdi
+11. Henry Purcell
+12. George Frideric Handel
+13. Johann Sebastian Bach
+14. Antonio Vivaldi
+15. Wolfgang Amadeus Mozart
+16. Joseph Haydn
+17. Ludwig van Beethoven
+18. Franz Schubert
+19. Frédéric Chopin
+20. Felix Mendelssohn
+21. Franz Liszt
+22. Richard Wagner
+23. Giuseppe Verdi
+24. Pyotr Illyich Tchaikovsky
+25. Johannes Brahms
+26. Antonín Dvořák
+27. Gustav Mahler
+28. Richard Strauss
+29. Claude Debussy
+30. Arnold Schoenberg
+31. Igor Stravinsky
+32. Bela Bartok
+33. Dmitri Shostakovich
+34. Aaron Copland
+35. Olivier Messiaen
+36. Karlheinz Stockhausen
+37. Benjamin Britten
+38. Philip Glass
+39. John Adams

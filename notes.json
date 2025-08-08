@@ -1,0 +1,21 @@
+{
+    "med-1": {
+        "notes": "Sounds pretty much how I expected it would. It's not great music, but considering that it's monophonic and a capella, it's fairly impressive how good it does sound.",
+        "checked": true
+    },
+    "med-2": {
+        "checked": true,
+        "notes": "There is a clear evolution from the chanting, but aurally it's still quite rough and sounds squarely medieval."
+    },
+    "med-3": {
+        "checked": true,
+        "notes": "The more \"choral\" aspects of this are very clear compared to the earlier works. It's still not quite \"good\" music, but you can see the evolution from the chanting and where things are heading. Quite an interesting transitional sound."
+    },
+    "ren-1": {
+        "checked": false
+    },
+    "med-4": {
+        "checked": true,
+        "notes": "Wow, this is a major departure from the previous works. This is more recognizable as music in the contemporary tradition than anything previously. I think you can see the origins of a folk music tradition that extends to eg. Bob Dylan here."
+    }
+}
