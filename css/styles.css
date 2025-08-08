@@ -1,0 +1,194 @@
+/* Custom scrollbar for textarea */
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #a3a3a3;
+  border-radius: 4px;
+}
+
+/* Default color for SVGs in links */
+a svg {
+  color: #808080;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+/* If <a> has href, color green */
+a[href]:not([href=""]) svg {
+  color: #1DB954;
+}
+
+/* The <use> inside will inherit 'currentColor' */
+svg use {
+  fill: currentColor;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+/* Enhance the active link */
+.timeline-link.active {
+  color: #4f46e5;
+  /* Indigo-700 */
+  font-weight: bold;
+  border-bottom: 2px solid #4f46e5;
+  text-decoration: none;
+  /* Prevent underline */
+}
+
+/* Prevent hover underline on active link */
+.timeline-link.active:hover {
+  text-decoration: none;
+}
+
+.historical-context {
+  border-left: 4px solid #4f46e5;
+  padding-left: 16px;
+  margin-top: 12px;
+  background-color: #f8f9ff;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Progress bubble styling */
+#progress-bubble {
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+  transition: all 0.3s ease;
+}
+
+#progress-bubble:hover {
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.6);
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* Custom global scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 70, 229, 0.5);
+  border-radius: 5px;
+}
+
+/* Dark mode specific styles */
+.dark body {
+  background-color: #121826;
+  color: #e2e8f0;
+}
+
+.dark nav {
+  background-color: #1e293b;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.dark .timeline-link {
+  color: #a5b4fc;
+}
+
+.dark .timeline-link.active {
+  color: #818cf8;
+  border-bottom-color: #818cf8;
+}
+
+.dark .syllabus-item {
+  background-color: #1e293b;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.dark .syllabus-item:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.dark .item-notes {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+.dark .historical-context {
+  background-color: #1e293b;
+  border-left-color: #818cf8;
+}
+
+.dark h2 {
+  color: #a5b4fc;
+  border-bottom-color: #334155;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e1;
+}
+
+.dark .text-indigo-700 {
+  color: #a5b4fc;
+}
+
+.dark header {
+  background-image: linear-gradient(to right, #4338ca, #7e22ce);
+}
+
+.dark button.bg-red-500 {
+  background-color: #ef4444;
+}
+
+.dark button.hover\:bg-red-600:hover {
+  background-color: #dc2626;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* Progress bubble dark mode */
+.dark #progress-bubble {
+  background-image: linear-gradient(to right, #4338ca, #7e22ce);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.dark #progress-bubble:hover {
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.6);
+}
+
+/* SVGs in dark mode */
+.dark a svg {
+  color: #9ca3af;
+  /* Gray-400 */
+}
+
+.dark a[href]:not([href=""]) svg {
+  color: #34d399;
+  /* Green-400, slightly brighter for dark mode */
+}
+
+/* Dark mode icon fallback (in case Tailwind classes don't work) */
+#sun-icon {
+  display: none;
+}
+
+#moon-icon {
+  display: block;
+}
+
+.dark #sun-icon {
+  display: block !important;
+}
+
+.dark #moon-icon {
+  display: none !important;
+}
+

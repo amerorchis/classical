@@ -1,0 +1,838 @@
+{
+  "medieval": {
+    "id": "medieval",
+    "title": "Medieval (500-1400)",
+    "works": [
+      {
+        "id": "med-1",
+        "title": "Gregorian Chant & Early Sacred Music",
+        "composer": null,
+        "recording": {
+          "url": "https://open.spotify.com/album/0fmLPKvIYbWX0NiUcAlj0b?si=EtNbzs9bRU-TJnzE7AsAbg",
+          "performer": "Benedictine Monks of the Abbey of St. Maurice & St. Maur, Clevaux"
+        },
+        "year": "c. 800-1000",
+        "notes": [
+          "Represents early monophonic tradition.",
+          "Influenced later liturgical music.",
+          "Spiritually meditative and timeless."
+        ],
+        "historicalContext": "Gregorian chant emerged during the papacy of Gregory the Great (590-604 CE) as an effort to standardize liturgical music across the growing Christian church. These monophonic melodies, sung without instrumental accompaniment, established the first comprehensive system of musical notation—neumes—which evolved into the four-line staff that preceded our modern notation. The chants' distinctive musical characteristics include free-flowing rhythm without regular meter, limited pitch range typically spanning an octave, and the eight church modes (Dorian, Phrygian, Lydian, etc.) that provided tonal frameworks before the development of major and minor scales. When experiencing pieces like the \"Kyrie eleison\" or \"Dies Irae,\" listeners encounter the musical DNA that later influenced polyphonic development in the 12th-14th centuries, Renaissance sacred music, and even modern film scores. Composers from Machaut to Mozart and beyond incorporated these ancient melodies as cantus firmus, demonstrating how this seemingly simple repertoire contained sophisticated melodic shapes that proved remarkably adaptable across musical history."
+      },
+      {
+        "id": "med-2",
+        "title": "Hildegard von Bingen - Ordo Virtutum",
+        "composer": "hildegard",
+        "recording": {
+          "url": "https://open.spotify.com/album/1RM2nW2WbT2cNiaawnOTz1?si=ZfcZslWDT8CELawmbVkCfA",
+          "performer": "Sequentia"
+        },
+        "year": "c. 1150",
+        "notes": [
+          "One of the earliest musical dramas.",
+          "Blends chant with theatrical narrative.",
+          "Showcases visionary and mystical themes."
+        ],
+        "historicalContext": "Hildegard von Bingen's \"Ordo Virtutum\" (Play of Virtues) stands as the earliest known morality play with music, composed at a time when women's creative contributions were rarely documented. As a 12th-century abbess, mystic, and polymath, Hildegard created this liturgical drama depicting the struggle between virtues and the devil for a human soul. The work's 82 melodies feature expansive ranges (sometimes spanning up to two octaves) that were unusual for the period, with flowing, melismatic lines that float above the standard Gregorian repertoire in their expressivity. Unlike the anonymous compositions of most medieval music, Hildegard's authenticated authorship gives us rare insight into individual creative vision from this era. Her unconventional melodic leaps, text-painting techniques, and dramatic character assignments prefigure developments in sacred musical drama that would not become common for centuries. When we listen to \"Ordo Virtutum,\" we hear not only a medieval masterpiece but also the voice of one of music history's earliest identified female composers asserting bold creative independence within the constraints of her time."
+      },
+      {
+        "id": "med-3",
+        "title": "Sacred Music from Notre-Dame Cathedral - Léonin & Pérotin",
+        "composer": "leonin",
+        "recording": {
+          "url": "https://open.spotify.com/album/0Bb5GQ7nB7ig8EzjbXr4Kv?si=VT26FD18TPGN0ooKNyL17w",
+          "performer": "Tonus Peregrinus"
+        },
+        "year": "c. 1200",
+        "notes": [
+          "Introduced polyphonic complexity.",
+          "Innovative use of rhythmic structures.",
+          "Laid groundwork for choral compositions."
+        ],
+        "historicalContext": "The Notre Dame School of polyphony, particularly through the work of Léonin and Pérotin in 12th-13th century Paris, marks one of music history's revolutionary moments—the shift from single-line monophony to organized multi-voice textures. Léonin's \"Magnus Liber Organi\" (Great Book of Organum) introduced the systematic composition of two-voice sacred music, where a traditional Gregorian chant (cantus firmus) was complemented by a more elaborate second voice. Pérotin then expanded this technique to three and four voices with works like \"Viderunt Omnes\" and \"Sederunt Principes,\" creating the world's first known compositions for four independent voices. These compositions introduced a rhythmic system called the rhythmic modes that allowed precise coordination between parts, thereby establishing the foundation for mensural notation (a precursor to modern rhythmic notation). The alternation between florid polyphonic sections and straightforward chant passages in these works established the structural principle of contrast that would influence Western music for centuries. While still restricted by parallel motion and limited harmonic language, these compositions represent a pivotal technical achievement that transformed music from a horizontal to a vertical art form, ultimately enabling the complex textures of Renaissance polyphony and beyond."
+      },
+      {
+        "id": "med-4",
+        "title": "Early Secular Music - Troubadour & Minnesänger Songs",
+        "composer": null,
+        "recording": {
+          "url": "https://open.spotify.com/album/5wszOw36NJ82nc9BWFVaB7?si=TdflbZi8Sumwyiahz2WeLw",
+          "performer": "Ensemble Fur Fruhe Musik Augsburg"
+        },
+        "year": "c. 1100-1300",
+        "notes": [
+          "Reflects courtly love and chivalry.",
+          "Early use of vernacular language.",
+          "Influenced later secular song traditions."
+        ],
+        "historicalContext": "Troubadour and Minnesänger songs represent the first substantial body of secular art music in Western culture, emerging as European society began its slow transition from a purely ecclesiastical musical tradition. These poet-musicians—troubadours in southern France (Occitania), trouvères in northern France, and Minnesänger in German-speaking lands—composed monophonic songs in vernacular languages rather than Latin, addressing themes of courtly love, chivalry, and political commentary. Bernart de Ventadorn's \"Can vei la lauzeta mover\" and Walther von der Vogelweide's \"Unter der Linden\" exemplify how these works combined sophisticated poetic structures (like the canso form with its intricate rhyme schemes) with memorable, often modal melodies. Musically, these songs feature more regular metrical patterns than sacred chant, reflecting their origins in dance and their integration with poetic meters. The songs were typically performed by solo singers, sometimes with instrumental accompaniment on instruments like the medieval fiddle, harp, or lute. Their revolutionary elevation of a secular musical tradition influenced the development of the madrigal, the art song, and ultimately the troubadour-like figure of the singer-songwriter. In these works, we witness music's expansion beyond the church into the courts and castles of medieval Europe, establishing artistic models for expressing personal emotion and social commentary that remain relevant today."
+      },
+      {
+        "id": "med-5",
+        "title": "Guillaume de Machaut - Messe de Nostre Dame",
+        "composer": "machaut",
+        "recording": {
+          "url": "https://open.spotify.com/album/7nweWVY6FMRLi0aFVtJK97?si=AQUmwqY-T12622lM5yQRoQ",
+          "performer": "The Hilliard Ensemble"
+        },
+        "year": "c. 1365",
+        "notes": [
+          "First complete polyphonic mass setting by a single composer.",
+          "Sophisticated interplay of rhythm and harmony.",
+          "Exemplifies the complex \"Ars Nova\" style."
+        ],
+        "historicalContext": "Machaut's \"Messe de Nostre Dame\" (c. 1365) stands as one of music history's most revolutionary achievements—the first complete setting of the Mass Ordinary by a single composer conceived as a unified musical work. Composed near the end of Machaut's life (possibly for Reims Cathedral where he served as canon), this masterpiece transcends its liturgical function to establish new possibilities for large-scale musical architecture. Machaut employs the complex rhythmic techniques of the Ars Nova style, including isorhythm (repeated rhythmic patterns combined with varying pitch sequences) and hocket (the distribution of a melody across multiple voices creating a hiccup-like effect). The mass balances innovation with tradition by incorporating plainchant foundations into sophisticated four-voice polyphony—each movement begins with the appropriate Gregorian chant before developing into intricate counterpoint. The Gloria and Credo movements employ a more syllabic, text-driven approach, while the Kyrie, Sanctus, and Agnus Dei feature melismatic extensions creating moments of extraordinary expressive intensity. While earlier masses cobbled together movements from different composers or employed simpler note-against-note writing, Machaut's achievement lies in creating consistent stylistic unity while varying techniques appropriately for each section's textual and liturgical function. Though the harmonic language sounds strange to modern ears, with open fifths and occasionally harsh dissonances, these sonorities perfectly suited the acoustic properties of Gothic cathedrals. This landmark composition influenced sacred music for generations, establishing the unified mass cycle as Western music's first large-scale form—a tradition that would continue through the Renaissance with Palestrina, into the Baroque with Bach, and beyond to Mozart, Beethoven, and even 20th-century composers."
+      }
+    ]
+  },
+  "renaissance": {
+    "id": "renaissance",
+    "title": "Renaissance (1400-1600)",
+    "works": [
+      {
+        "id": "ren-1",
+        "title": "Josquin des Prez - Missa Pange Lingua & Missa La Sol Fa Re Mi",
+        "composer": "josquin",
+        "recording": {
+          "url": "https://open.spotify.com/album/7MybFTlK93WNF2YDVkqtgn?si=5xG2oqbeRtekHUBiYqWzNA",
+          "performer": "The Tallis Scholars (Peter Phillips)"
+        },
+        "year": "c. 1500",
+        "notes": [
+          "Masterful use of polyphony.",
+          "Expressive text setting.",
+          "Influenced sacred music composition."
+        ],
+        "historicalContext": "Josquin des Prez's masses represent the Renaissance ideal of perfected polyphony, balancing mathematical precision with profound expressivity. In \"Missa Pange Lingua,\" Josquin transformed a simple Gregorian hymn into a complex five-movement mass through sophisticated motivic development, while \"Missa La Sol Fa Re Mi\" ingeniously builds an entire composition around a simple five-note motif (reportedly based on a patron's words, \"Lascia fare mi\"—\"leave it to me\"). Josquin's technical innovations include pervasive imitation (where each voice states the same melody in succession), paired duets that create textural variety, and carefully planned points of climax through textural density changes. Perhaps most revolutionary was his approach to text setting, where musical phrases directly serve the meaning and rhythm of the words—a stark contrast to earlier composers who often stretched syllables beyond recognition. His contemporaries recognized these achievements; Martin Luther famously remarked, \"Josquin is the master of the notes. Others must do as the notes dictate, but Josquin is their master.\" Josquin's work forms the pivotal link between medieval modal thinking and the emergent tonal system, establishing compositional approaches that would influence Palestrina, Lassus, and even Bach. These masses exemplify the humanist spirit of the Renaissance, where technical mastery serves emotional and spiritual expression rather than mere demonstration of skill."
+      },
+      {
+        "id": "ren-2",
+        "title": "Giovanni Pierluigi da Palestrina - Missa Papae Marcellus",
+        "composer": "palestrina",
+        "recording": {
+          "url": "https://open.spotify.com/album/6rSJ9l1V8H7Ahqn65m9OMi?si=cfe281VQRFuYRCXSoWuPVg",
+          "performer": "The Choir of Westminster Abbey (Simon Preston)"
+        },
+        "year": "c. 1567",
+        "notes": [
+          "Exemplifies clarity in counterpoint.",
+          "A model for liturgical music.",
+          "Represents high Renaissance style."
+        ],
+        "historicalContext": "Palestrina's \"Missa Papae Marcellus\" emerged at a critical moment when the Catholic Counter-Reformation's Council of Trent was considering banning polyphonic music from worship for obscuring sacred texts. According to musical legend (though historically disputed), this six-voice mass convinced the Council that polyphony could enhance rather than detract from textual clarity. Palestrina achieved this through several technical innovations: consonant harmonies that avoid harsh dissonances, carefully controlled entry points for imitative voices, homophonic passages (where voices move together) at key textual moments, and his famous \"one-against-one\" counterpoint where rhythmic complexity never overwhelms textual intelligibility. The \"Gloria\" and \"Credo\" movements demonstrate his mastery of text declamation, alternating between syllabic passages (one note per syllable) and modest melismas for emphasis. Distinct from the emotional expressionism of later madrigalists, Palestrina's conservative approach elevates the text through balanced, serene musical architecture—what musicologists call the \"prima pratica\" or \"stile antico.\" The work exemplifies the culmination of Renaissance polyphonic techniques while establishing a model of sacred composition that would remain influential for centuries—Bach studied Palestrina's counterpoint, and the work's a cappella style inspired the 19th-century Cecilian movement's approach to liturgical reform. This mass represents the perfect synthesis of technical mastery and spiritual purpose within the constraints of 16th-century compositional practice."
+      },
+      {
+        "id": "ren-3",
+        "title": "Thomas Tallis - Spem in alium",
+        "composer": "tallis",
+        "recording": {
+          "url": "https://open.spotify.com/album/69n01dGwqZ5d5b1GITfP7G?si=fuwNo4NZT9qo0RWBtc995w",
+          "performer": "The Tallis Scholars"
+        },
+        "year": "c. 1570",
+        "notes": [
+          "Ambitious 40-voice motet.",
+          "Pinnacle of vocal polyphony.",
+          "Innovative spatial arrangement."
+        ],
+        "historicalContext": "Thomas Tallis's \"Spem in alium\" stands as perhaps the most ambitious polyphonic composition of the Renaissance—a 40-voice motet written during England's religious tensions between Protestant and Catholic factions. Composed around 1570, possibly for Queen Elizabeth I's 40th birthday or in response to Alessandro Striggio's 40-part \"Ecce beatam lucem,\" the work demonstrates compositional virtuosity on an unprecedented scale. Tallis organizes the 40 independent voices into eight five-voice choirs, creating a mathematical and acoustic marvel where themes cascade through the ensemble in carefully calculated waves. The piece begins with a single voice and gradually builds to moments where all 40 parts sing simultaneously, creating overwhelming textural density before returning to smaller groupings. This spatial arrangement—choirs typically positioned in a horseshoe formation—creates antiphonal effects as musical ideas travel physically around the performance space. The Latin text (\"I have never placed my hope in any other than you, O God of Israel\") acquires transcendent power through Tallis's structure, with key words emphasized through full-ensemble climaxes. The work represents the absolute outer limits of Renaissance compositional technique, balancing immense complexity with architectural coherence—an achievement rarely attempted since. When properly performed, \"Spem in alium\" creates an aural experience that surrounds listeners in waves of sound, demonstrating how Renaissance composers could create immersive, three-dimensional musical experiences without modern technology, using only the mathematics of counterpoint and human voices."
+      },
+      {
+        "id": "ren-4",
+        "title": "Orlando di Lasso - Laudate Dominum",
+        "composer": "lasso",
+        "recording": {
+          "url": "https://open.spotify.com/album/490XbeD9Uu92uY8MsMotea?si=-4dLDKiiTYWMtDZhHI6GPg",
+          "performer": "Studio de musique ancienne de Montréal (Andrew McAnerney)"
+        },
+        "year": "c. 1570",
+        "notes": [
+          "Rich harmonic language.",
+          "Bridges early and late Renaissance styles.",
+          "Emotionally expressive and innovative."
+        ],
+        "historicalContext": "Orlando di Lasso (Roland de Lassus) stands as one of the most cosmopolitan composers of the Renaissance, whose \"Laudate Dominum\" exemplifies his synthesis of multiple European musical traditions. Born in Franco-Flemish territories but working primarily in Munich, Lasso absorbed Italian madrigal techniques, French chanson styles, and German lied approaches, creating a uniquely international Renaissance sound. \"Laudate Dominum\" showcases his ability to balance formal sacred structures with surprisingly direct emotional expression—a hallmark of late Renaissance aesthetic. Unlike the more restrained Palestrina, Lasso employs bolder harmonic progressions, including unexpected chromaticism that pushes the boundaries of 16th-century modal practice. His approach to text-setting is almost theatrical; the jubilant psalm text receives vivid musical illustration through contrasting textures, ranging from homophonic declamation to intricate imitative counterpoint, often shifting suddenly to underline specific words. The motet demonstrates Lasso's famous versatility—he composed over 2,000 works in virtually every genre of his time. His willingness to bend contrapuntal rules for expressive effect presages the more dramatic approach of the emerging Baroque, while his careful attention to textual meaning reflects the heightened humanism of the late Renaissance. Lasso's influence spread throughout Europe through widely published collections of his works, making him perhaps the most internationally recognized composer of his era and a crucial link between the balanced polyphony of the high Renaissance and the more rhetorical approach of the early Baroque."
+      },
+      {
+        "id": "ren-5",
+        "title": "William Byrd - Mass for Five Voices",
+        "composer": "byrd",
+        "recording": {
+          "url": "https://open.spotify.com/album/2MZP6i1vy8Cj469778Yezk?si=1iN0opW9Sy6HUUD4JWJd0w",
+          "performer": "The Tallis Scholars"
+        },
+        "year": "c. 1590",
+        "notes": [
+          "Intricate vocal counterpoint.",
+          "Reflects personal and spiritual expression.",
+          "Significant work in English Renaissance."
+        ],
+        "historicalContext": "William Byrd's \"Mass for Five Voices\" stands as a remarkable testament to religious conviction amid persecution—a Catholic masterpiece composed around 1590-1595 in Protestant England where such worship was illegal. Composed for clandestine services in private noble chapels rather than grand cathedrals, this work balances sophisticated polyphonic writing with emotional expressiveness, showcasing Byrd's unique synthesis of Continental techniques with English musical sensibilities. Despite enjoying royal favor as a Gentleman of the Chapel Royal, Byrd took considerable risk in composing and publishing this music (notably without title pages as a precaution), creating not merely beautiful music but an act of spiritual resistance. The Mass demonstrates Byrd's contrapuntal mastery—five independent voices moving with perfect clarity while building moments of harmonic richness at key theological points, from the hushed reverence of the Kyrie to the transcendent beauty of the Agnus Dei. Unlike many Renaissance Mass settings that borrowed existing melodies, Byrd's freely-composed work responds with particular sensitivity to each textual element, creating subtle motivic connections that unify the approximately 25-minute composition. The work represents the zenith of Tudor polyphony and has remained central to the choral repertoire for over four centuries—valued not only for its technical achievement but for embodying how artistic expression could preserve faith and identity even under the most challenging historical circumstances."
+      }
+    ]
+  },
+  "baroque": {
+    "id": "baroque", 
+    "title": "Baroque (1600-1750)",
+    "works": [
+      {
+        "id": "bar-1",
+        "title": "Claudio Monteverdi - L'Orfeo",
+        "composer": "monteverdi",
+        "recording": {
+          "url": "https://open.spotify.com/album/2dOEPUO8yaMKqozeCEC0T2?si=P3BouwnCRsijuz2NRzEPtA",
+          "performer": "Concerto Italiano (Rinaldo Alessandrini)"
+        },
+        "year": "1607",
+        "notes": [
+          "First great opera still regularly performed today.",
+          "Perfect synthesis of Renaissance polyphony with new Baroque dramatic style.",
+          "Innovative instrumentation serves dramatic expression."
+        ],
+        "historicalContext": "Monteverdi's \"L'Orfeo\" (1607) stands as the first operatic masterpiece that successfully unified music and drama into a coherent art form. Composed for the Mantuan court during Carnival season, this \"favola in musica\" (story in music) transformed the experimental musical dramas of the Florentine Camerata into a fully realized theatrical experience. Monteverdi brilliantly balanced older Renaissance polyphonic techniques with the new Baroque emphasis on text expression through his innovative concept of \"seconda pratica,\" where music serves the emotional impact of the words."
+      },
+      {
+        "id": "bar-2",
+        "title": "Henry Purcell - Dido and Aeneas",
+        "composer": "purcell",
+        "recording": {
+          "url": "https://open.spotify.com/album/19ogthWkUFeShOTXQh9Spd?si=pxZPXsWURyWDXsoGTl4Tpg",
+          "performer": "The English Concert (Trevor Pinnock)"
+        },
+        "year": "c. 1689",
+        "notes": [
+          "Foundation of English Baroque opera.",
+          "Notable for its emotional depth.",
+          "Features the famous \"Dido's Lament.\""
+        ],
+        "historicalContext": "Purcell's \"Dido and Aeneas\" (c.1689) stands as England's first true opera, composed for a girls' boarding school performance yet achieving remarkable dramatic power within its compact form. Drawing on Virgil's Aeneid, Purcell crafts a tragedy where vocal lines perfectly mirror natural speech patterns while maintaining musical elegance."
+      },
+      {
+        "id": "bar-3",
+        "title": "George Frideric Handel - Water Music & Music for the Royal Fireworks",
+        "composer": "handel",
+        "recording": {
+          "url": "https://open.spotify.com/album/7sXAfHgByM2Po10h6kSTgF?si=m3KFY9UxRiuxZAzLsz-N3A",
+          "performer": "English Baroque Soloists (John Eliot Gardiner)"
+        },
+        "year": "1717/1749",
+        "notes": [
+          "Exemplifies festive orchestral style.",
+          "Composed for royal celebrations.",
+          "Accessible and grand in character."
+        ],
+        "historicalContext": "Handel's \"Water Music\" (1717) and \"Music for the Royal Fireworks\" (1749) represent the pinnacle of Baroque outdoor ceremonial music, both composed for specific royal events on commission from England's Hanoverian monarchs."
+      },
+      {
+        "id": "bar-4", 
+        "title": "Johann Sebastian Bach - Brandenburg Concertos",
+        "composer": "bach",
+        "recording": {
+          "url": "https://open.spotify.com/album/3x8N7VCXWbZaOAzNkPTwCf?si=lpBY4HbxRY6Y49-DaqVXrg",
+          "performer": "Academy of St. Martin in the Fields (Neville Marriner)"
+        },
+        "year": "1721",
+        "notes": [
+          "Showcases instrumental virtuosity.",
+          "Innovative interplay between soloists and ensemble.",
+          "A cornerstone of Baroque orchestral music."
+        ],
+        "historicalContext": "Bach's six Brandenburg Concertos, presented to Christian Ludwig, Margrave of Brandenburg in 1721 as a job application (which was unsuccessful), represent the apotheosis of Baroque concerto grosso form while simultaneously expanding its boundaries in unprecedented ways."
+      },
+      {
+        "id": "bar-5",
+        "title": "Antonio Vivaldi - The Four Seasons",
+        "composer": "vivaldi",
+        "recording": {
+          "url": "https://open.spotify.com/album/1G0dgQkqneuP7kid0mhJXh?si=pIllFcBPSneQyeFvP6ii2g",
+          "performer": "Academy of St. Martin in the Fields (Neville Marriner)"
+        },
+        "year": "1725",
+        "notes": [
+          "Musical depiction of nature's seasons.",
+          "Each concerto evokes a distinct mood.",
+          "A landmark in programmatic music."
+        ],
+        "historicalContext": "Vivaldi's \"The Four Seasons\" (Le quattro stagioni) revolutionized program music by creating one of the first detailed musical narratives without text or staging. Published in 1725 as part of his Op. 8 collection \"The Contest Between Harmony and Invention,\" these four violin concertos were accompanied by sonnets (likely written by Vivaldi himself) that provide specific programmatic descriptions for each musical passage."
+      },
+      {
+        "id": "bar-6",
+        "title": "Johann Sebastian Bach - St. Matthew Passion",
+        "composer": "bach",
+        "recording": {
+          "url": "https://open.spotify.com/album/1WvjBGg9O0QI9gF66bfG9x?si=jY9VRLPASHOLfCMpAy8JHQ",
+          "performer": "Concentus Musicus Wien (Nikolaus Harnoncourt)"
+        },
+        "year": "1727",
+        "notes": [
+          "Monumental setting of Christ's Passion narrative.",
+          "Innovative double-choir structure with complex counterpoint.",
+          "Perfect balance of drama, contemplation, and theological depth."
+        ],
+        "historicalContext": "Bach's St. Matthew Passion (1727, revised 1736) represents the pinnacle of Baroque sacred music—a monumental three-hour work that transformed the Lutheran Passion tradition from simple Scripture recitation into profound musical drama. Composed for Good Friday services at Leipzig's St. Thomas Church, the work's revolutionary double-choir structure creates unprecedented spatial and dramatic effects."
+      },
+      {
+        "id": "bar-7",
+        "title": "George Frideric Handel - Messiah",
+        "composer": "handel",
+        "recording": {
+          "url": "https://open.spotify.com/album/4e5MOtI4r6XKYsvh5yFSrB?si=jP9YwTZ9S_qIYVkB-fi4ow",
+          "performer": "English Baroque Soloists and Monteverdi Choir (John Eliot Gardiner)"
+        },
+        "year": "1742",
+        "notes": [
+          "Iconic oratorio with dramatic contrasts.",
+          "Features renowned choral and solo sections.",
+          "Enduring work of Baroque sacred music."
+        ],
+        "historicalContext": "Handel's \"Messiah,\" composed in an astonishing 24 days in 1741, represents the perfect marriage of German contrapuntal tradition, Italian operatic lyricism, and English choral practice—reflecting Handel's cosmopolitan career across Europe. Unlike most oratorios of its time, \"Messiah\" avoids dramatic characterization, instead offering contemplative meditation on Christ's life and sacrifice."
+      },
+      {
+        "id": "bar-8",
+        "title": "Johann Sebastian Bach - Goldberg Variations",
+        "composer": "bach",
+        "recording": {
+          "url": "https://open.spotify.com/album/1aCpHSQE5ghxibsQ5gkBe0?si=EBdkXFoTT6i317L-4FjZFg",
+          "performer": "Glenn Gould"
+        },
+        "year": "1741",
+        "notes": [
+          "30 variations on a serene aria.",
+          "Canon structure every third variation.",
+          "Blend of virtuosity and deep expression."
+        ],
+        "historicalContext": "Bach's \"Goldberg Variations\" (1741), originally titled \"Aria with Diverse Variations,\" represents the pinnacle of Baroque keyboard variation form. Commissioned by Count Kaiserling for his harpsichordist Johann Gottlieb Goldberg (according to musical legend), this collection of 30 variations demonstrates Bach's unparalleled ability to extract infinite possibilities from simple material."
+      },
+      {
+        "id": "bar-9",
+        "title": "Johann Sebastian Bach - Mass in B Minor",
+        "composer": "bach",
+        "recording": {
+          "url": "https://open.spotify.com/album/3HdmIB3Wzcd7bFDdsgaIbp?si=0WNhzzlnTBioZ1-WrgDqNA",
+          "performer": "The Monteverdi Choir and English Baroque Soloists (John Eliot Gardiner)"
+        },
+        "year": "1749",
+        "notes": [
+          "Monumental sacred work.",
+          "Integrates diverse Baroque styles.",
+          "Pinnacle of counterpoint and expression."
+        ],
+        "historicalContext": "Bach's Mass in B Minor represents the culmination of his compositional life—a monumental synthesis of every musical style and technique he had mastered, assembled into a unified statement of faith that transcends its liturgical function. Compiled primarily between 1748-49 (though incorporating earlier movements dating to 1724), the work occupies a unique position in Bach's output as a Lutheran composer creating a complete Catholic Mass."
+      }
+    ]
+  },
+  "classical": {
+    "id": "classical",
+    "title": "Classical (1750-1820)",
+    "works": [
+      {
+        "id": "cla-1",
+        "title": "Wolfgang Amadeus Mozart - Piano Concertos (No. 20 in D minor, K.466)",
+        "composer": "mozart",
+        "recording": {
+          "url": "https://open.spotify.com/album/2zs2VEQyfjqG2UBAnaoYaQ?si=zWqb1QuVSpWQEurlrC5PsQ",
+          "performer": "Mitsuko Uchida"
+        },
+        "year": "1785",
+        "notes": [
+          "Elegant dialogue between piano and orchestra.",
+          "Highlights expressive clarity and refinement.",
+          "A prime example of Classical concerto form."
+        ],
+        "historicalContext": "Mozart's Piano Concerto No. 20 in D minor (K.466) stands as one of only two piano concertos Mozart wrote in minor keys, marking a dramatic departure from the generally optimistic character of his concertos. Composed in 1785 during Mozart's most productive Vienna period, this work demonstrates his ability to balance Classical formal principles with unprecedented emotional depth and dramatic intensity."
+      },
+      {
+        "id": "cla-2",
+        "title": "Wolfgang Amadeus Mozart - The Marriage of Figaro",
+        "composer": "mozart",
+        "recording": {
+          "url": "https://open.spotify.com/album/2COjPQLeLFEAYFaDcqS87d?si=LZxv6qkPSY2mG0urlNLN1w",
+          "performer": "Metropolitan Opera Orchestra (James Levine)"
+        },
+        "year": "1786",
+        "notes": [
+          "Operatic comedy with social critique.",
+          "Innovative ensemble finales.",
+          "Psychological depth in characters."
+        ],
+        "historicalContext": "Mozart's \"The Marriage of Figaro\" (1786) represents the perfect synthesis of Italian opera buffa tradition with Mozart's unique gift for character development and social commentary. Based on Beaumarchais's controversial play (which had been banned in Vienna for its political implications), Lorenzo Da Ponte's libretto and Mozart's music create a revolutionary work that uses comedy to examine class conflict, gender relations, and social hypocrisy."
+      },
+      {
+        "id": "cla-3",
+        "title": "Wolfgang Amadeus Mozart - Symphony No. 40 in G minor",
+        "composer": "mozart",
+        "recording": {
+          "url": "https://open.spotify.com/album/6zibIhSvaqI1TEeZO5FujG?si=MDX0B82hTxCOlUQI-2mQhA",
+          "performer": "Vienna Philharmonic (Leonard Bernstein)"
+        },
+        "year": "1788",
+        "notes": [
+          "Epitomizes the Classical style.",
+          "Rich emotional contrasts and dynamics.",
+          "A timeless masterpiece of orchestral music."
+        ],
+        "historicalContext": "Mozart's Symphony No. 40 (1788) emerged during a period of personal and financial crisis, yet paradoxically represents one of his most perfectly balanced achievements. One of only two symphonies Mozart composed in minor keys, this work demonstrates how Classical formal principles could accommodate unprecedented emotional urgency and psychological complexity."
+      },
+      {
+        "id": "cla-4",
+        "title": "Wolfgang Amadeus Mozart - Requiem in D minor",
+        "composer": "mozart",
+        "recording": {
+          "url": "https://open.spotify.com/album/62TBuvIWwGvb1Y9P7NShjd?si=orLOZBNYTb-5hTzWsU5spg",
+          "performer": "The Monteverdi Choir and English Baroque Soloists (John Eliot Gardiner)"
+        },
+        "year": "1791",
+        "notes": [
+          "Mysterious and dramatic composition.",
+          "Unfinished work with deep emotional resonance.",
+          "Blends operatic drama with sacred tradition."
+        ],
+        "historicalContext": "Mozart's Requiem, left unfinished at his death in December 1791, has become one of classical music's most haunting and mysterious works. Commissioned by the enigmatic Count Franz von Walsegg (who intended to pass it off as his own composition to commemorate his wife's death), the Requiem represents Mozart's final musical statement—a work that seems to prophetically contemplate his own mortality."
+      },
+      {
+        "id": "cla-5",
+        "title": "Joseph Haydn - String Quartets (Op. 76)",
+        "composer": "haydn",
+        "recording": {
+          "url": "https://open.spotify.com/album/6LSNWyhLcrOYt2z0d2rpE5?si=oW1H2HHETAazzbK3T8V7Qg",
+          "performer": "Takács Quartet"
+        },
+        "year": "c. 1797",
+        "notes": [
+          "Pioneers chamber music dialogue.",
+          "Influential in the development of quartets.",
+          "Balances wit with structural innovation."
+        ],
+        "historicalContext": "Haydn's Op. 76 quartets (1797), composed during his final creative period, represent the culmination of his innovations in chamber music—works that established the string quartet as the most sophisticated form of instrumental conversation. These six quartets demonstrate Haydn's mature mastery of the medium he essentially invented, balancing playful wit with profound structural innovation."
+      },
+      {
+        "id": "cla-6",
+        "title": "Ludwig van Beethoven - Piano Sonata No. 14 \"Moonlight Sonata\"",
+        "composer": "beethoven",
+        "recording": {
+          "url": "https://open.spotify.com/album/6erUlga5EF5hRWrCA8Lcbu?si=mMwOcXlYQbKX_PK3I2tRIg",
+          "performer": "Maurizio Pollini"
+        },
+        "year": "1801",
+        "notes": [
+          "Bridges classical and Romantic sensibilities.",
+          "Innovative structure and emotive themes.",
+          "A staple of piano repertoire."
+        ],
+        "historicalContext": "Beethoven's Piano Sonata No. 14 \"Moonlight Sonata\" (1801) marks a crucial transition point between Classical and Romantic aesthetics, composed during Beethoven's increasing awareness of his progressive hearing loss. The work's unprecedented opening movement—a continuous meditation in C# minor marked \"Adagio sostenuto\"—revolutionized sonata form by placing the most emotionally intense material at the beginning rather than in the traditional fast opening movement."
+      },
+      {
+        "id": "cla-7",
+        "title": "Ludwig van Beethoven - Symphony No. 5",
+        "composer": "beethoven",
+        "recording": {
+          "url": "https://open.spotify.com/album/5U2ZIDU7MISDzXEtFbcZWJ?si=_apAs8KzR4G_WGVE_v4oCw",
+          "performer": "Berlin Philharmonic (Herbert von Karajan)"
+        },
+        "year": "c. 1808",
+        "notes": [
+          "Iconic opening motif recognized worldwide.",
+          "Symbolizes triumph over adversity.",
+          "Revolutionized symphonic form."
+        ],
+        "historicalContext": "Beethoven's Fifth Symphony (1808) stands as perhaps the most recognizable work in classical music, its famous opening motif becoming a universal symbol of musical drama and human struggle. Composed during Beethoven's 'heroic period,' the symphony demonstrates his revolutionary approach to motivic development, where a simple four-note idea becomes the foundation for an entire 33-minute musical journey."
+      },
+      {
+        "id": "cla-8",
+        "title": "Ludwig van Beethoven - Missa Solemnis",
+        "composer": "beethoven",
+        "recording": {
+          "url": "https://open.spotify.com/album/23ibE20u08AaxGPOo2MSSa?si=-h0tSilJRBaKqvRBwdRmXw",
+          "performer": "Orchestre Révolutionnaire et Romantique (John Eliot Gardiner)"
+        },
+        "year": "1823",
+        "notes": [
+          "Monumental setting of the Mass.",
+          "Blend of liturgical tradition and personal expression.",
+          "Extreme technical and emotional demands."
+        ],
+        "historicalContext": "Beethoven's Missa Solemnis (1823), which he considered his greatest achievement, represents a monumental fusion of sacred tradition with individual artistic vision. Originally conceived for his patron Archduke Rudolph's installation as Archbishop of Olmütz, the work evolved into a deeply personal statement of faith that transcends its ceremonial origins to become a universal statement about humanity's relationship with the divine."
+      }
+    ]
+  },
+  "romantic": {
+    "id": "romantic",
+    "title": "Romantic (1810-1910)",
+    "works": [
+      {
+        "id": "rom-1",
+        "title": "Ludwig van Beethoven - Symphony No. 9 \"Choral\"",
+        "composer": "beethoven",
+        "recording": {
+          "url": "https://open.spotify.com/album/2XF4GhKOvsWt1viozHlx8a?si=BkMj57xTRYC2uOukAgPp3Q",
+          "performer": "New York Philharmonic (Leonard Bernstein)"
+        },
+        "year": "1824",
+        "notes": [
+          "Epic choral finale that redefines the symphony.",
+          "Universal message of human brotherhood.",
+          "Bridges Classical and Romantic periods."
+        ],
+        "historicalContext": "Beethoven's Ninth Symphony (1824) represents both the culmination of the Classical symphony and the opening statement of Romantic musical ideals. The work's revolutionary incorporation of chorus and soloists in the final movement, setting Schiller's 'Ode to Joy,' transformed the symphony from pure instrumental music into a vehicle for universal human expression."
+      },
+      {
+        "id": "rom-2", 
+        "title": "Franz Schubert - Winterreise",
+        "composer": "schubert",
+        "recording": {
+          "url": "https://open.spotify.com/album/0mgzkW1ff8QDdQ0GVX26IB?si=BR_BPYS4StCwSqW9fHa7aA",
+          "performer": "Dietrich Fischer-Dieskau and Gerald Moore"
+        },
+        "year": "1827",
+        "notes": [
+          "24-song cycle setting poems by Wilhelm Müller.",
+          "Explores themes of isolation, despair, and existential searching.",
+          "Pinnacle of German Romantic Lied."
+        ],
+        "historicalContext": "Schubert's 'Winterreise' (Winter Journey, 1827) stands as the greatest achievement in German art song, composed during the final year of Schubert's life when he was battling illness and creative urgency. This 24-song cycle, setting poems by Wilhelm Müller, creates a profound psychological journey through a winter landscape that mirrors the protagonist's emotional desolation."
+      },
+      {
+        "id": "rom-3",
+        "title": "Frédéric Chopin - Nocturnes",
+        "composer": "chopin", 
+        "recording": {
+          "url": "https://open.spotify.com/album/5Q5m22P7jIwdMSKXqhrpaN?si=slZ6iudcSaW5BwYs74m7VA",
+          "performer": "Arthur Rubinstein"
+        },
+        "year": "1830-1846",
+        "notes": [
+          "Intimate and lyrical piano works.",
+          "Showcase subtle dynamic contrasts.",
+          "Epitomize Romantic piano style."
+        ],
+        "historicalContext": "Chopin's Nocturnes, composed throughout his career (1830-1846), established the template for Romantic piano composition through their perfect fusion of technical innovation with profound emotional expression. Inspired by Irish composer John Field's nocturnes but far transcending their models, these works demonstrate Chopin's unique ability to transform the piano into an instrument of unprecedented expressive subtlety."
+      },
+      {
+        "id": "rom-4",
+        "title": "Felix Mendelssohn - A Midsummer Night's Dream",
+        "composer": "mendelssohn",
+        "recording": {
+          "url": "https://open.spotify.com/album/60J66evwnrnfH03HgDTrwN?si=B48jFXBaRfmCa170WCoPPw",
+          "performer": "London Symphony Orchestra and The Monteverdi Choir (John Eliot Gardiner)"
+        },
+        "year": "1842",
+        "notes": [
+          "Captures the magic of Shakespearean fantasy.",
+          "Masterful orchestral color and texture.",
+          "Seamless blend of Classical form with Romantic expression."
+        ],
+        "historicalContext": "Mendelssohn's incidental music to 'A Midsummer Night's Dream' (1842) represents one of the most successful marriages of literature and music in the Romantic era. The famous Overture, composed when Mendelssohn was only 17, already demonstrated his mature mastery of orchestral color and his unique ability to translate Shakespeare's magical world into purely musical terms."
+      },
+      {
+        "id": "rom-5",
+        "title": "Franz Liszt - Piano Sonata in B Minor",
+        "composer": "liszt",
+        "recording": {
+          "url": "https://open.spotify.com/album/6b9dJ4bujWQESSxeETIyUX?si=mmY1AD-_R6qT_eBb2ba7sA",
+          "performer": "Claudio Arrau"
+        },
+        "year": "1853",
+        "notes": [
+          "Single-movement sonata form.",
+          "Virtuosic writing with thematic transformation.",
+          "Pinnacle of Romantic piano literature."
+        ],
+        "historicalContext": "Liszt's Piano Sonata in B Minor (1853) represents the pinnacle of Romantic piano composition, revolutionary in its single-movement structure that compresses traditional four-movement sonata form into one continuous 30-minute architectural masterpiece. This work demonstrates Liszt's innovative technique of 'thematic transformation,' where a small number of motifs undergo constant metamorphosis to create large-scale unity."
+      },
+      {
+        "id": "rom-6",
+        "title": "Richard Wagner - Tristan und Isolde",
+        "composer": "wagner",
+        "recording": {
+          "url": "https://open.spotify.com/album/6BIzBPVDbAw4DdyMOENCFe?si=MtW8E88xT0eSLEYutCtXdw",
+          "performer": "Berlin Philharmonic (Daniel Barenboim)"
+        },
+        "year": "1865-1870",
+        "notes": [
+          "Explores complex chromatic harmonies.",
+          "Pioneering in orchestral color and texture.",
+          "Revolutionary approach to musical drama."
+        ],
+        "historicalContext": "Wagner's 'Tristan und Isolde' (1865) represents one of music history's most revolutionary works, fundamentally altering the course of Western harmony and pointing directly toward 20th-century atonality. The famous 'Tristan chord' in the opening measures creates harmonic ambiguity that remains unresolved for nearly four hours, reflecting the opera's central theme of unfulfilled longing."
+      },
+      {
+        "id": "rom-7",
+        "title": "Giuseppe Verdi - Requiem",
+        "composer": "verdi",
+        "recording": {
+          "url": "https://open.spotify.com/album/6u5CN9S9a9V5VpKT2NGduB?si=wI4kKGu5RaKdkS6JwK0OIQ",
+          "performer": "London Symphony Orchestra (Colin Davis)"
+        },
+        "year": "1874",
+        "notes": [
+          "Dramatic, operatic sacred work.",
+          "Powerful choral and orchestral passages.",
+          "Personal tribute to Alessandro Manzoni."
+        ],
+        "historicalContext": "Verdi's Requiem (1874) stands as a unique synthesis of sacred tradition with operatic drama, composed to honor the memory of Italian novelist Alessandro Manzoni. Critics initially dubbed it an 'opera in church dress,' but this work transcends such simple categorization through its profound engagement with themes of death, judgment, and redemption expressed through Verdi's unparalleled gift for vocal writing."
+      },
+      {
+        "id": "rom-8",
+        "title": "Pyotr Illyich Tchaikovsky - Swan Lake",
+        "composer": "tchaikovsky",
+        "recording": {
+          "url": "https://open.spotify.com/album/7dVA06E7AP7P7VzPyNxQVO?si=mDX6M3B0SAOh2rsZVNq3Pg",
+          "performer": "London Symphony Orchestra (André Previn)"
+        },
+        "year": "1877",
+        "notes": [
+          "Iconic ballet score full of drama and beauty.",
+          "Masterful orchestration supports dance.",
+          "Timeless melodies and rich harmonies."
+        ],
+        "historicalContext": "Tchaikovsky's 'Swan Lake' (1877) transformed ballet from mere entertainment into profound musical drama through its unprecedented integration of symphonic development with choreographic narrative. Though initially unsuccessful, this score established the template for all subsequent classical ballets through its perfect marriage of memorable melody, sophisticated orchestration, and psychological character development."
+      },
+      {
+        "id": "rom-9",
+        "title": "Johannes Brahms - Symphony No. 1",
+        "composer": "brahms",
+        "recording": {
+          "url": "https://open.spotify.com/album/55FSkCsbfWQnhgmDcBtAT9?si=EusZTSGaTjidSk4yNwD7iw",
+          "performer": "Berliner Philharmoniker (Herbert von Karajan)"
+        },
+        "year": "1877",
+        "notes": [
+          "Combines classical structure with deep emotion.",
+          "Often compared to Beethoven's works.",
+          "Culmination of 20 years of symphonic development."
+        ],
+        "historicalContext": "Brahms's First Symphony (1877) represents the culmination of nearly two decades of struggle to create a worthy successor to Beethoven's symphonic legacy. The work's famous finale, with its hymn-like theme that inevitably recalls Beethoven's 'Ode to Joy,' demonstrates how Brahms balanced reverence for Classical tradition with his own distinctive Romantic voice."
+      },
+      {
+        "id": "rom-10",
+        "title": "Antonín Dvořák - Symphony No. 9 \"From the New World\"",
+        "composer": "dvorak",
+        "recording": {
+          "url": "https://open.spotify.com/album/45AlGtE9Il2BmnisrbU1no?si=qHHM_QOcSNKLWUn2sOFKVQ",
+          "performer": "Berlin Philharmonic (Rafael Kubelik)"
+        },
+        "year": "1893",
+        "notes": [
+          "Synthesis of American inspirations with European symphonic form.",
+          "Incorporates elements of Native American and African American music.",
+          "Bridge between Old and New World musical traditions."
+        ],
+        "historicalContext": "Dvořák's 'New World' Symphony (1893) stands as a unique cultural bridge, composed during the Czech composer's residency in America as director of the National Conservatory of Music. This work demonstrates how European symphonic tradition could absorb and transform American musical elements—including African American spirituals and Native American melodies—while maintaining structural coherence."
+      },
+      {
+        "id": "rom-11",
+        "title": "Gustav Mahler - Symphony No. 2 \"Resurrection\"",
+        "composer": "mahler",
+        "recording": {
+          "url": "https://open.spotify.com/album/2SVkyvRyCXIZ8WsGe8j0xc?si=yTZLCN-fQbyW-toiaDlWYg",
+          "performer": "New York Philharmonic (Leonard Bernstein)"
+        },
+        "year": "1894",
+        "notes": [
+          "Ambitious work merging orchestral and choral forces.",
+          "Explores themes of death and transcendence.",
+          "Marks the peak of Romantic symphonic expression."
+        ],
+        "historicalContext": "Mahler's 'Resurrection' Symphony (1894) represents the ultimate expression of late Romantic symphonic ambition, expanding the genre to cosmic proportions through its incorporation of vocal soloists, chorus, and an orchestra of unprecedented size. This 90-minute work traces a philosophical journey from death through resurrection, embodying Mahler's belief that the symphony should 'contain the world.'"
+      },
+      {
+        "id": "rom-12",
+        "title": "Richard Strauss - Also Sprach Zarathustra",
+        "composer": "strauss",
+        "recording": {
+          "url": "https://open.spotify.com/album/1kHbPoLRmiAHIDgYRraYU9?si=cTZL4y4QSKW_rSttzV7CMA",
+          "performer": "Berlin Philharmonic (Herbert von Karajan)"
+        },
+        "year": "1896",
+        "notes": [
+          "Landmark tone poem with iconic opening fanfare.",
+          "Based on Nietzsche's philosophical work.",
+          "Showcases late Romantic orchestral virtuosity."
+        ],
+        "historicalContext": "Strauss's 'Also sprach Zarathustra' (1896) represents the pinnacle of late Romantic tone poem composition, translating Nietzsche's philosophical concepts into a 33-minute orchestral journey of unprecedented complexity and color. The work's famous opening fanfare has become one of classical music's most recognizable moments, though the complete work explores themes of human evolution and philosophical transcendence through Strauss's revolutionary approach to orchestration."
+      }
+    ]
+  },
+  "modern": {
+    "id": "modern",
+    "title": "20th Century & Beyond",
+    "works": [
+      {
+        "id": "mod-1",
+        "title": "Claude Debussy - La Mer",
+        "composer": "debussy",
+        "recording": {
+          "url": "https://open.spotify.com/album/0Zby80imfAHwdn1JQaUblw?si=7di8FVxrSam5LfDyCL8qig",
+          "performer": "Berlin Philharmonic (Herbert von Karajan)"
+        },
+        "year": "1905",
+        "notes": [
+          "Symphonic work in three movements.",
+          "Evocative tone painting of the sea.",
+          "Impressionistic orchestral color."
+        ],
+        "historicalContext": "Debussy's 'La Mer' (1905) represents the culmination of musical Impressionism, using innovative harmonic language and orchestral color to create atmospheric soundscapes that revolutionized 20th-century composition. This work abandons traditional developmental procedures in favor of textural evolution, creating a musical equivalent to the Impressionist painters' techniques."
+      },
+      {
+        "id": "mod-2",
+        "title": "Arnold Schoenberg - Pierrot Lunaire",
+        "composer": "schoenberg",
+        "recording": {
+          "url": "https://open.spotify.com/album/6rCeCmAF0APTboMpZqKsCj?si=15jkA5FSRhCWvEGGRaMM5A",
+          "performer": "Ensemble Intercontemporain (Pierre Boulez with Christine Schäfer)"
+        },
+        "year": "1912",
+        "notes": [
+          "Revolutionary vocal technique of Sprechstimme (speech-song).",
+          "Atonal expressionist masterpiece in 21 miniature movements.",
+          "Pioneering chamber ensemble of five musicians."
+        ],
+        "historicalContext": "Schoenberg's 'Pierrot Lunaire' (1912) stands as one of the most radical works in music history, abandoning traditional tonal relationships in favor of free atonality while introducing the revolutionary vocal technique of Sprechstimme. This cycle of 21 songs creates a hallucinatory world that perfectly captures early 20th-century anxiety and psychological fragmentation."
+      },
+      {
+        "id": "mod-3",
+        "title": "Igor Stravinsky - The Rite of Spring",
+        "composer": "stravinsky",
+        "recording": {
+          "url": "https://open.spotify.com/album/1eahftQN5ottBeGBh80A2j?si=6yk8XDBeT4eaDM8EeBb9Ow",
+          "performer": "Chicago Symphony Orchestra (Georg Solti)"
+        },
+        "year": "1913",
+        "notes": [
+          "Caused riots at its 1913 Paris premiere.",
+          "Revolutionary rhythmic complexity and dissonance.",
+          "Depicts primitive ritual sacrifice through modernist musical language."
+        ],
+        "historicalContext": "Stravinsky's 'The Rite of Spring' (1913) represents one of music history's most revolutionary moments, causing riots at its Parisian premiere and fundamentally altering 20th-century compositional thinking. The work's unprecedented rhythmic complexity, harmonic dissonance, and primitivist aesthetic broke decisively with Romantic tradition, establishing new possibilities for musical expression."
+      },
+      {
+        "id": "mod-4",
+        "title": "Béla Bartók - String Quartet No. 4",
+        "composer": "bartok",
+        "recording": {
+          "url": "https://open.spotify.com/album/2t60TvGuahxlDsPHLdahjt?si=aEL1PvGaRBiGOpUBkjLLzw",
+          "performer": "Takács Quartet"
+        },
+        "year": "1928",
+        "notes": [
+          "Perfect symmetrical five-movement structure.",
+          "Innovative string techniques including pizzicato effects.",
+          "Synthesis of folk elements with modernist harmony."
+        ],
+        "historicalContext": "Bartók's Fourth String Quartet (1928) represents a perfect synthesis of Eastern European folk tradition with modernist technique, organized in a symmetrical five-movement arch structure that demonstrates the composer's mathematical approach to form. This work showcases Bartók's revolutionary string techniques and his unique harmonic language based on folk scales and interval cycles."
+      },
+      {
+        "id": "mod-5",
+        "title": "Dmitri Shostakovich - Symphony No. 5",
+        "composer": "shostakovich",
+        "recording": {
+          "url": "https://open.spotify.com/album/00d6wTUJHGsrxPmbETXGWm?si=LVvlCEdNTdGueccnggzkIQ",
+          "performer": "New York Philharmonic (Leonard Bernstein)"
+        },
+        "year": "1937",
+        "notes": [
+          "Powerful expression under political pressure.",
+          "Balances public conformity with private resistance.",
+          "Masterpiece of 20th-century symphonic literature."
+        ],
+        "historicalContext": "Shostakovich's Fifth Symphony (1937) emerged from a period of intense political pressure under Stalin's regime, following criticism of his opera 'Lady Macbeth of Mtsensk.' Subtitled 'A Soviet artist's creative response to just criticism,' this work demonstrates how great art can survive and even thrive under oppressive conditions through coded resistance and double meanings."
+      },
+      {
+        "id": "mod-6",
+        "title": "Aaron Copland - Appalachian Spring",
+        "composer": "copland",
+        "recording": {
+          "url": "https://open.spotify.com/album/7l52vJiVq7ngdSquMTUM42?si=Y8B5PBuRRGmVhniMAAFrLw",
+          "performer": "Orpheus Chamber Orchestra"
+        },
+        "year": "1944",
+        "notes": [
+          "Evokes the American landscape with rustic themes.",
+          "Originally composed for Martha Graham's ballet.",
+          "Incorporates the Shaker hymn 'Simple Gifts.'"
+        ],
+        "historicalContext": "Copland's 'Appalachian Spring' (1944) represents the quintessential American classical work, originally composed for Martha Graham's ballet about Pennsylvania pioneers. This score distills American musical identity through its incorporation of folk elements, particularly the Shaker hymn 'Simple Gifts,' within a sophisticated modernist framework that avoids European Romantic excess."
+      },
+      {
+        "id": "mod-7", 
+        "title": "Olivier Messiaen - Turangalîla-Symphonie",
+        "composer": "messiaen",
+        "recording": {
+          "url": "https://open.spotify.com/album/3qUqILNEQNWMhBikgiGt4u?si=nRQDP-b_Q36wRY2VveBduw",
+          "performer": "Boston Symphony Orchestra (Andris Nelsons)"
+        },
+        "year": "1948",
+        "notes": [
+          "Rich in rhythmic and harmonic complexity.",
+          "Incorporates birdsong and Indian classical music.",
+          "Features the electronic ondes Martenot."
+        ],
+        "historicalContext": "Messiaen's 'Turangalîla-Symphonie' (1948) stands as one of the most coloristic and spiritually ambitious works of the 20th century, synthesizing influences from Hindu philosophy, Indian classical music, birdsong, and Catholic mysticism. The work's title combines Sanskrit concepts of love and time, reflecting Messiaen's belief that music could express theological and metaphysical truths."
+      },
+      {
+        "id": "mod-8",
+        "title": "Karlheinz Stockhausen - Gesang der Jünglinge",
+        "composer": "stockhausen", 
+        "recording": {
+          "url": "https://open.spotify.com/album/1ydECPfpGqbY4mzQMJG3nY?si=nNu-JEvcQ2aV9gcHHltUjA",
+          "performer": "Karlheinz Stockhausen (composer's authorized recording)"
+        },
+        "year": "1956",
+        "notes": [
+          "Pioneering electronic composition with revolutionary sound manipulation.",
+          "Combines boy soprano voice with electronic sounds.",
+          "Explores spatial distribution of sound in performance."
+        ],
+        "historicalContext": "Stockhausen's 'Gesang der Jünglinge' (1956) represents a breakthrough in electronic music composition, seamlessly blending a boy soprano's voice with electronically generated sounds to create an entirely new sonic universe. This work demonstrated how electronic technology could extend musical expression beyond traditional instrumental limitations, influencing generations of composers and sound artists."
+      },
+      {
+        "id": "mod-9",
+        "title": "Benjamin Britten - War Requiem",
+        "composer": "britten",
+        "recording": {
+          "url": "https://open.spotify.com/album/2yxH657dxLr8pwumiBwBCS?si=2D_M1WdCTyeJ2_ih0Ha5OQ",
+          "performer": "London Philharmonic Orchestra and Chorus (Gianandrea Noseda)"
+        },
+        "year": "1962",
+        "notes": [
+          "A moving meditation on the horrors of war.",
+          "Juxtaposes Latin Mass text with Wilfred Owen's war poetry.",
+          "Composed for the consecration of Coventry Cathedral."
+        ],
+        "historicalContext": "Britten's 'War Requiem' (1962) stands as one of the most powerful anti-war statements in classical music, composed for the consecration of the new Coventry Cathedral built alongside the ruins of its predecessor destroyed in World War II bombing. The work's innovative structure juxtaposes the traditional Latin Requiem Mass with the bitter war poetry of Wilfred Owen, creating a profound meditation on sacrifice, loss, and reconciliation."
+      },
+      {
+        "id": "mod-10",
+        "title": "Philip Glass - Glassworks",
+        "composer": "glass",
+        "recording": {
+          "url": "https://open.spotify.com/album/1My9AZY0XBwVwwy1DDVSQS?si=UiY-wNUWQVeX0Q4yhqfZKg",
+          "performer": "Philip Glass Ensemble"
+        },
+        "year": "1982",
+        "notes": [
+          "Emblematic of minimalist music.",
+          "Repetitive structures create hypnotic effect.",
+          "Accessible entry point to contemporary classical music."
+        ],
+        "historicalContext": "Glass's 'Glassworks' (1982) represents the accessible face of musical minimalism, distilling the composer's repetitive techniques into six movements that demonstrate how minimal means can achieve maximum expressive impact. This work helped bring contemporary classical music to broader audiences through its mesmerizing patterns and tonal accessibility."
+      },
+      {
+        "id": "mod-11",
+        "title": "John Adams - Short Ride in a Fast Machine",
+        "composer": "adams",
+        "recording": {
+          "url": "https://open.spotify.com/album/2Vot2ADfKISmhek7Raa7Tf?si=fOEWnsVXRLqxyQfjPNlPaQ",
+          "performer": "San Francisco Symphony (Michael Tilson Thomas)"
+        },
+        "year": "1986",
+        "notes": [
+          "Dynamic and energetic contemporary composition.",
+          "Showcases post-minimalist orchestral writing.",
+          "Brief but intense musical journey."
+        ],
+        "historicalContext": "Adams's 'Short Ride in a Fast Machine' (1986) exemplifies post-minimalism through its kinetic energy and sophisticated orchestration that moves beyond pure repetition to create narrative and emotional development. This four-minute orchestral showpiece demonstrates how minimalist techniques could be adapted for traditional symphony orchestras while maintaining contemporary relevance and excitement."
+      }
+    ]
+  }
+}

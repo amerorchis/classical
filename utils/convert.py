@@ -64,14 +64,14 @@ def process_html(html_content):
 # Example usage:
 if __name__ == "__main__":
     # Load your HTML file
-    with open("classical.html", "r", encoding="utf-8") as file:
+    with open("../classical.html", "r", encoding="utf-8") as file:
         html_data = file.read()
 
     # Process HTML content
     fixed_html = process_html(html_data)
 
     # Save the output to a new file
-    with open("classical_fixed.html", "w", encoding="utf-8") as file:
+    with open("../classical_fixed.html", "w", encoding="utf-8") as file:
         file.write(fixed_html)
 
     print("Smart quotes and apostrophes replaced successfully.")
