@@ -242,7 +242,8 @@ export const Utils = {
     if (element) {
       element.scrollIntoView({ behavior, block });
     }
-  }
+  },
+
 };
 
 /**

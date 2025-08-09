@@ -8,7 +8,7 @@ let syllabusData = null;
  */
 async function loadSyllabusData() {
   try {
-    const response = await fetch('data/syllabus-data.json');
+    const response = await fetch('src/data/syllabus-data.json');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

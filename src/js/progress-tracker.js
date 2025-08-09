@@ -104,6 +104,11 @@ class ProgressTracker {
     // Save state
     Storage.saveItemState(itemId, checkbox.checked, notes);
     
+    // Trigger confetti when checkbox is checked
+    if (checkbox.checked && typeof window.triggerConfetti === 'function') {
+      window.triggerConfetti(checkbox);
+    }
+    
     // Update progress display
     this.updateProgress();
     
