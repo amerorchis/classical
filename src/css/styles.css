@@ -2060,6 +2060,7 @@ nav {
   background-color: var(--color-gray-900);
 }
 #dynamic-menu-content a[class~="bg-purple-100"],
+#dynamic-menu-content a[class~="bg-green-100"],
 #dynamic-menu-content a[class~="hover:bg-indigo-100"]:hover,
 #dynamic-menu-content button[class~="hover:bg-gray-100"]:hover span {
   color:#ffffff;
