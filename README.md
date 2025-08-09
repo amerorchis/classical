@@ -77,28 +77,31 @@ service cloud.firestore {
 
 ```
 classical/
-├── index.html          # Main HTML file (rename to index.html for production)
-├── css/
-│   └── styles.css         # Custom styles and dark mode support
-├── js/
-│   ├── app.js            # Main application initialization
-│   ├── theme-manager.js   # Dark/light mode handling
-│   ├── navigation.js      # Menu and scroll navigation
-│   ├── progress-tracker.js # Progress tracking and persistence
-│   ├── syllabus-builder.js # Dynamic content generation
-│   ├── composer-bios.js   # Composer biography popups
-│   └── utils.js          # Utility functions and DOM helpers
-├── data/
-│   ├── syllabus-data.json # Musical works and metadata
-│   └── composer-data.json # Composer biographies and images
-└── images/               # Composer portraits and other assets
+├── index.html            # Main HTML file
+├── src/
+│   ├── css/
+│   │   └── styles.css    # Custom styles and dark mode support
+│   ├── js/
+│   │   ├── app.js        # Main application initialization
+│   │   ├── theme-manager.js # Dark/light mode handling
+│   │   ├── navigation.js # Menu and scroll navigation
+│   │   ├── progress-tracker.js # Progress tracking and persistence
+│   │   ├── syllabus-builder.js # Dynamic content generation
+│   │   ├── composer-bios.js # Composer biography popups
+│   │   └── utils.js      # Utility functions and DOM helpers
+│   ├── data/
+│   │   ├── syllabus-data.json # Musical works and metadata
+│   │   └── composer-data.json # Composer biographies and images
+│   └── assets/
+│       └── images/       # Composer portraits and other assets
+└── docs/                 # Documentation and development notes
 ```
 
 ## Data Structure
 
 ### Adding New Works
 
-Edit `data/syllabus-data.json`:
+Edit `src/data/syllabus-data.json`:
 
 ```json
 {
@@ -121,14 +124,14 @@ Edit `data/syllabus-data.json`:
 
 ### Adding Composer Biographies
 
-Edit `data/composer-data.json`:
+Edit `src/data/composer-data.json`:
 
 ```json
 {
   "composer-id": {
     "name": "Composer Name",
     "years": "1600-1750",
-    "image": "images/composer-portrait.jpg",
+    "image": "src/assets/images/composer-portrait.jpg",
     "bio": "Detailed biography text..."
   }
 }

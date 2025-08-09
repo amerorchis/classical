@@ -5,17 +5,11 @@
 <head>
   <meta charset="utf-8" />
   <title>Classical Music Syllabus</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Configure Tailwind for dark mode
-    tailwind.config = {
-      darkMode: 'class'
-    }
-  </script>
-  <link href="/music_favicon.ico" rel="icon" type="image/x-icon" />
+
+  <link href="/src/assets/images/music_favicon.ico" rel="icon" type="image/x-icon" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <link rel="stylesheet" href="css/styles.css">
-  
+  <link rel="stylesheet" href="src/css/styles.css">
+
   <!-- Apply theme immediately to prevent flash -->
   <script>
     (function() {
@@ -220,7 +214,7 @@
           <a class="timeline-link text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
             href="#romantic">Romantic</a>
           <a class="timeline-link text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
-            href="#modern">20th Century &amp; Beyond</a>
+            href="#twenty">20th Century &amp; Beyond</a>
         </div>
         <!-- Right: Scroll-to-top arrow -->
         <div class="w-10 flex justify-end">
@@ -263,10 +257,10 @@
   <!-- Import all modules -->
   <script type="module">
     // Import all necessary modules
-    import './js/utils.js';
-    import './js/app.js';
-    import { initializeSyllabus } from './js/syllabus-builder.js';
-    import './js/syllabus-integration.js';
+    import './src/js/utils.js';
+    import './src/js/app.js';
+    import { initializeSyllabus } from './src/js/syllabus-builder.js';
+    import './src/js/syllabus-integration.js';
     
     // Initialize dynamic syllabus when DOM loads
     document.addEventListener('DOMContentLoaded', async function () {

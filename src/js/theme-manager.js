@@ -100,25 +100,7 @@ class ThemeManager {
     
     // Notify observers
     this.notifyObservers('themeChanged', { theme, isDark });
-    
-    // Update Tailwind config if needed
-    this.updateTailwindConfig();
-  }
-
-  /**
-   * Update Tailwind configuration
-   */
-  updateTailwindConfig() {
-    // Ensure Tailwind is configured for dark mode
-    if (typeof tailwind !== 'undefined') {
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {}
-        }
-      };
     }
-  }
 
   /**
    * Get current theme

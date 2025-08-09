@@ -31,9 +31,6 @@ class ClassicalMusicApp {
     Utils.log('Initializing Classical Music Syllabus Application');
 
     try {
-      // Configure Tailwind CSS
-      this.configureTailwind();
-
       // Initialize core modules in dependency order
       await this.initializeModules();
 
@@ -52,20 +49,7 @@ class ClassicalMusicApp {
     }
   }
 
-  /**
-   * Configure Tailwind CSS
-   */
-  configureTailwind() {
-    if (typeof tailwind !== 'undefined') {
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {}
-        }
-      };
-      Utils.log('Tailwind CSS configured');
-    }
-  }
+
 
   /**
    * Initialize all core modules
