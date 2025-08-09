@@ -51,6 +51,26 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
   
+  <!-- Confetti for celebration when works are completed -->
+  <script type="module">
+    import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+    window.triggerConfetti = function(element) {
+      // Get the position of the element for targeted confetti
+      const rect = element.getBoundingClientRect();
+      const x = (rect.left + rect.right) / 2 / window.innerWidth;
+      const y = (rect.top + rect.bottom) / 2 / window.innerHeight;
+      
+      // Launch confetti from the element position
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { x, y },
+        velocity: 0.7,
+        gravity: 0.8,
+      });
+    };
+  </script>
+  
   <!-- Firebase Configuration -->
   <script>
     const firebaseConfig = {
