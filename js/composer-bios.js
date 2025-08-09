@@ -315,63 +315,6 @@ function setupBioPopupHandlers() {
 }
 
 /**
- * Adds the required styles for the bio popup
- */
-function addBioPopupStyles() {
-  log('Adding bio popup styles');
-
-  // Check if styles already exist
-  if (document.getElementById('composer-bio-styles')) {
-    log('Bio popup styles already exist, skipping');
-    return;
-  }
-
-  const styleEl = document.createElement('style');
-  styleEl.id = 'composer-bio-styles';
-  styleEl.textContent = `
-    .bio-popup {
-      position: absolute;
-      width: 750px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-    
-    .bio-popup::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: 20px;
-      border-width: 0 10px 10px 10px;
-      border-style: solid;
-      border-color: transparent transparent #ffffff transparent;
-      filter: drop-shadow(0 -1px 1px rgba(0,0,0,0.1));
-      z-index: 10;
-    }
-    
-    .dark .bio-popup::before {
-      border-color: transparent transparent #1e293b transparent;
-    }
-
-    /* Explicitly define these to override any conflicting styles */
-    .hidden {
-      display: none !important;
-    }
-    
-    #composer-bio-popup:not(.hidden) {
-      display: block !important;
-    }
-    
-    /* Add a placeholder for image to prevent layout shift */
-    #bio-popup-image {
-      min-height: 24px;
-      min-width: 24px;
-    }
-  `;
-
-  document.head.appendChild(styleEl);
-  log('Added bio popup styles to document head');
-}
-
-/**
  * Initialize the composer bio system
  */
 async function initComposerBios() {
@@ -387,7 +330,6 @@ async function initComposerBios() {
     createBioPopupContainer();
     addBioButtonsToComposers();
     setupBioPopupHandlers();
-    addBioPopupStyles();
     preloadComposerImages();
     
     log('Initialization complete');

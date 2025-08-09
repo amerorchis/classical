@@ -1,0 +1,24 @@
+# Simple workflow to deploy static content to an FTP server
+name: FTP Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ftp-deploy-job:
+    name: FTP Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: FTP Deploy Action
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: htdocs/classical

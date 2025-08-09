@@ -53,8 +53,6 @@ class ProgressTracker {
       return;
     }
 
-    const state = Storage.getSyllabusState();
-
     syllabusItems.forEach(item => {
       const id = item.getAttribute('data-id');
       if (!id) {
