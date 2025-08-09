@@ -362,7 +362,7 @@ class NavigationManager {
               behavior: 'smooth'
             });
 
-            // Optional: Highlight the item briefly
+            // Highlight the item briefly
             targetItem.classList.add('ring-4', 'ring-indigo-500', 'ring-opacity-75');
             setTimeout(() => {
               targetItem.classList.remove('ring-4', 'ring-indigo-500', 'ring-opacity-75');
