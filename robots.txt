@@ -10,5 +10,5 @@ Allow: /src/assets/
 # Point to sitemap
 Sitemap: https://amerorchis.com/classical/sitemap.xml
 
-# Crawl delay (optional, helps with server load)
+# Crawl delay
 Crawl-delay: 1

@@ -8,7 +8,7 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Era sections (these are fragment anchors but help with discoverability) -->
+  <!-- Era sections -->
   <url>
     <loc>https://amerorchis.com/classical/#medieval</loc>
     <lastmod>2024-08-10</lastmod>
