@@ -2068,6 +2068,34 @@ nav {
 #dynamic-menu-content button:hover svg {
   stroke: #ffffff;
 }
+/* Bio Light */
+#composer-bio-popup {
+  background-color: #ffffff;
+  border-color: var(--color-gray-200);
+}
+div #bio-popup-content p {
+  color: var(--color-gray-700);
+}
+h3#bio-popup-title {
+  color: var(--color-indigo-800);
+}
+#composer-bio-popup::before {
+  border-color: transparent transparent var(--color-gray-200) transparent;
+}
+/* Bio Dark */
+.dark #composer-bio-popup {
+  background-color: #1e293b;
+  border-color: var(--color-gray-700);
+}
+.dark div#bio-popup-content p {
+  color: #ffffff;
+}
+.dark h3#bio-popup-title {
+  color: var(--color-indigo-300);
+}
+.dark #composer-bio-popup::before {
+  border-color: transparent transparent var(--color-gray-700) transparent;
+}
 
 .timeline-link.active {
   color: #4f46e5;
