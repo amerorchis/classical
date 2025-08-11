@@ -4,11 +4,37 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Classical Music Syllabus</title>
+  <title>Western Classical Music in 50 Works | Complete Study Guide</title>
+  <meta name="description" content="Explore 1,000 years of Western classical music through 50 essential works from Medieval to Modern. Interactive guide with composer biographies, historical context, and Spotify integration for music lovers and students.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="classical music, music history, composer biographies, western classical music, music education, essential classical works, music syllabus">
+  <meta name="author" content="Classical Music Study Guide">
+  <link rel="canonical" href="https://amerorchis.com/classical">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Western Classical Music in 50 Works | Complete Study Guide">
+  <meta property="og:description" content="Explore 1,000 years of Western classical music through 50 essential works from Medieval to Modern. Interactive guide with composer biographies, historical context, and Spotify integration.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amerorchis.com/classical">
+  <meta property="og:image" content="https://amerorchis.com/classical/src/assets/images/Bach.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Classical Music Study Guide">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Western Classical Music in 50 Works | Complete Study Guide">
+  <meta name="twitter:description" content="Explore 1,000 years of Western classical music through 50 essential works from Medieval to Modern. Interactive guide with composer biographies and historical context.">
+  <meta name="twitter:image" content="https://amerorchis.com/classical/src/assets/images/Bach.jpg">
 
   <link href="/src/assets/images/music_favicon.ico" rel="icon" type="image/x-icon" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <link rel="stylesheet" href="src/css/styles.css">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="src/data/syllabus-data.json" as="fetch" type="application/json" crossorigin="anonymous">
+  <link rel="preload" href="src/data/composer-data.json" as="fetch" type="application/json" crossorigin="anonymous">
 
   <!-- Apply theme immediately to prevent flash -->
   <script>
@@ -262,12 +288,18 @@
     import { initializeSyllabus } from './src/js/syllabus-builder.js';
     import './src/js/syllabus-integration.js';
     
+    // Lazy load SEO structured data (non-critical for initial render)
+    const loadSEOData = () => import('./src/js/seo-structured-data.js');
+    
     // Initialize dynamic syllabus when DOM loads
     document.addEventListener('DOMContentLoaded', async function () {
       try {
         console.log('Loading dynamic syllabus...');
         await initializeSyllabus();
         console.log('Dynamic syllabus loaded successfully');
+        
+        // Load SEO data after main content is ready (non-blocking)
+        loadSEOData().catch(error => console.warn('Failed to load SEO data:', error));
       } catch (error) {
         console.error('Failed to load dynamic syllabus:', error);
       }

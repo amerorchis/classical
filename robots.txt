@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Allow CSS and JS files for better crawling
+Allow: /src/css/
+Allow: /src/js/
+Allow: /src/data/
+Allow: /src/assets/
+
+# Point to sitemap
+Sitemap: https://amerorchis.com/classical/sitemap.xml
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 1

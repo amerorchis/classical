@@ -221,13 +221,13 @@ function setupBioPopupHandlers() {
           if (preloadedImages[composerId] && preloadedImages[composerId].complete) {
             log(`Using preloaded image for ${composerId}`);
             bioPopupImage.src = composer.image;
-            bioPopupImage.alt = composer.name;
+            bioPopupImage.alt = `Portrait of ${composer.name}, classical music composer (${composer.years})`;
             bioPopupImage.classList.remove('hidden');
           } else {
             // If not preloaded, set the source and add an onload event
             log(`Setting image source for ${composerId}`);
             bioPopupImage.src = composer.image;
-            bioPopupImage.alt = composer.name;
+            bioPopupImage.alt = `Portrait of ${composer.name}, classical music composer (${composer.years})`;
             
             // Wait for the image to load before displaying it
             bioPopupImage.onload = function() {

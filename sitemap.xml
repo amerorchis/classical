@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main page -->
+  <url>
+    <loc>https://amerorchis.com/classical/</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Era sections (these are fragment anchors but help with discoverability) -->
+  <url>
+    <loc>https://amerorchis.com/classical/#medieval</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://amerorchis.com/classical/#renaissance</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://amerorchis.com/classical/#baroque</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://amerorchis.com/classical/#classical</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://amerorchis.com/classical/#romantic</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://amerorchis.com/classical/#modern</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
