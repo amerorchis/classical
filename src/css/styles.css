@@ -1304,6 +1304,10 @@ h3#bio-popup-title {
 #side-menu button:hover svg {
   stroke: var(--color-white);
 }
+button#close-menu:hover svg {
+    stroke: var(--color-gray-900);
+    color: var(--color-gray-900);
+}
 /* --- Icon Hover Color in Light Mode --- */
 button:hover #moon-icon {
   color: var(--color-text-light);
