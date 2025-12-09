@@ -134,7 +134,7 @@ export const Progress = {
 
     // const total = syllabusItems.length;
     const total = 50 // Fixed at 50
-    const completed = Array.from(syllabusItems).filter(item => {
+    let completed = Array.from(syllabusItems).filter(item => {
       const checkbox = item.querySelector('.item-checkbox');
       return checkbox && checkbox.checked;
     }).length;
