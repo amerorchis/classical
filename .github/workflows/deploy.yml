@@ -7,8 +7,23 @@ on:
       - main
 
 jobs:
+  validate-json:
+    name: Validate JSON
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check JSON syntax
+        run: |
+          # Find all .json files and run 'jq empty' on them.
+          # If 'jq' encounters a syntax error, it returns a non-zero exit code,
+          # which causes this step to fail.
+          find . -type f -name "*.json" -exec jq empty {} +
+
   ftp-deploy-job:
     name: FTP Deploy
+    needs: validate-json
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
