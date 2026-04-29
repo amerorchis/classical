@@ -413,6 +413,28 @@ class NavigationManager {
       }
     });
 
+    // Add a top-level link to the References / bibliography section
+    if (document.getElementById('references-section')) {
+      const refsDiv = document.createElement('div');
+      refsDiv.className = 'menu-section menu-section--standalone';
+      const refsButton = document.createElement('a');
+      refsButton.href = '#references-section';
+      refsButton.className = 'w-full flex justify-between items-center py-2 px-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none';
+      refsButton.innerHTML = `<span class="font-medium text-indigo-600 dark:text-indigo-400">References</span>`;
+      refsButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.closeMenu();
+        const target = document.getElementById('references-section');
+        if (target) {
+          const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+      refsDiv.appendChild(refsButton);
+      menuContent.appendChild(refsDiv);
+    }
+
     // Add tip about progress bubble inside the menu
     const tipDiv = document.createElement('div');
     tipDiv.className = 'text-xs text-gray-400 dark:text-gray-500 mt-16 px-2';
