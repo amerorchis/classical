@@ -1,10 +1,10 @@
 // app.js
 // Main application initialization and Firebase integration
 
-import { DOM, Utils } from './utils.js';
-import { initThemeManager } from './theme-manager.js';
-import { initProgressTracker, resetProgress } from './progress-tracker.js';
-import { initNavigation } from './navigation.js';
+import { DOM, Utils } from './utils.js?v=candlelit-11';
+import { initThemeManager } from './theme-manager.js?v=candlelit-11';
+import { initProgressTracker, resetProgress } from './progress-tracker.js?v=candlelit-11';
+import { initNavigation } from './navigation.js?v=candlelit-11';
 
 /**
  * Main Application Class

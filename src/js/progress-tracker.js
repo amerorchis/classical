@@ -103,10 +103,14 @@ class ProgressTracker {
 
     // Save state
     Storage.saveItemState(itemId, checkbox.checked, notes);
-    
-    // Trigger confetti when checkbox is checked
+
+    // Trigger confetti when checkbox is checked. The hidden checkbox has no
+    // layout box, so anchor the burst on the visible "Mark as listened" button
+    // (or the work entry itself as a fallback) for a centered, visible effect.
     if (checkbox.checked && typeof window.triggerConfetti === 'function') {
-      window.triggerConfetti(checkbox);
+      const heardBtn = item ? item.querySelector('.work__heard') : null;
+      const anchor = heardBtn || item || checkbox;
+      window.triggerConfetti(anchor);
     }
     
     // Update progress display

@@ -53,10 +53,13 @@ class ThemeManager {
    * Set up dark mode toggle button
    */
   setupDarkModeToggle() {
-    const darkModeToggle = DOM.getElementById('dark-mode-toggle');
-    
+    // Use raw document.getElementById here so the absence of the toggle
+    // (intentional, since dark mode is currently disabled) doesn't log a
+    // misleading warning via DOM.getElementById.
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
     if (!darkModeToggle) {
-      Utils.log('Dark mode toggle button not found');
+      Utils.log('Dark mode toggle button not present (dark mode disabled)');
       return;
     }
 

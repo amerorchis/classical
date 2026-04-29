@@ -1,10 +1,10 @@
 // syllabus-integration.js
 // Integration layer to reinitialize functionality after dynamic syllabus loading
 
-import { DOM, Utils } from './utils.js';
-import { reinitProgressTracker } from './progress-tracker.js';
-import { initComposerBios } from './composer-bios.js';
-import navigationManager from './navigation.js';
+import { DOM, Utils } from './utils.js?v=candlelit-11';
+import { reinitProgressTracker } from './progress-tracker.js?v=candlelit-11';
+import { initComposerBios } from './composer-bios.js?v=candlelit-11';
+import navigationManager from './navigation.js?v=candlelit-11';
 
 /**
  * Integration manager for post-dynamic-load functionality

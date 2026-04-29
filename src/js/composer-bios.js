@@ -79,6 +79,14 @@ function createBioPopupContainer() {
     return;
   }
 
+  // Backdrop (fixed overlay) — sits behind the popup and blurs/dims the page.
+  if (!document.getElementById('composer-bio-backdrop')) {
+    const backdrop = document.createElement('div');
+    backdrop.id = 'composer-bio-backdrop';
+    backdrop.className = 'hidden';
+    document.body.appendChild(backdrop);
+  }
+
   // Create container
   const popupContainer = document.createElement('div');
   popupContainer.id = 'composer-bio-popup';
@@ -93,7 +101,7 @@ function createBioPopupContainer() {
           </svg>
         </button>
       </div>
-      
+
       <img id="bio-popup-image" src="" alt="" class="float-left mr-4 mb-2 rounded-lg w-24 h-24 object-cover hidden" />
       <div id="bio-popup-content" class="text-gray-700 dark:text-gray-300 text-m"></div>
     </div>
@@ -133,25 +141,29 @@ function addBioButtonsToComposers() {
       return;
     }
 
-    // Create bio button container
-    const bioButtonContainer = document.createElement('div');
-    bioButtonContainer.className = 'ml-4 relative';
-    bioButtonContainer.innerHTML = `
-      <button class="composer-bio-btn text-sm text-indigo-600 hover:text-indigo-800 flex items-center focus:outline-none px-3 py-1 border border-indigo-200 rounded-md shadow-sm hover:shadow-md transition-all duration-200 dark:bg-white dark:bg-opacity-40" data-composer="${composerId}">
-        <svg class="w-4 h-4 mr-2" fill="currentColor" stroke="currentColor" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-          <path d="M111.001 82.058c-4.921-1.406-13.503-1.382-19.757.436-12.727 3.709-21.114 13.309-18.739 21.454 2.376 8.145 14.618 11.757 27.345 8.048 11.709-3.394 19.757-11.854 19.03-19.563V0L47.973 16.387v80.216c-4.921-1.406-13.503-1.382-19.757.436-12.727 3.709-21.114 13.309-18.739 21.454 2.376 8.145 14.618 11.757 27.345 8.048 11.709-3.394 19.757-11.854 19.03-19.563V34.423l55.15-13.284v60.919z" />
-        </svg>
-        <span>Composer Bio</span>
-      </button>
+    // Create bio button (inline, attached after the composer name line in candlelit layout)
+    const bioButton = document.createElement('button');
+    bioButton.className = 'composer-bio-btn';
+    bioButton.dataset.composer = composerId;
+    bioButton.innerHTML = `
+      <svg class="w-4 h-4 mr-2" fill="currentColor" stroke="currentColor" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+        <path d="M111.001 82.058c-4.921-1.406-13.503-1.382-19.757.436-12.727 3.709-21.114 13.309-18.739 21.454 2.376 8.145 14.618 11.757 27.345 8.048 11.709-3.394 19.757-11.854 19.03-19.563V0L47.973 16.387v80.216c-4.921-1.406-13.503-1.382-19.757.436-12.727 3.709-21.114 13.309-18.739 21.454 2.376 8.145 14.618 11.757 27.345 8.048 11.709-3.394 19.757-11.854 19.03-19.563V34.423l55.15-13.284v60.919z" />
+      </svg>
+      <span>Composer Bio</span>
     `;
 
-    // Find the parent flex container and append the button
-    const parentFlex = label.parentElement;
-    if (parentFlex && parentFlex.classList.contains('flex')) {
-      parentFlex.appendChild(bioButtonContainer);
-      log(`Added bio button for composer ${composerId}`, bioButtonContainer);
+    // Place the button inline at the end of the composer name line in the candlelit layout.
+    const work = label.closest('.work');
+    const composerLine = work ? work.querySelector('.work__composer') : null;
+    if (composerLine) {
+      // Avoid duplicates on re-init
+      if (!composerLine.querySelector('.composer-bio-btn')) {
+        composerLine.appendChild(document.createTextNode(' '));
+        composerLine.appendChild(bioButton);
+      }
+      log(`Added bio button for composer ${composerId}`);
     } else {
-      log(`WARNING: Parent element for ${composerId} is not a flex container or doesn't exist:`, parentFlex);
+      log(`WARNING: Could not find .work__composer line for ${composerId}`);
     }
   });
 }
@@ -181,16 +193,22 @@ function setupBioPopupHandlers() {
     closeButton: closeBioButton
   });
 
+  const backdrop = document.getElementById('composer-bio-backdrop');
+  if (backdrop) {
+    backdrop.addEventListener('click', () => hidePopup());
+  }
+
   // Hide popup function
   function hidePopup() {
     log('Hiding popup');
     bioPopup.classList.add('hidden');
-    
+    if (backdrop) backdrop.classList.add('hidden');
+
     // Clear the image src when hiding the popup
     bioPopupImage.src = '';
     bioPopupImage.alt = '';
     bioPopupImage.classList.add('hidden');
-    
+
     log('Image cleared and hidden');
   }
 
@@ -212,39 +230,11 @@ function setupBioPopupHandlers() {
 
         // Fill the popup with composer data
         bioPopupTitle.textContent = `${composer.name} (${composer.years})`;
-        
-        // Handle the image - first hide it, then set source and show when ready
+
+        // Portrait is already shown in the work entry's folio — hide it in the popup.
+        bioPopupImage.src = '';
+        bioPopupImage.alt = '';
         bioPopupImage.classList.add('hidden');
-        
-        if (composer.image && composer.image.trim() !== '') {
-          // Use the preloaded image if available
-          if (preloadedImages[composerId] && preloadedImages[composerId].complete) {
-            log(`Using preloaded image for ${composerId}`);
-            bioPopupImage.src = composer.image;
-            bioPopupImage.alt = `Portrait of ${composer.name}, classical music composer (${composer.years})`;
-            bioPopupImage.classList.remove('hidden');
-          } else {
-            // If not preloaded, set the source and add an onload event
-            log(`Setting image source for ${composerId}`);
-            bioPopupImage.src = composer.image;
-            bioPopupImage.alt = `Portrait of ${composer.name}, classical music composer (${composer.years})`;
-            
-            // Wait for the image to load before displaying it
-            bioPopupImage.onload = function() {
-              log(`Image for ${composerId} loaded, displaying now`);
-              bioPopupImage.classList.remove('hidden');
-            };
-            
-            bioPopupImage.onerror = function() {
-              log(`ERROR: Failed to load image for ${composerId}`);
-              bioPopupImage.classList.add('hidden');
-            };
-          }
-        } else {
-          // Hide the image element if no image provided
-          log(`No image for ${composerId}, keeping image hidden`);
-          bioPopupImage.classList.add('hidden');
-        }
 
         // Convert bio text to paragraphs with typographic quotes
         const withTypographicQuotes = composer.bio
@@ -256,13 +246,18 @@ function setupBioPopupHandlers() {
         const paragraphs = withTypographicQuotes.split('\n\n').map(p => `<p class="mb-3">${p}</p>`).join('');
         bioPopupContent.innerHTML = paragraphs;
 
-        // Position the popup near the button
+        // Position the popup near the button, clamped inside the viewport.
         const buttonRect = bioButton.getBoundingClientRect();
+        const popupWidth = 750;
+        const margin = 16;
+        const minLeft = margin;
+        const maxLeft = Math.max(margin, window.innerWidth - popupWidth - margin);
+        const clampedLeft = Math.min(maxLeft, Math.max(minLeft, buttonRect.left));
         log('Button position:', buttonRect);
 
         bioPopup.style.position = 'absolute';
         bioPopup.style.top = `${buttonRect.bottom + window.scrollY + 10}px`;
-        bioPopup.style.left = `${buttonRect.left + window.scrollX}px`;
+        bioPopup.style.left = `${clampedLeft + window.scrollX}px`;
         bioPopup.style.zIndex = '100';
 
         log('Setting popup position:', {
@@ -270,7 +265,8 @@ function setupBioPopupHandlers() {
           left: `${buttonRect.left + window.scrollX}px`
         });
 
-        // Show the popup
+        // Show backdrop + popup
+        if (backdrop) backdrop.classList.remove('hidden');
         bioPopup.classList.remove('hidden');
         log('Popup should now be visible');
       } else {

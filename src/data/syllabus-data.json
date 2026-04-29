@@ -6,7 +6,9 @@
       {
         "id": "med-1",
         "title": "Gregorian Chant & Early Sacred Music",
+        "displayTitle": "Gregorian Chant & Early Sacred Music",
         "composer": null,
+        "image": "src/assets/images/Gregory.jpg",
         "recording": {
           "url": "https://open.spotify.com/album/0fmLPKvIYbWX0NiUcAlj0b?si=EtNbzs9bRU-TJnzE7AsAbg",
           "performer": "Benedictine Monks of the Abbey of St. Maurice & St. Maur, Clevaux"
@@ -22,6 +24,7 @@
       {
         "id": "med-2",
         "title": "Hildegard von Bingen - Ordo Virtutum",
+        "displayTitle": "Ordo Virtutum",
         "composer": "hildegard",
         "recording": {
           "url": "https://open.spotify.com/album/1RM2nW2WbT2cNiaawnOTz1?si=ZfcZslWDT8CELawmbVkCfA",
@@ -38,7 +41,9 @@
       {
         "id": "med-3",
         "title": "Sacred Music from Notre-Dame Cathedral - Léonin & Pérotin",
+        "displayTitle": "Sacred Music from Notre-Dame Cathedral",
         "composer": "leonin",
+        "image": "src/assets/images/Perotin_Alleluia_nativitas.jpg",
         "recording": {
           "url": "https://open.spotify.com/album/0Bb5GQ7nB7ig8EzjbXr4Kv?si=VT26FD18TPGN0ooKNyL17w",
           "performer": "Tonus Peregrinus"
@@ -54,7 +59,9 @@
       {
         "id": "med-4",
         "title": "Early Secular Music - Troubadour & Minnesänger Songs",
+        "displayTitle": "Early Secular Music - Troubadour & Minnesänger Songs",
         "composer": null,
+        "image": "src/assets/images/Codex_Manesse_Walther.jpg",
         "recording": {
           "url": "https://open.spotify.com/album/5wszOw36NJ82nc9BWFVaB7?si=TdflbZi8Sumwyiahz2WeLw",
           "performer": "Ensemble Fur Fruhe Musik Augsburg"
@@ -70,6 +77,7 @@
       {
         "id": "med-5",
         "title": "Guillaume de Machaut - Messe de Nostre Dame",
+        "displayTitle": "Messe de Nostre Dame",
         "composer": "machaut",
         "recording": {
           "url": "https://open.spotify.com/album/7nweWVY6FMRLi0aFVtJK97?si=AQUmwqY-T12622lM5yQRoQ",
@@ -92,6 +100,7 @@
       {
         "id": "ren-1",
         "title": "Josquin des Prez - Missa Pange Lingua & Missa La Sol Fa Re Mi",
+        "displayTitle": "Missa Pange Lingua & Missa La Sol Fa Re Mi",
         "composer": "josquin",
         "recording": {
           "url": "https://open.spotify.com/album/7MybFTlK93WNF2YDVkqtgn?si=5xG2oqbeRtekHUBiYqWzNA",
@@ -108,6 +117,7 @@
       {
         "id": "ren-2",
         "title": "Giovanni Pierluigi da Palestrina - Missa Papae Marcellus",
+        "displayTitle": "Missa Papae Marcellus",
         "composer": "palestrina",
         "recording": {
           "url": "https://open.spotify.com/album/6rSJ9l1V8H7Ahqn65m9OMi?si=cfe281VQRFuYRCXSoWuPVg",
@@ -124,6 +134,7 @@
       {
         "id": "ren-3",
         "title": "Thomas Tallis - Spem in alium",
+        "displayTitle": "Spem in alium",
         "composer": "tallis",
         "recording": {
           "url": "https://open.spotify.com/album/69n01dGwqZ5d5b1GITfP7G?si=fuwNo4NZT9qo0RWBtc995w",
@@ -140,6 +151,7 @@
       {
         "id": "ren-4",
         "title": "Orlando di Lasso - Laudate Dominum",
+        "displayTitle": "Laudate Dominum",
         "composer": "lasso",
         "recording": {
           "url": "https://open.spotify.com/album/490XbeD9Uu92uY8MsMotea?si=-4dLDKiiTYWMtDZhHI6GPg",
@@ -156,6 +168,7 @@
       {
         "id": "ren-5",
         "title": "William Byrd - Mass for Five Voices",
+        "displayTitle": "Mass for Five Voices",
         "composer": "byrd",
         "recording": {
           "url": "https://open.spotify.com/album/2MZP6i1vy8Cj469778Yezk?si=1iN0opW9Sy6HUUD4JWJd0w",
@@ -178,6 +191,7 @@
       {
         "id": "bar-1",
         "title": "Claudio Monteverdi - L'Orfeo",
+        "displayTitle": "L'Orfeo",
         "composer": "monteverdi",
         "recording": {
           "url": "https://open.spotify.com/album/2dOEPUO8yaMKqozeCEC0T2?si=P3BouwnCRsijuz2NRzEPtA",
@@ -194,6 +208,7 @@
       {
         "id": "bar-2",
         "title": "Henry Purcell - Dido and Aeneas",
+        "displayTitle": "Dido and Aeneas",
         "composer": "purcell",
         "recording": {
           "url": "https://open.spotify.com/album/19ogthWkUFeShOTXQh9Spd?si=pxZPXsWURyWDXsoGTl4Tpg",
@@ -210,6 +225,7 @@
       {
         "id": "bar-3",
         "title": "George Frideric Handel - Water Music & Music for the Royal Fireworks",
+        "displayTitle": "Water Music & Music for the Royal Fireworks",
         "composer": "handel",
         "recording": {
           "url": "https://open.spotify.com/album/7sXAfHgByM2Po10h6kSTgF?si=m3KFY9UxRiuxZAzLsz-N3A",
@@ -226,6 +242,7 @@
       {
         "id": "bar-4",
         "title": "Johann Sebastian Bach - Brandenburg Concertos",
+        "displayTitle": "Brandenburg Concertos",
         "composer": "bach",
         "recording": {
           "url": "https://open.spotify.com/album/3x8N7VCXWbZaOAzNkPTwCf?si=lpBY4HbxRY6Y49-DaqVXrg",
@@ -242,6 +259,7 @@
       {
         "id": "bar-5",
         "title": "Antonio Vivaldi - The Four Seasons",
+        "displayTitle": "The Four Seasons",
         "composer": "vivaldi",
         "recording": {
           "url": "https://open.spotify.com/album/1G0dgQkqneuP7kid0mhJXh?si=pIllFcBPSneQyeFvP6ii2g",
@@ -258,6 +276,7 @@
       {
         "id": "bar-6",
         "title": "Johann Sebastian Bach - St. Matthew Passion",
+        "displayTitle": "St. Matthew Passion",
         "composer": "bach",
         "recording": {
           "url": "https://open.spotify.com/album/1WvjBGg9O0QI9gF66bfG9x?si=jY9VRLPASHOLfCMpAy8JHQ",
@@ -274,6 +293,7 @@
       {
         "id": "bar-7",
         "title": "Johann Sebastian Bach - Goldberg Variations",
+        "displayTitle": "Goldberg Variations",
         "composer": "bach",
         "recording": {
           "url": "https://open.spotify.com/album/1aCpHSQE5ghxibsQ5gkBe0?si=EBdkXFoTT6i317L-4FjZFg",
@@ -290,6 +310,7 @@
       {
         "id": "bar-8",
         "title": "George Frideric Handel - Messiah",
+        "displayTitle": "Messiah",
         "composer": "handel",
         "recording": {
           "url": "https://open.spotify.com/album/4e5MOtI4r6XKYsvh5yFSrB?si=jP9YwTZ9S_qIYVkB-fi4ow",
@@ -306,6 +327,7 @@
       {
         "id": "bar-9",
         "title": "Johann Sebastian Bach - Mass in B Minor",
+        "displayTitle": "Mass in B Minor",
         "composer": "bach",
         "recording": {
           "url": "https://open.spotify.com/album/3HdmIB3Wzcd7bFDdsgaIbp?si=0WNhzzlnTBioZ1-WrgDqNA",
@@ -328,6 +350,7 @@
       {
         "id": "cla-1",
         "title": "Wolfgang Amadeus Mozart - Piano Concertos (No. 20 in D minor, K.466)",
+        "displayTitle": "Piano Concertos (No. 20 in D minor, K.466)",
         "composer": "mozart",
         "recording": {
           "url": "https://open.spotify.com/album/2zs2VEQyfjqG2UBAnaoYaQ?si=zWqb1QuVSpWQEurlrC5PsQ",
@@ -344,6 +367,7 @@
       {
         "id": "cla-2",
         "title": "Wolfgang Amadeus Mozart - The Marriage of Figaro",
+        "displayTitle": "The Marriage of Figaro",
         "composer": "mozart",
         "recording": {
           "url": "https://open.spotify.com/album/2COjPQLeLFEAYFaDcqS87d?si=LZxv6qkPSY2mG0urlNLN1w",
@@ -360,6 +384,7 @@
       {
         "id": "cla-3",
         "title": "Wolfgang Amadeus Mozart - Symphony No. 40 in G minor",
+        "displayTitle": "Symphony No. 40 in G minor",
         "composer": "mozart",
         "recording": {
           "url": "https://open.spotify.com/album/6zibIhSvaqI1TEeZO5FujG?si=MDX0B82hTxCOlUQI-2mQhA",
@@ -376,6 +401,7 @@
       {
         "id": "cla-4",
         "title": "Wolfgang Amadeus Mozart - Requiem in D minor",
+        "displayTitle": "Requiem in D minor",
         "composer": "mozart",
         "recording": {
           "url": "https://open.spotify.com/album/62TBuvIWwGvb1Y9P7NShjd?si=orLOZBNYTb-5hTzWsU5spg",
@@ -392,6 +418,7 @@
       {
         "id": "cla-5",
         "title": "Joseph Haydn - String Quartets (Op. 76)",
+        "displayTitle": "String Quartets (Op. 76)",
         "composer": "haydn",
         "recording": {
           "url": "https://open.spotify.com/album/6LSNWyhLcrOYt2z0d2rpE5?si=oW1H2HHETAazzbK3T8V7Qg",
@@ -408,6 +435,7 @@
       {
         "id": "cla-6",
         "title": "Ludwig van Beethoven - Piano Sonata No. 14 \"Moonlight Sonata\"",
+        "displayTitle": "Piano Sonata No. 14 \"Moonlight Sonata\"",
         "composer": "beethoven",
         "recording": {
           "url": "https://open.spotify.com/album/6erUlga5EF5hRWrCA8Lcbu?si=mMwOcXlYQbKX_PK3I2tRIg",
@@ -424,6 +452,7 @@
       {
         "id": "cla-7",
         "title": "Ludwig van Beethoven - Symphony No. 5",
+        "displayTitle": "Symphony No. 5",
         "composer": "beethoven",
         "recording": {
           "url": "https://open.spotify.com/album/5U2ZIDU7MISDzXEtFbcZWJ?si=_apAs8KzR4G_WGVE_v4oCw",
@@ -440,6 +469,7 @@
       {
         "id": "cla-8",
         "title": "Ludwig van Beethoven - Missa Solemnis",
+        "displayTitle": "Missa Solemnis",
         "composer": "beethoven",
         "recording": {
           "url": "https://open.spotify.com/album/23ibE20u08AaxGPOo2MSSa?si=-h0tSilJRBaKqvRBwdRmXw",
@@ -462,6 +492,7 @@
       {
         "id": "rom-1",
         "title": "Ludwig van Beethoven - Symphony No. 9 \"Choral\"",
+        "displayTitle": "Symphony No. 9 \"Choral\"",
         "composer": "beethoven",
         "recording": {
           "url": "https://open.spotify.com/album/2XF4GhKOvsWt1viozHlx8a?si=BkMj57xTRYC2uOukAgPp3Q",
@@ -478,6 +509,7 @@
       {
         "id": "rom-2",
         "title": "Franz Schubert - Winterreise",
+        "displayTitle": "Winterreise",
         "composer": "schubert",
         "recording": {
           "url": "https://open.spotify.com/album/0mgzkW1ff8QDdQ0GVX26IB?si=BR_BPYS4StCwSqW9fHa7aA",
@@ -494,6 +526,7 @@
       {
         "id": "rom-3",
         "title": "Frédéric Chopin - Nocturnes",
+        "displayTitle": "Nocturnes",
         "composer": "chopin",
         "recording": {
           "url": "https://open.spotify.com/album/5Q5m22P7jIwdMSKXqhrpaN?si=slZ6iudcSaW5BwYs74m7VA",
@@ -510,6 +543,7 @@
       {
         "id": "rom-4",
         "title": "Felix Mendelssohn - A Midsummer Night's Dream",
+        "displayTitle": "A Midsummer Night's Dream",
         "composer": "mendelssohn",
         "recording": {
           "url": "https://open.spotify.com/album/60J66evwnrnfH03HgDTrwN?si=B48jFXBaRfmCa170WCoPPw",
@@ -526,6 +560,7 @@
       {
         "id": "rom-5",
         "title": "Franz Liszt - Piano Sonata in B Minor",
+        "displayTitle": "Piano Sonata in B Minor",
         "composer": "liszt",
         "recording": {
           "url": "https://open.spotify.com/album/6b9dJ4bujWQESSxeETIyUX?si=mmY1AD-_R6qT_eBb2ba7sA",
@@ -542,6 +577,7 @@
       {
         "id": "rom-6",
         "title": "Richard Wagner - Tristan und Isolde",
+        "displayTitle": "Tristan und Isolde",
         "composer": "wagner",
         "recording": {
           "url": "https://open.spotify.com/album/6BIzBPVDbAw4DdyMOENCFe?si=MtW8E88xT0eSLEYutCtXdw",
@@ -558,6 +594,7 @@
       {
         "id": "rom-7",
         "title": "Giuseppe Verdi - Requiem",
+        "displayTitle": "Requiem",
         "composer": "verdi",
         "recording": {
           "url": "https://open.spotify.com/album/6u5CN9S9a9V5VpKT2NGduB?si=wI4kKGu5RaKdkS6JwK0OIQ",
@@ -574,6 +611,7 @@
       {
         "id": "rom-8",
         "title": "Georges Bizet - Carmen",
+        "displayTitle": "Carmen",
         "composer": "bizet",
         "recording": {
           "url": "https://open.spotify.com/album/3wGsemyIA0V2SPk0wWlLgu?si=3x8kS5MxQ1uvE1yrqNhvUQ",
@@ -590,6 +628,7 @@
       {
         "id": "rom-9",
         "title": "Pyotr Illyich Tchaikovsky - Swan Lake",
+        "displayTitle": "Swan Lake",
         "composer": "tchaikovsky",
         "recording": {
           "url": "https://open.spotify.com/album/7dVA06E7AP7P7VzPyNxQVO?si=mDX6M3B0SAOh2rsZVNq3Pg",
@@ -606,6 +645,7 @@
       {
         "id": "rom-10",
         "title": "Johannes Brahms - Symphony No. 1",
+        "displayTitle": "Symphony No. 1",
         "composer": "brahms",
         "recording": {
           "url": "https://open.spotify.com/album/55FSkCsbfWQnhgmDcBtAT9?si=EusZTSGaTjidSk4yNwD7iw",
@@ -622,6 +662,7 @@
       {
         "id": "rom-11",
         "title": "Antonín Dvořák - Symphony No. 9 \"From the New World\"",
+        "displayTitle": "Symphony No. 9 \"From the New World\"",
         "composer": "dvorak",
         "recording": {
           "url": "https://open.spotify.com/album/45AlGtE9Il2BmnisrbU1no?si=qHHM_QOcSNKLWUn2sOFKVQ",
@@ -638,6 +679,7 @@
       {
         "id": "rom-12",
         "title": "Gustav Mahler - Symphony No. 2 \"Resurrection\"",
+        "displayTitle": "Symphony No. 2 \"Resurrection\"",
         "composer": "mahler",
         "recording": {
           "url": "https://open.spotify.com/album/2SVkyvRyCXIZ8WsGe8j0xc?si=yTZLCN-fQbyW-toiaDlWYg",
@@ -654,6 +696,7 @@
       {
         "id": "rom-13",
         "title": "Richard Strauss - Also Sprach Zarathustra",
+        "displayTitle": "Also Sprach Zarathustra",
         "composer": "strauss",
         "recording": {
           "url": "https://open.spotify.com/album/1kHbPoLRmiAHIDgYRraYU9?si=cTZL4y4QSKW_rSttzV7CMA",
@@ -670,6 +713,7 @@
       {
         "id": "rom-14",
         "title": "Sergei Rachmaninoff - Piano Concerto No. 2",
+        "displayTitle": "Piano Concerto No. 2",
         "composer": "rachmaninoff",
         "recording": {
           "url": "https://open.spotify.com/album/44eOy7bLDpoOZx5A9a1GEJ?si=CyUoGmgFSWSMS7Joe-b5RQ",
@@ -692,6 +736,7 @@
       {
         "id": "mod-1",
         "title": "Claude Debussy - La Mer",
+        "displayTitle": "La Mer",
         "composer": "debussy",
         "recording": {
           "url": "https://open.spotify.com/album/0Zby80imfAHwdn1JQaUblw?si=7di8FVxrSam5LfDyCL8qig",
@@ -708,6 +753,7 @@
       {
         "id": "mod-2",
         "title": "Arnold Schoenberg - Pierrot Lunaire",
+        "displayTitle": "Pierrot Lunaire",
         "composer": "schoenberg",
         "recording": {
           "url": "https://open.spotify.com/album/6rCeCmAF0APTboMpZqKsCj?si=15jkA5FSRhCWvEGGRaMM5A",
@@ -724,6 +770,7 @@
       {
         "id": "mod-3",
         "title": "Igor Stravinsky - The Rite of Spring",
+        "displayTitle": "The Rite of Spring",
         "composer": "stravinsky",
         "recording": {
           "url": "https://open.spotify.com/album/1eahftQN5ottBeGBh80A2j?si=6yk8XDBeT4eaDM8EeBb9Ow",
@@ -740,6 +787,7 @@
       {
         "id": "mod-4",
         "title": "Béla Bartók - String Quartet No. 4",
+        "displayTitle": "String Quartet No. 4",
         "composer": "bartok",
         "recording": {
           "url": "https://open.spotify.com/album/2t60TvGuahxlDsPHLdahjt?si=aEL1PvGaRBiGOpUBkjLLzw",
@@ -756,6 +804,7 @@
       {
         "id": "mod-5",
         "title": "Maurice Ravel - Boléro",
+        "displayTitle": "Boléro",
         "composer": "ravel",
         "recording": {
           "url": "https://open.spotify.com/album/6nOlQ6TzBqM52Gqh3i16p4?si=e5j47DCORYOb3lnL0kJabA",
@@ -772,6 +821,7 @@
       {
         "id": "mod-6",
         "title": "Dmitri Shostakovich - Symphony No. 5",
+        "displayTitle": "Symphony No. 5",
         "composer": "shostakovich",
         "recording": {
           "url": "https://open.spotify.com/album/47hMwYtFSqgTrzZljGnpqD?si=kXDJUjN_TcynMTyAgCMTCg",
@@ -788,6 +838,7 @@
       {
         "id": "mod-7",
         "title": "Aaron Copland - Appalachian Spring",
+        "displayTitle": "Appalachian Spring",
         "composer": "copland",
         "recording": {
           "url": "https://open.spotify.com/album/7l52vJiVq7ngdSquMTUM42?si=Y8B5PBuRRGmVhniMAAFrLw",
@@ -804,6 +855,7 @@
       {
         "id": "mod-8",
         "title": "Olivier Messiaen - Turangalîla-Symphonie",
+        "displayTitle": "Turangalîla-Symphonie",
         "composer": "messiaen",
         "recording": {
           "url": "https://open.spotify.com/album/3qUqILNEQNWMhBikgiGt4u?si=nRQDP-b_Q36wRY2VveBduw",
@@ -820,6 +872,7 @@
       {
         "id": "mod-9",
         "title": "Karlheinz Stockhausen - Gesang der Jünglinge",
+        "displayTitle": "Gesang der Jünglinge",
         "composer": "stockhausen",
         "recording": {
           "url": "https://open.spotify.com/album/1ydECPfpGqbY4mzQMJG3nY?si=nNu-JEvcQ2aV9gcHHltUjA",
@@ -836,6 +889,7 @@
       {
         "id": "mod-10",
         "title": "Benjamin Britten - War Requiem",
+        "displayTitle": "War Requiem",
         "composer": "britten",
         "recording": {
           "url": "https://open.spotify.com/album/2yxH657dxLr8pwumiBwBCS?si=2D_M1WdCTyeJ2_ih0Ha5OQ",
@@ -852,6 +906,7 @@
       {
         "id": "mod-11",
         "title": "Philip Glass - Glassworks",
+        "displayTitle": "Glassworks",
         "composer": "glass",
         "recording": {
           "url": "https://open.spotify.com/album/1My9AZY0XBwVwwy1DDVSQS?si=UiY-wNUWQVeX0Q4yhqfZKg",
@@ -868,6 +923,7 @@
       {
         "id": "mod-12",
         "title": "John Adams - Short Ride in a Fast Machine",
+        "displayTitle": "Short Ride in a Fast Machine",
         "composer": "adams",
         "recording": {
           "url": "https://open.spotify.com/album/2Vot2ADfKISmhek7Raa7Tf?si=fOEWnsVXRLqxyQfjPNlPaQ",
