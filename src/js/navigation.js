@@ -56,7 +56,9 @@ class NavigationManager {
     const navLinks = document.querySelectorAll('.timeline-link');
 
     let currentSection = '';
-    const offset = 100; // Offset for fixed header
+    // Match (with a small buffer) the CSS `scroll-padding-top` so a fresh
+    // anchor click lands inside the destination section's detection range.
+    const offset = 140;
 
     // Find the currently visible section
     sections.forEach(section => {

@@ -120,11 +120,7 @@ export const Progress = {
   updateProgressBubble() {
     const completedCount = DOM.getElementById('completed-count');
     const totalCount = DOM.getElementById('total-count');
-    
-    if (!completedCount || !totalCount) {
-      console.warn('Progress bubble elements not found');
-      return;
-    }
+    const heroCompleted = document.getElementById('hero-completed');
 
     const syllabusItems = DOM.getSyllabusItems();
     if (syllabusItems.length === 0) {
@@ -143,9 +139,10 @@ export const Progress = {
     if (completed > 38) {
       completed -= 3;
     }
-    
-    completedCount.textContent = completed;
-    totalCount.textContent = total;
+
+    if (completedCount) completedCount.textContent = completed;
+    if (totalCount) totalCount.textContent = total;
+    if (heroCompleted) heroCompleted.textContent = completed;
   },
 
   /**
