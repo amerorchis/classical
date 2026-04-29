@@ -1,0 +1,109 @@
+{
+  "books": [
+    {
+      "author": "Richard Taruskin",
+      "title": "The Oxford History of Western Music",
+      "publisher": "Oxford University Press",
+      "year": 2005
+    },
+    {
+      "author": "Alex Ross",
+      "title": "The Rest Is Noise: Listening to the Twentieth Century",
+      "publisher": "Farrar, Straus and Giroux",
+      "year": 2007
+    },
+    {
+      "author": "Alex Ross",
+      "title": "Listen to This",
+      "publisher": "Farrar, Straus and Giroux",
+      "year": 2010
+    },
+    {
+      "author": "Harold C. Schonberg",
+      "title": "The Lives of the Great Composers",
+      "publisher": "W. W. Norton",
+      "year": 1981
+    },
+    {
+      "author": "Jan Swafford",
+      "title": "Language of the Spirit: An Introduction to Classical Music",
+      "publisher": "Basic Books",
+      "year": 2017
+    },
+    {
+      "author": "Jan Swafford",
+      "title": "The Vintage Guide to Classical Music",
+      "publisher": "Vintage Books",
+      "year": 1992
+    },
+    {
+      "author": "J. Peter Burkholder, Donald Jay Grout & Claude V. Palisca",
+      "title": "A History of Western Music",
+      "publisher": "W. W. Norton",
+      "year": 1960
+    },
+    {
+      "author": "Charles Rosen",
+      "title": "The Classical Style: Haydn, Mozart, Beethoven",
+      "publisher": "W. W. Norton",
+      "year": 1971
+    },
+    {
+      "author": "Charles Rosen",
+      "title": "The Romantic Generation",
+      "publisher": "Harvard University Press",
+      "year": 1995
+    },
+    {
+      "author": "Ted Libbey",
+      "title": "The NPR Listener's Encyclopedia of Classical Music",
+      "publisher": "Workman Publishing",
+      "year": 2006
+    }
+  ],
+  "references": [
+    {
+      "title": "The New Grove Dictionary of Music and Musicians",
+      "editors": "Stanley Sadie & John Tyrrell",
+      "publisher": "Oxford University Press",
+      "note": "Available online as Grove Music Online"
+    },
+    {
+      "title": "Wikipedia",
+      "note": "Composer and work articles"
+    }
+  ],
+  "recordingGuides": [
+    {
+      "title": "The Penguin Guide to Recorded Classical Music",
+      "authors": "Ivan March, Edward Greenfield, Robert Layton & Paul Czajkowski",
+      "publisher": "Penguin Books"
+    },
+    {
+      "title": "Gramophone",
+      "publisher": "Mark Allen Group (London)",
+      "note": "Monthly classical music magazine, founded 1923"
+    },
+    {
+      "title": "Building a Library",
+      "publisher": "BBC Radio 3",
+      "note": "Recurring feature within Record Review"
+    },
+    {
+      "title": "BBC Music Magazine",
+      "publisher": "Our Media (BBC)",
+      "note": "Founded 1992"
+    },
+    {
+      "title": "ClassicsToday",
+      "founder": "David Hurwitz",
+      "url": "https://www.classicstoday.com"
+    }
+  ],
+  "podcasts": [
+    {
+      "title": "Sticky Notes: The Classical Music Podcast",
+      "host": "Joshua Weilerstein"
+    }
+  ]
+}

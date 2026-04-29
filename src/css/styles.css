@@ -1763,6 +1763,108 @@ nav {
 }
 .footer-links a:hover { border-bottom-color: var(--color-primary-accent); }
 
+/* ----- References / bibliography ----------------------------------------- */
+.references {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 64px 96px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.references:empty { display: none; }
+.references__head {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+}
+.references__rule {
+  flex: 1;
+  height: 1px;
+  background: var(--color-secondary-accent);
+  max-width: 240px;
+}
+.references__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -0.01em;
+  color: var(--color-text-light);
+  margin: 0;
+}
+.references__blurb {
+  font: italic 400 18px/28px var(--font-body);
+  color: var(--color-text-muted-light);
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.references__groups {
+  columns: 2;
+  column-gap: 64px;
+  margin-top: 8px;
+}
+.references__group {
+  break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.references__group:last-child { margin-bottom: 0; }
+.references__group-title {
+  font: italic 400 13px/1 var(--font-body);
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--color-primary-accent);
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-secondary-accent);
+}
+.references__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.reference-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-body);
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+.reference-entry__author {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted-light);
+}
+.reference-entry__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--color-text-light);
+}
+.reference-entry__meta {
+  font-size: 14px;
+  color: var(--color-text-muted-light);
+}
+.reference-entry__note {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--color-text-muted-light);
+  opacity: 0.85;
+}
+
 /* ----- Side menu ---------------------------------------------------------- */
 #side-menu {
   background: var(--color-background-light);
@@ -1805,6 +1907,14 @@ nav {
 #side-menu a.work-link:hover {
   background: var(--color-surface-light);
   color: var(--color-primary-accent);
+}
+#side-menu .menu-section button:hover,
+#side-menu .menu-section a:hover {
+  background: var(--color-surface-light);
+}
+#side-menu .menu-section button:hover span,
+#side-menu .menu-section a:hover span {
+  color: var(--color-primary-accent-dark);
 }
 #close-menu { color: var(--color-primary-accent); }
 #close-menu:hover svg { color: var(--color-primary-accent-dark); }
@@ -2067,6 +2177,15 @@ a[href*="spotify.com"] svg {
 .dark .footer-credit { color: var(--color-text-dark); opacity: 0.8; }
 .dark .footer-links a { color: var(--color-secondary-accent); }
 .dark .footer-links a:hover { border-bottom-color: var(--color-secondary-accent); }
+.dark .references__rule { background: var(--color-secondary-accent); }
+.dark .references__title { color: var(--color-text-dark); }
+.dark .references__blurb { color: var(--color-text-dark); opacity: 0.75; }
+.dark .references__group-title { color: var(--color-secondary-accent); border-bottom-color: var(--color-secondary-accent); }
+.dark .reference-entry { color: var(--color-text-dark); }
+.dark .reference-entry__author { color: var(--color-text-dark); opacity: 0.7; }
+.dark .reference-entry__title { color: var(--color-text-dark); }
+.dark .reference-entry__meta,
+.dark .reference-entry__note { color: var(--color-text-dark); opacity: 0.7; }
 
 .dark #side-menu { background: var(--color-surface-dark); border-right-color: var(--color-border-dark); }
 .dark #side-menu h3 { color: var(--color-secondary-accent); }
@@ -2139,6 +2258,8 @@ a[href*="spotify.com"] svg {
   .candlelit-hero { padding: 64px 48px 48px; }
   .hero-title { font-size: 100px; line-height: 96px; }
   .hero-title em { font-size: 72px; line-height: 76px; }
+  .references { padding: 56px 48px 24px; }
+  .references__groups { column-gap: 48px; }
 }
 
 /* 5.5 Mobile breakpoint
@@ -2173,6 +2294,14 @@ a[href*="spotify.com"] svg {
   .work__notes li { font-size: 16px; line-height: 24px; }
 
   .candlelit-footer { padding: 40px 24px 24px; }
+
+  .references { padding: 40px 24px 16px; gap: 24px; }
+  .references__title { font-size: 36px; line-height: 40px; }
+  .references__blurb { font-size: 16px; line-height: 24px; }
+  .references__rule { max-width: 80px; }
+  .references__groups { columns: 1; }
+  .references__group { margin-bottom: 32px; }
+  .reference-entry__title { font-size: 20px; line-height: 26px; }
 }
 
 /* 5.4 Animations

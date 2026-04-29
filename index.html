@@ -260,13 +260,9 @@
         <div class="loading-message">Loading syllabus content&hellip;</div>
       </div>
     </main>
+    <section class="references" id="references-section" aria-label="References"></section>
     <footer class="candlelit-footer">
       <div class="footer-rule"></div>
-      <p class="footer-credit">
-        Set in <em>Cormorant Garamond</em> &amp; <em>EB Garamond</em>;
-        drawn against the spine of <strong>The Oxford History of Western Music</strong>
-        by Richard Taruskin.
-      </p>
       <div class="footer-links">
         <a href="#" id="reset-progress" onclick="event.preventDefault(); resetSyllabus();">Reset progress</a>
       </div>
@@ -276,11 +272,12 @@
   <!-- Import all modules -->
   <script type="module">
     // Import all necessary modules with cache-bust query string
-    const v = '?v=candlelit-11';
+    const v = '?v=candlelit-13';
     await import('./src/js/utils.js' + v);
     await import('./src/js/app.js' + v);
     const { initializeSyllabus } = await import('./src/js/syllabus-builder.js' + v);
     await import('./src/js/syllabus-integration.js' + v);
+    const { initializeReferences } = await import('./src/js/references-builder.js' + v);
 
     const loadSEOData = () => import('./src/js/seo-structured-data.js' + v);
 
@@ -289,6 +286,7 @@
         console.log('Loading dynamic syllabus...');
         await initializeSyllabus();
         console.log('Dynamic syllabus loaded successfully');
+        initializeReferences().catch(error => console.warn('Failed to load references:', error));
         loadSEOData().catch(error => console.warn('Failed to load SEO data:', error));
       } catch (error) {
         console.error('Failed to load dynamic syllabus:', error);
