@@ -1,0 +1,1300 @@
+{
+ "_README": "Phase A reconciliation results, per docs/work_list_audit_policy.md. Each composer: final accepted flagship/curated symphony entries, dual-sourced. Applied to symphony_works.md only after a composer's audit is complete. status: KEEP/FIX/ADD confirmed; DROP/FLAG excluded with reason.",
+ "Giovanni Battista Sammartini": {
+  "rule": "few-flagship",
+  "final": [
+   "Symphony in C major, J-C 4",
+   "Symphony in C major, J-C 7",
+   "Symphony in D major, J-C 14",
+   "Symphony in F major, J-C 32",
+   "Symphony in F major, J-C 33",
+   "Symphony in G major, J-C 39",
+   "Symphony in G major, J-C 47",
+   "Symphony in A major, J-C 65"
+  ],
+  "dropped": {
+   "Symphony in E-flat major, J-C 26": "not dual-confirmable (absent MB + IMSLP + recordings)",
+   "Symphony in B-flat major, J-C 71": "J-C 71 is a CONCERTO, not a symphony (spurious)",
+   "Symphony in D major, J-C 15": "single-source only (one recording); not bulletproof"
+  },
+  "sources": "MusicBrainz strict type=Symphony; IMSLP Category:Sammartini; Dynamic/Naxos CDS460 & Naxos 8.557298 recordings",
+  "done": true
+ },
+ "Johann Stamitz": {
+  "rule": "few-flagship",
+  "final": [
+   "Symphony in D major, Op. 3 No. 2 (WolS I. D-3)",
+   "Symphony in E-flat major, Op. 11 No. 3",
+   "Sinfonia Pastorale in D major, Op. 4 No. 2 (WolS I. D-4)",
+   "Symphony in G major, Op. 3 No. 1 (WolS I. G-2)",
+   "Symphony in E-flat major, Op. 3 No. 4 (WolS I. Eb-3)",
+   "Symphony in F major, Op. 3 No. 6 (WolS I. F-2)"
+  ],
+  "dropped": {
+   "Symphony in G major (Mannheim)": "misattributed (probably Antoine Mahaut, WolS III.QS-3) — spurious",
+   "Symphony in D major, Op. 5 No. 2": "Op. 5 is the Orchestral Trios set; not securely a flagship symphony",
+   "Symphony in A major / B-flat / F / E-flat / C major (bare key)": "unpinnable, no catalogue id"
+  },
+  "sources": "MusicBrainz; IMSLP 6 Symphonies Op.3; Wikipedia work-list; Artaria thematic edition; Naxos 8.553194 & 8.573966",
+  "done": true
+ },
+ "Carl Stamitz": {
+  "rule": "few-flagship",
+  "final": [
+   "Symphony in G major, Op. 13 No. 4",
+   "Symphony in C major, Op. 13 No. 5",
+   "Symphony in F major, Op. 24 No. 3",
+   "Symphony in G major, Op. 2 No. 3 (KaiS 19)",
+   "Symphony 'La Chasse', Op. 24 No. 1 (KaiS 31)"
+  ],
+  "flag": "'La Chasse' key disputed (MB F major vs Bamert/Chandos D major) + Op.24 No.1 vs C-major Op.24 ambiguity — needs final key resolution before Phase B",
+  "dropped": {
+   "Op.3 No.2 / Op.11 No.3 / bare A,B-flat,F,E-flat,C / Op.13 No.1 / Op.24 No.2": "not dual-confirmable with agreed catalogue id + recording"
+  },
+  "sources": "MusicBrainz; IMSLP Cat:Stamitz,Carl (KaiS/S ids); Chandos CHAN 9358 Bamert/LMP; Presto",
+  "done": true,
+  "needs_review": true
+ },
+ "François-Joseph Gossec": {
+  "rule": "few-flagship",
+  "final": [
+   "Symphonie à 17 parties in F major (B91)",
+   "Symphony in E-flat major, Op. 5 No. 2 (B26)",
+   "Symphony in D major, Op. 5 No. 3 'Pastorella' (B27)",
+   "Symphony in F major, Op. 12 No. 6 (B59)",
+   "Symphonie à grand orchestre in D major, Op. 13 No. 3 'La Chasse' (B62)"
+  ],
+  "dropped": {
+   "Op.6 No.6 (we had E-flat; MB B-flat, no Brook id)": "key/ID unconfirmable",
+   "Op.3 No.6 / Op.8 No.2 / Op.12 No.1 / Op.6 No.3 / Op.5 No.1 / 'Pastorella' standalone / 'Grande Symphonie'": "no agreed Brook id / wrong key / duplicate / not symphony"
+  },
+  "sources": "Brook catalogue; IMSLP 6 Symphonies Op.5; Chandos CHAN 9661; MusicBrainz",
+  "done": true
+ },
+ "Johann Christian Bach": {
+  "rule": "case-by-case (true symphonies only; opera-overture 'symphonies' excluded)",
+  "final": [
+   "Symphony in D major, Op. 3 No. 1, W. C1",
+   "Symphony in C major, Op. 3 No. 2, W. C2",
+   "Symphony in E-flat major, Op. 6 No. 3, W. C9",
+   "Symphony in G minor, Op. 6 No. 6, W. C12",
+   "Symphony in B-flat major, Op. 9 No. 1, W. C17b",
+   "Symphony in E-flat major, Op. 9 No. 2, W. C18b",
+   "Symphony in E-flat major, Op. 18 No. 1, W. C26",
+   "Symphony in D major, Op. 18 No. 4, W. C27",
+   "Symphony in E major, Op. 18 No. 5, W. C28"
+  ],
+  "dropped": {
+   "Op.18 No.2 (W.G9 Lucio Silla overture)": "opera overture, not a concert symphony",
+   "Op.18 No.3 (W.G15 Endimione overture)": "opera overture, not a concert symphony",
+   "Op.18 No.6 (W. deest/XC1)": "not dual-confirmable as a genuine symphony"
+  },
+  "sources": "Wikipedia List of compositions by J.C. Bach; IMSLP Op.3/Op.18; Daniels' Orchestral; MusicBrainz (W. numbers)",
+  "done": true
+ },
+ "Michael Haydn": {
+  "rule": "few-flagship",
+  "final": [
+   "Symphony No. 18 in C major, P. 10 (MH 188)",
+   "Symphony No. 19 in D major, P. 11 (MH 198)",
+   "Symphony No. 25 in G major, P. 16 (MH 334)",
+   "Symphony No. 26 in E-flat major, P. 17 (MH 340)",
+   "Symphony No. 28 in C major, P. 19 (MH 384)",
+   "Symphony No. 29 in D minor, P. 20 (MH 393)"
+  ],
+  "dropped": {
+   "No. 29 'D major'": "FIXED to D minor (his only minor-key symphony, P.20/MH393)",
+   "No. 32 in D major / No. 33 in D minor / No. 34 in E-flat": "spurious/unconfirmable, no agreed P./MH"
+  },
+  "sources": "Wikipedia Michael Haydn work-list; IMSLP; MusicBrainz (P./MH numbers)",
+  "done": true
+ },
+ "Carl Ditters von Dittersdorf": {
+  "rule": "few-flagship (the 6 surviving Ovid symphonies)",
+  "final": [
+   "Symphony in C major 'The Four Ages of the World' (Ovid I), Kr. 73 / Grave C23",
+   "Symphony in D major 'The Fall of Phaeton' (Ovid II), Kr. 74 / Grave D1",
+   "Symphony in G major 'Actaeon Changed into a Stag' (Ovid III), Kr. 75 / Grave G26",
+   "Symphony in F major 'The Rescue of Andromeda by Perseus' (Ovid IV), Kr. 76 / Grave F8",
+   "Symphony in D major 'The Petrification of Phineus and his Friends' (Ovid V), Kr. 77 / Grave D53",
+   "Symphony in A major 'The Lycian Peasants Turned into Frogs' (Ovid VI), Kr. 78 / Grave A10"
+  ],
+  "dropped": {
+   "'Phaeton' D minor": "FIXED to D major",
+   "4 generic untitled C/D/A/E-flat rows": "no catalogue id, ambiguous among ~120 symphonies"
+  },
+  "sources": "Dittersdorf Symphony Project (dittersdorf.info); IMSLP Symphonies after Ovid Kr.73-84",
+  "done": true
+ },
+ "Luigi Boccherini": {
+  "rule": "few-flagship",
+  "final": [
+   "Symphony in D minor, Op. 12 No. 4, G. 506 'La casa del diavolo'",
+   "Symphony in C major, Op. 12 No. 3, G. 505",
+   "Symphony in A major, Op. 12 No. 6, G. 508",
+   "Symphony in C major, Op. 37 No. 1, G. 515",
+   "Symphony in D minor, Op. 37 No. 3, G. 517",
+   "Symphony in C minor, Op. 41, G. 519"
+  ],
+  "dropped": {
+   "G. 475": "is Cello Concerto No. 2 — NOT a symphony",
+   "G. 490": "Overture in D, not flagship symphony",
+   "G. 505 'F major'": "FIXED to C major",
+   "G. 512 'B-flat'/G. 523 'D major'": "wrong keys, not flagship"
+  },
+  "sources": "Wikipedia List of compositions by Boccherini (Gérard nos.); IMSLP Cat:Boccherini; MusicBrainz",
+  "done": true
+ },
+ "Ignaz Pleyel": {
+  "rule": "few-flagship",
+  "final": [
+   "Symphony in C minor, Ben. 121",
+   "Symphony in F minor, Ben. 138",
+   "Symphony in D major, Ben. 126",
+   "Symphony in G major, Ben. 130",
+   "Symphony in C major, Op. 66, Ben. 154",
+   "Symphony in D minor, Ben. 147"
+  ],
+  "dropped": {
+   "Ben. 121 'C major' / Ben. 138 'F major'": "FIXED keys (C minor / F minor)",
+   "Ben. 155 'La Révolution du 10 Août'": "is B.706, a choral hymn — NOT a symphony (spurious)",
+   "Ben. 142/125/143/140/151": "wrong keys / unconfirmable"
+  },
+  "sources": "IMSLP List of works by Pleyel (Benton nos.); Artaria Editions; Chandos CHAN 9525; cpo/Griffiths",
+  "done": true
+ },
+ "Kurt Atterberg": {
+  "rule": "complete (9 numbered, was ENTIRELY MISSING — ADD)",
+  "final": [
+   "Symphony No. 1 in B minor, Op. 3",
+   "Symphony No. 2 in F major, Op. 6",
+   "Symphony No. 3 in D major, Op. 10 'Västkustbilder'",
+   "Symphony No. 4 in G minor, Op. 14 'Sinfonia piccola'",
+   "Symphony No. 5 in D minor, Op. 20 'Sinfonia funebre'",
+   "Symphony No. 6 in C major, Op. 31 'Dollar Symphony'",
+   "Symphony No. 7 in A minor, Op. 45 'Sinfonia romantica'",
+   "Symphony No. 8 in E minor, Op. 48 'På svenska folkmotiv'",
+   "Symphony No. 9 in B-flat minor, Op. 54 'Sinfonia visionaria'"
+  ],
+  "dropped": {},
+  "sources": "Wikipedia List of compositions by Atterberg; MusicBrainz; IMSLP; Daniels' Orchestral",
+  "done": true
+ },
+ "George Onslow": {
+  "rule": "complete (4 symphonies)",
+  "final": [
+   "Symphony No. 1 in A major, Op. 41",
+   "Symphony No. 2 in D minor, Op. 42",
+   "Symphony No. 3 in F minor (no opus; orch. of String Quintet Op. 32)",
+   "Symphony No. 4 in G major, Op. 71"
+  ],
+  "dropped": {
+   "No. 3 'Op. 69'": "FIXED: Op. 69 is a string quartet; Sym. 3 has no opus"
+  },
+  "sources": "Wikipedia List of compositions by Onslow; IMSLP",
+  "done": true
+ },
+ "E. J. Moeran": {
+  "rule": "complete",
+  "final": [
+   "Symphony in G minor"
+  ],
+  "dropped": {
+   "Symphony No. 2 in E-flat": "unfinished; only exists as Martin Yates reconstruction — not a canonical Moeran symphony (note only)"
+  },
+  "sources": "Wikipedia E. J. Moeran; Grove/IMSLP",
+  "done": true
+ },
+ "Olivier Messiaen": {
+  "rule": "complete",
+  "final": [
+   "Turangalîla-Symphonie"
+  ],
+  "dropped": {},
+  "sources": "Wikipedia List of compositions by Messiaen; Grove",
+  "done": true
+ },
+ "Luciano Berio": {
+  "rule": "complete",
+  "final": [
+   "Sinfonia (for 8 voices and orchestra)"
+  ],
+  "dropped": {},
+  "sources": "Wikipedia Sinfonia (Berio); MusicBrainz",
+  "done": true
+ },
+ "Julia Perry": {
+  "rule": "few-flagship (most symphonies undocumented; keep only dual-confirmed)",
+  "final": [
+   "Symphony No. 1 (First Symphony, for full orchestra)",
+   "Symphony No. 5 'Integration Symphony' (chamber orchestra)",
+   "Symphony No. 6 (for symphonic band, 1966)",
+   "Symphony No. 10 'Soul Symphony'",
+   "Symphony No. 11 'Space Symphony'",
+   "Symphony No. 12 'Simple Symphony'"
+  ],
+  "dropped": {
+   "No. 4": "undocumented in every authoritative source — DROP",
+   "No. 9": "mentioned but no located/titled work — FLAG, excluded",
+   "No. 10 'Soli Deo Gloria'": "FIXED subtitle to 'Soul Symphony'"
+  },
+  "sources": "LA Public Library scholarly profile (Walker Hill/AMRC); Wikipedia; songofamerica.net; Akron Symphony Julia Perry Project",
+  "done": true
+ },
+ "Magnus Lindberg": {
+  "rule": "single (no numbered symphony)",
+  "final": [
+   "Aura (1994, in four movements; composer notes it is NOT a titled symphony)"
+  ],
+  "dropped": {},
+  "note": "Lindberg himself: 'it is not a symphony'; closest symphonic work; Kraft/Feria are not symphonies",
+  "sources": "Wikipedia Aura (Lindberg); Boosey & Hawkes/Wise publisher page",
+  "done": true
+ },
+ "Esa-Pekka Salonen": {
+  "rule": "NONE — composer has no symphony",
+  "final": [],
+  "dropped": {
+   "'Foreign Bodies' placeholder": "not a symphony; Salonen wrote no symphony",
+   "MB 'Symphony no.3/4/Sinfonia op.20'": "spurious MB misattributions (Salonen uses no opus numbers)"
+  },
+  "note": "Salonen remains in the 154-composer list but has ZERO work rows (honest). Composer-count vs works will legitimately not be 1:1 here.",
+  "sources": "Wikipedia Salonen work-list; Wise Music Classical (publisher); Britannica",
+  "done": true
+ },
+ "James MacMillan": {
+  "rule": "complete (5 symphonies)",
+  "final": [
+   "Symphony No. 1 'Vigil' (part of Triduum)",
+   "Symphony No. 2 (chamber orchestra)",
+   "Symphony No. 3 'Silence'",
+   "Symphony No. 4",
+   "Symphony No. 5 'Le grand Inconnu' (choral)"
+  ],
+  "dropped": {},
+  "sources": "Wikipedia List of compositions by MacMillan; Boosey & Hawkes catalogue",
+  "done": true
+ },
+ "Lera Auerbach": {
+  "rule": "complete (6 symphonies)",
+  "final": [
+   "Symphony No. 1 'Chimera'",
+   "Symphony No. 2 'Requiem for a Poet' (mezzo, cello, choir & orch.)",
+   "Symphony No. 3 'The Infant Minstrel and His Peculiar Menagerie' (violin, choir & orch.)",
+   "Symphony No. 4 'Arctica' (piano, choir & orch.)",
+   "Symphony No. 5 'Paradise Lost'",
+   "Symphony No. 6 'Vessels of Light' (cello, choir & orch.)"
+  ],
+  "dropped": {
+   "No. 2 'Requiem for Icarus' (old guess)": "FIXED to 'Requiem for a Poet'",
+   "missing No. 5 & No. 6": "ADDED (were absent)"
+  },
+  "sources": "Wikipedia Lera Auerbach; leraauerbach.com/compositions; Boosey & Hawkes/Sikorski",
+  "done": true
+ },
+ "Carl Philipp Emanuel Bach": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "Wq 182/1-6 + Wq 183/1-4 all correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Joseph Haydn": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "10 curated picks all correct Hob./key/nickname (22,44,45,88,92,94,100,101,103,104)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Wolfgang Amadeus Mozart": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "10 picks all correct K./key/nickname (25,29,31,34,35,36,38,39,40,41)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Luigi Cherubini": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "Symphony in D major (1815) — sole symphony, correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Étienne Méhul": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "4 symphonies, keys correct (G minor, D, C, E)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Ludwig van Beethoven": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "9 symphonies all correct; spurious 'Jena' correctly absent",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Franz Berwald": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "4 (Sérieuse/Capricieuse/Singulière/No.4 E-flat) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Franz Schubert": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "8 picks correct; Unfinished=No.8, Great=No.9 (modern numbering)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Hector Berlioz": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "4 (Fantastique, Harold, Roméo et Juliette, Funèbre et triomphale) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Felix Mendelssohn": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "5 numbered correct (1 c,2 Lobgesang,3 Scottish,4 Italian,5 Reformation)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Robert Schumann": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "4 correct (1 Spring,2 C,3 Rhenish,4 d minor)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Franz Liszt": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "Faust S.108 + Dante S.109 correct; MB spurious entries excluded",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Niels Gade": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "8 numbered, all keys/op correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "César Franck": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "Symphony in D minor FWV 48 — sole, correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Édouard Lalo": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "Symphony in G minor — sole extant, correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Anton Bruckner": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "0 + 1-9 (10) correct; Study Sym WAB 99 consciously excluded (least canonical, keeps ceiling)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Anton Rubinstein": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "6 symphonies correct (2 Ocean, 4 Dramatic d minor)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Alexander Borodin": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "3 correct (2 Bogatyr, 3 unfinished)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Johannes Brahms": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "4 correct keys; MB spurious 'op.28' excluded",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Camille Saint-Saëns": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "5 correct (Sym in A R.159, No.1, Urbs Roma R.163, No.2, No.3 Organ)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Mily Balakirev": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "2 correct (No.1 C, No.2 d minor); MB Manfred spurious excluded",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Georges Bizet": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "Symphony in C + Roma — both correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Max Bruch": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "3 correct (Op.28 E-flat, Op.36 f minor, Op.51 E)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "John Knowles Paine": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "2 correct (No.1 c minor Op.23, No.2 'In the Spring' A Op.34)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Pyotr Ilyich Tchaikovsky": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "6 numbered + Manfred, all keys/op/nickname correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Antonín Dvořák": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "9, modern numbering, all keys/op correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Hubert Parry": {
+  "rule": "verified as-is",
+  "final": "KEEP all current entries (dual-confirmed)",
+  "note": "5 correct (3 English, 5 Symphonic Fantasia 1912)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Louis Spohr": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP all 10; ADD missing keys",
+  "fix": {
+   "No.4 'Die Weihe der Töne'": "add key F major",
+   "No.6 'Historische'": "add key G major",
+   "No.7 'Irdisches und Göttliches'": "add key C major (double orchestra)",
+   "No.9 'Die Jahreszeiten'": "add key B minor",
+   "No.10": "WoO 8 E-flat, note '(withdrawn by composer)'"
+  },
+  "sources": "MusicBrainz; Wikipedia; louis-spohr.com catalogue",
+  "done": true
+ },
+ "Joachim Raff": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP all 11; ADD missing keys",
+  "fix": {
+   "No.1 'An das Vaterland'": "add D major",
+   "No.3 'Im Walde'": "add F major",
+   "No.5 'Lenore'": "add E major",
+   "No.7 'In den Alpen'": "add B-flat major"
+  },
+  "sources": "MusicBrainz; Wikipedia Joachim Raff",
+  "done": true
+ },
+ "Felix Draeseke": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP all 4",
+  "fix": {
+   "No.4 'Symphonia Comica'": "add key E minor (WoO 38)"
+  },
+  "sources": "Wikipedia Draeseke; Records International/cpo 777786-2",
+  "done": true
+ },
+ "Zdeněk Fibich": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "3 (F Op.17, E-flat Op.38, e minor Op.53) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Vincent d'Indy": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "Sym sur un chant montagnard Op.25 (unnumbered) + No.2 B-flat Op.57 + No.3 'de bello gallico' Op.70 correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Charles Villiers Stanford": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "7 correct (3 Irish, 5 L'Allegro, 6 In Memoriam, 7) keys/op verified",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "George Whitefield Chadwick": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "3 correct (C Op.5, B-flat Op.21, F)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Ernest Chausson": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "Symphony in B-flat Op.20 — sole, correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Sergei Taneyev": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 (1 e minor,2 B-flat unfinished,3 d minor,4 c minor Op.12) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Edward Elgar": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "1 A-flat Op.55, 2 E-flat Op.63, 3 (Payne elaboration) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Hans Rott": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "Symphony in E major — sole completed, correct (re-confirmed)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Gustav Mahler": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "1-9 + Das Lied + No.10 unfinished; keys/nicknames correct (Titan/Resurrection/Tragic/Thousand); No.10 F-sharp major",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Albéric Magnard": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 (c Op.4, E Op.6, b-flat Op.11, c-sharp Op.21) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Carl Nielsen": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "6 correct (op/FS/nicknames verified; 5 no nickname, 6 Sinfonia semplice no op)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Jean Sibelius": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "Kullervo (choral sym Op.7; MB-strict omits, Wiki/IMSLP confirm) + 1-7 keys/op correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Paul Dukas": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "Symphony in C major (1896) — sole, correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Amy Beach": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "'Gaelic' Symphony in E minor Op.32 — sole, correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Albert Roussel": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 correct (1 'Le poème de la forêt' d minor Op.7, 2 B-flat Op.23, 3 g minor Op.42, 4 A Op.53)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Wilhelm Stenhammar": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "2 correct (1 F no-op withdrawn, 2 g minor Op.34)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Ralph Vaughan Williams": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "9 correct (1 Sea,2 London,3 Pastoral,7 Sinfonia antartica; keys verified)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Sergei Rachmaninoff": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "3 numbered + The Bells (choral sym Op.35) correct; Youth Symphony correctly omitted",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Charles Ives": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 numbered + New England Holidays + Universe (unfinished, Austin) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Franz Schmidt": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 correct (E, E-flat, A, C major)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Arnold Schoenberg": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "Chamber Symphony No.1 Op.9 + No.2 Op.38 correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Ernő Dohnányi": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "2 correct (1 d minor Op.9, 2 E Op.40)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Nikolai Myaskovsky": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 curated of 27 — picks (1,5,6,10,13,16 Aviation,17,21,24,27) all keys/op verified",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Igor Stravinsky": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 true symphonies (E-flat Op.1, of Psalms, in C, in Three Movements); 'Symphonies of Wind Instruments' DROPPED (not a genre symphony)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Alexander Zemlinsky": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP 4 (Sym1 d, Sym2 B-flat, Lyric, Sinfonietta Op.23)",
+  "fix": {
+   "Lyric Symphony": "add Op. 18"
+  },
+  "sources": "MusicBrainz; Wikipedia Zemlinsky",
+  "done": true
+ },
+ "Josef Suk": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP 2",
+  "fix": {
+   "Symphony No. 1 in E major": "add Op. 14"
+  },
+  "sources": "IMSLP; Presto; MusicBrainz",
+  "done": true
+ },
+ "Havergal Brian": {
+  "rule": "verified w/ FIX (10 curated of 32)",
+  "final": "KEEP 10 picks (1 Gothic..22 Symphonia brevis)",
+  "fix": {
+   "Symphony No. 16": "add key C-sharp minor"
+  },
+  "sources": "Wikipedia Havergal Brian; MusicBrainz; Naxos 8.573959",
+  "done": true
+ },
+ "Karol Szymanowski": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP 4",
+  "fix": {
+   "Symphony No. 1": "add key F minor (Op. 15)"
+  },
+  "sources": "Wikipedia Szymanowski; MusicBrainz",
+  "done": true
+ },
+ "Richard Strauss": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP 4 (Sym d minor, Sym2 f minor Op.12, Symphonia Domestica Op.53, An Alpine Symphony Op.64)",
+  "fix": {
+   "Symphony in D minor": "add '(1880)' / TrV 94 for disambiguation"
+  },
+  "sources": "Wikipedia Strauss work-list; MusicBrainz",
+  "done": true
+ },
+ "Alexander Glazunov": {
+  "rule": "verified w/ ADD",
+  "final": "KEEP 8 numbered + ADD No.9",
+  "add": {
+   "Symphony No. 9 (unfinished, single movement, completed by Gavriil Yudin)": "key UNRESOLVED — Wikipedia D minor vs MB D major; do not assert key (flagged)"
+  },
+  "note": "No.1 'Slavonian' Op.5, No.5 'Heroic' Op.55 (informal nickname, dual-attested)",
+  "sources": "Wikipedia Glazunov; IMSLP; Bachtrack; MusicBrainz",
+  "done": true,
+  "needs_review": true
+ },
+ "Gian Francesco Malipiero": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "11 numbered+named all correct (1 'In quattro tempi'..11 'delle cornamuse')",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Anton Webern": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "Symphony Op.21 — sole, correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Alfredo Casella": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "3 (1 b minor Op.5, 2 c minor Op.12, 3 Op.63 no-key) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Wilhelm Furtwängler": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "3 (1 b minor, 2 e minor, 3 c-sharp minor) correct; MB Beethoven misattrib excluded",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Bohuslav Martinů": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "6 (H289-343, 6='Fantaisies symphoniques') correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Sergei Prokofiev": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "7 correct (1 Classical Op.25; No.4 has Op.47/112 versions=1 entry)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Arthur Bliss": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "A Colour Symphony Op.24 + Morning Heroes (choral sym Op.48) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Arthur Honegger": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "5 correct (3 Liturgique,4 Deliciae Basilienses,5 Di tre re)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Darius Milhaud": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 curated of 12 (1,2,3 Te Deum,4,5,6,7,8 Rhodanienne,10,12 Rurale) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Rued Langgaard": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 curated of 16 (BVN numbers/nicknames verified)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Walter Piston": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "8 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Paul Hindemith": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "6 correct (Mathis, in E-flat, Symphonia Serena, Harmonie der Welt, Pittsburgh, in B-flat for band)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "William Grant Still": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "5 correct (1 Afro-American..5 Western Hemisphere)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Howard Hanson": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "7 correct (1 Nordic Op.21..7 A Sea Symphony)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Roberto Gerhard": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 correct (1,2,3 Collages,4 New York)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Roger Sessions": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "9 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Harald Sæverud": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "9 correct (5 Quasi una fantasia,6 Sinfonia Dolorosa,7 Salme,8 Minnesota)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Roy Harris": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 curated of ~13 (1 '1933'..11; 4 Folksong,6 Gettysburg,8 San Francisco,10 Abraham Lincoln) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Carlos Chávez": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "6 correct (1 Antígona,2 india,4 romántica,5 strings)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Aaron Copland": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 correct (Sym1, Dance Symphony, Short Symphony=No.2, Sym3)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Edmund Rubbra": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "11 numbered correct (8 Teilhard,9 Sinfonia Sacra,10 da Camera)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "William Walton": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "2 correct (1 b-flat minor, 2)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Aram Khachaturian": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "3 correct (1 e minor,2 The Bell,3 Symphony-Poem)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Michael Tippett": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Karl Amadeus Hartmann": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "8 correct (1 Versuch eines Requiems,2 Adagio,4 strings,5 concertante)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Dmitri Shostakovich": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "15 numbered all correct (keys/op/nicknames verified; 14 key G minor customarily omitted)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Elliott Carter": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "3 correct (Sym1, A Symphony of Three Orchestras, Symphonia: sum fluxae pretium spei)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Grażyna Bacewicz": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 numbered + Symphony for String Orchestra (1946) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Samuel Barber": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "2 correct (1 Op.9 one-movement, 2 Op.19)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Allan Pettersson": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 curated of 17 (2,5,6,7,8,9,10,12 'Dead in the Square',13,15) correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Benjamin Britten": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 correct (Simple Sym Op.4, Sinfonia da Requiem Op.20, Spring Sym Op.44, Cello Sym Op.68)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/Grove",
+  "done": true
+ },
+ "Arnold Bax": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP 7 numbered",
+  "fix": {
+   "No.2": "key -> 'in E minor and C major'",
+   "No.3": "DROP key (no documented key)",
+   "No.4": "DROP key (no documented key)",
+   "No.7": "key -> A-flat minor (not major)"
+  },
+  "sources": "Wikipedia per-symphony articles; arnoldbax.com; MusicBrainz (GP nos.)",
+  "done": true
+ },
+ "Florence Price": {
+  "rule": "verified as-is",
+  "final": "KEEP No.1 (e minor), No.3 (c minor), No.4 (d minor)",
+  "note": "No.2 in G minor presumed lost — correctly omitted; 1->3->4 gap intentional & dual-confirmed",
+  "sources": "Wikipedia Florence Price work-list; MusicBrainz",
+  "done": true
+ },
+ "Jón Leifs": {
+  "rule": "verified w/ DROP",
+  "final": "KEEP only: Saga Symphony (Op. 26)",
+  "dropped": {
+   "Symphony No. 2 'Landfall'": "'Landfall' Op.41 is an Overture (male chorus & orch.), NOT a symphony; Leifs wrote no Symphony No.2"
+  },
+  "sources": "Wikipedia Jón Leifs; MIC Iceland; MusicBrainz",
+  "done": true
+ },
+ "William Schuman": {
+  "rule": "verified w/ DROP",
+  "final": "KEEP Nos. 3-10 (8 symphonies)",
+  "dropped": {
+   "Symphony No. 1 (1935)": "withdrawn by composer",
+   "Symphony No. 2 (1937)": "withdrawn by composer"
+  },
+  "note": "canon is 3-10; 5='Symphony for Strings', 9='Le fosse Ardeatine', 10='American Muse'",
+  "sources": "Wikipedia William Schuman; Britannica; MusicBrainz",
+  "done": true
+ },
+ "Vagn Holmboe": {
+  "rule": "verified w/ FLAG",
+  "final": "KEEP 10 curated (Nos.1-8,10,11)",
+  "flag": {
+   "No.3 opus": "25 (MB/ours) vs 26 (Wikipedia) — unresolved, omit/await 3rd source",
+   "No.11 opus": "144 (MB) vs 150 (Wikipedia) — unresolved"
+  },
+  "note": "numbers/nicknames (3 Sinfonia rustica,4 Sinfonia sacra,8 Sinfonia boreale) confirmed",
+  "sources": "Wikipedia Holmboe work-list; MusicBrainz",
+  "done": true,
+  "needs_review": true
+ },
+ "Witold Lutosławski": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Andrzej Panufnik": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 numbered correct (Sinfonia Rustica..No.10)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "David Diamond": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "11 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Vincent Persichetti": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "9 numbered correct (5 Strings,6 Band,9 Janiculum)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Henri Dutilleux": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "2 correct (1, 2 'Le Double')",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Isang Yun": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "5 numbered correct (4 'Im Dunkeln singen')",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Leonard Bernstein": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "3 correct (Jeremiah/Age of Anxiety/Kaddish)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "George Rochberg": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "6 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Galina Ustvolskaya": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "5 correct (2 True&Eternal Bliss,3 Jesus Messiah,4 Prayer,5 Amen)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Mieczysław Weinberg": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 curated of 26 correct (8 Polish Flowers,12,17,19,21 Kaddish)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Malcolm Arnold": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "9 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Robert Simpson": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 curated of 11 correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Ruth Gipps": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "5 numbered correct (Op.22/30/57/61/64)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Peter Mennin": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "9 numbered correct (1-2 withdrawn,4 The Cycle,7 Variation-Symphony)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Joly Braga Santos": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "6 numbered correct (5 Virtus Lusitaniae)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Hans Werner Henze": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 numbered correct (9 choral)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Einojuhani Rautavaara": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "8 numbered correct (7 Angel of Light,8 The Journey)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Sofia Gubaidulina": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "Stimmen… Verstummen (Symphony in 12 movements) — sole, correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Per Nørgård": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "8 numbered correct (1 Sinfonia austera,6 At the End of the Day)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Krzysztof Penderecki": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "8 numbered correct (2 Christmas,4 Adagio,5 Korean,6 Chinese Songs,7 Seven Gates,8 Lieder der Vergänglichkeit)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Henryk Górecki": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 correct (1 '1959',2 Copernican,3 Sorrowful Songs,4 Tansman Episodes)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Alfred Schnittke": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 correct (No.0 + 1-9; 5=Concerto Grosso No.4)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Peter Maxwell Davies": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 numbered correct (8 Antarctic,10 Alla ricerca di Borromini)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Giya Kancheli": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "7 numbered correct (2 Chants,4 Michelangelo,7 Epilogue)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Aulis Sallinen": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "8 numbered correct (5 Washington Mosaics,7 Dreams of Gandalf)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Arvo Pärt": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "4 numbered correct (1 Polyphonic,4 Los Angeles)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "John Harbison": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "6 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Christopher Rouse": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "6 numbered correct",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Carl Vine": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "8 numbered correct (1 Microsymphony,5 Percussion,6 Choral,8 The Enchanted Loom)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Ellen Taaffe Zwilich": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "5 correct (2 Cello Symphony,4 The Gardens,5 Concerto for Orchestra)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Kalevi Aho": {
+  "rule": "verified as-is",
+  "final": "KEEP current entries (dual-confirmed)",
+  "note": "10 curated of 18 correct (7 Insect Symphony,12 Luosto)",
+  "sources": "MusicBrainz + Wikipedia work-list/IMSLP/publisher",
+  "done": true
+ },
+ "Gloria Coates": {
+  "rule": "verified w/ FIX (10 curated of 16)",
+  "final": "KEEP 10 picks",
+  "fix": {
+   "Symphony No. 14": "add subtitle 'The Americans'"
+  },
+  "sources": "Wikipedia Gloria Coates work-list; MusicBrainz",
+  "done": true
+ },
+ "Philip Glass": {
+  "rule": "verified w/ FIX (10 curated of 14+)",
+  "final": "KEEP 10 picks",
+  "fix": {
+   "Symphony No. 5 'Choral'": "subtitle -> 'Requiem, Bardo, Nirmanakaya' (official title)"
+  },
+  "sources": "Wikipedia List of compositions by Glass; philipglass.com; Wise Music",
+  "done": true
+ },
+ "David Matthews": {
+  "rule": "verified w/ ADD",
+  "final": "KEEP 1-9 + ADD No.10",
+  "add": {
+   "Symphony No. 10 'Regeneration', Op. 157 (2020-21)": "was missing; dual-confirmed Wikipedia + Faber Music"
+  },
+  "sources": "Wikipedia David Matthews work-list; Faber Music",
+  "done": true
+ },
+ "Aaron Jay Kernis": {
+  "rule": "verified w/ FIX",
+  "final": "KEEP 4 (Symphony in Waves, No.2, No.3 'Symphony of Meditations', No.4 'Chromelodeon')",
+  "fix": {
+   "Symphony No. 1 'Symphony in Waves'": "relabel to 'Symphony in Waves' (carries NO number in authoritative sources)"
+  },
+  "sources": "Wise Music/Associated Music Publishers; aaronjaykernis.com; Wikipedia",
+  "done": true
+ },
+ "John Adams": {
+  "rule": "verified w/ DROP (no numbered symphony; only titled-symphony works)",
+  "final": [
+   "Chamber Symphony",
+   "Doctor Atomic Symphony"
+  ],
+  "dropped": {
+   "Harmonielehre": "orchestral work, not titled/classed a symphony",
+   "Naive and Sentimental Music": "orchestral work, not a symphony",
+   "City Noir": "orchestral work, not a symphony",
+   "My Father Knew Charles Ives": "orchestral work, not a symphony"
+  },
+  "note": "Adams has NO numbered symphony; only Chamber Symphony (1992) & Doctor Atomic Symphony (2007) are genuine symphony-class",
+  "sources": "Wise Music Classical (publisher); Wikipedia Adams work-list; MusicBrainz type=Symphony",
+  "done": true
+ },
+ "Heitor Villa-Lobos": {
+  "rule": "verified as-is (10 curated of 12; No.5 lost)",
+  "final": "KEEP 10 picks",
+  "note": "1 O Imprevisto,2 Ascensão,3 A Guerra,4 A Vitória,6,7,8,9,10 Sumé Pater Patrium,12; No.5 lost (excluded), No.11 extant but not curated (≤10 ceiling)",
+  "sources": "Wikipedia List of compositions by Villa-Lobos; MusicBrainz",
+  "done": true
+ },
+ "Zoltán Kodály": {
+  "rule": "verified as-is",
+  "final": "KEEP: Symphony in C major",
+  "note": "Kodály's sole symphony, Symphony in C major (1961, ded. Toscanini)",
+  "sources": "Wikipedia Kodály work-list; Grove; MusicBrainz",
+  "done": true
+ },
+ "John Corigliano": {
+  "rule": "verified as-is",
+  "final": "KEEP 3",
+  "note": "Sym1 (1989, Grawemeyer), Sym2 for string orchestra (Pulitzer 2001), Sym3 'Circus Maximus' (wind ensemble) — agent-verified",
+  "sources": "Wikipedia Corigliano work-list; MusicBrainz",
+  "done": true
+ }
+}
