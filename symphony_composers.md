@@ -152,33 +152,34 @@ Bach, Vivaldi, Bartók) are deliberately excluded.
 128. **Luciano Berio** (1925–2003) — *Sinfonia* (1968) reinvented the symphony as collage and commentary.
 129. **Hans Werner Henze** (1926–2012) — Ten symphonies spanning lyrical and politically charged idioms.
 130. **Einojuhani Rautavaara** (1928–2016) — Eight symphonies, including the mystical "Angel of Light."
+131. **Kenneth Leighton** (1929–1988) — Three symphonies, including the choral *Sinfonia mistica*; a leading British contrapuntalist.
 
 ## Late Twentieth Century & the Contemporary Symphony
 
-131. **Sofia Gubaidulina** (1931–2024) — A towering late-modern figure; *Stimmen… Verstummen*, a symphony in twelve movements, brings her spiritual intensity to the genre.
-132. **Per Nørgård** (1932–2025) — Eight symphonies built on his "infinity series"; a major modern Dane.
-133. **Krzysztof Penderecki** (1933–2020) — Eight symphonies marking his path from avant-garde to neo-Romanticism.
-134. **Henryk Górecki** (1933–2010) — The Third Symphony ("Sorrowful Songs") became a cultural phenomenon.
-135. **Gloria Coates** (1933–2023) — Sixteen symphonies of distinctive glissando-saturated texture.
-136. **Alfred Schnittke** (1934–1998) — Nine symphonies built on polystylism and historical collage.
-137. **Peter Maxwell Davies** (1934–2016) — Ten symphonies plus ten "Strathclyde" concertos; a prolific Briton.
-138. **Giya Kancheli** (1935–2019) — Seven symphonies of stark contrast and meditative stillness.
-139. **Aulis Sallinen** (1935–2025) — Eight symphonies central to modern Finnish music.
-140. **Arvo Pärt** (b. 1935) — Four symphonies tracing his path to "tintinnabuli" spirituality.
-141. **Philip Glass** (b. 1937) — Over fourteen symphonies extending the genre into minimalism.
-142. **John Harbison** (b. 1938) — Six symphonies from a leading American composer.
-143. **John Corigliano** (b. 1938) — His First Symphony (an AIDS memorial) is among the most performed of recent decades.
-144. **Ellen Taaffe Zwilich** (b. 1939) — Five symphonies; first woman to win the Pulitzer Prize for Music.
-145. **David Matthews** (b. 1943) — Nine symphonies sustaining the British symphonic line.
-146. **John Adams** (b. 1947) — *Harmonielehre*, the "Doctor Atomic Symphony," and *City Noir* in symphonic scope.
-147. **Kalevi Aho** (b. 1949) — Seventeen-plus symphonies; among today's most prolific symphonists.
-148. **Christopher Rouse** (1949–2019) — Six dramatic, hard-hitting American symphonies.
-149. **Carl Vine** (b. 1954) — Eight symphonies central to contemporary Australian music.
-150. **Magnus Lindberg** (b. 1958) — Large-scale symphonic works from a leading Finnish modernist.
-151. **Esa-Pekka Salonen** (b. 1958) — Symphonic and orchestral works from the composer-conductor.
-152. **James MacMillan** (b. 1959) — Five symphonies of spiritual and dramatic intensity.
-153. **Aaron Jay Kernis** (b. 1960) — Pulitzer-winning symphonist of the contemporary American scene.
-154. **Lera Auerbach** (b. 1973) — A leading symphonist of the current generation, with numbered symphonies including "Chimera" and "Arctica."
+132. **Sofia Gubaidulina** (1931–2024) — A towering late-modern figure; *Stimmen… Verstummen*, a symphony in twelve movements, brings her spiritual intensity to the genre.
+133. **Per Nørgård** (1932–2025) — Eight symphonies built on his "infinity series"; a major modern Dane.
+134. **Krzysztof Penderecki** (1933–2020) — Eight symphonies marking his path from avant-garde to neo-Romanticism.
+135. **Henryk Górecki** (1933–2010) — The Third Symphony ("Sorrowful Songs") became a cultural phenomenon.
+136. **Gloria Coates** (1933–2023) — Sixteen symphonies of distinctive glissando-saturated texture.
+137. **Alfred Schnittke** (1934–1998) — Nine symphonies built on polystylism and historical collage.
+138. **Peter Maxwell Davies** (1934–2016) — Ten symphonies plus ten "Strathclyde" concertos; a prolific Briton.
+139. **Giya Kancheli** (1935–2019) — Seven symphonies of stark contrast and meditative stillness.
+140. **Aulis Sallinen** (1935–2025) — Eight symphonies central to modern Finnish music.
+141. **Arvo Pärt** (b. 1935) — Four symphonies tracing his path to "tintinnabuli" spirituality.
+142. **Philip Glass** (b. 1937) — Over fourteen symphonies extending the genre into minimalism.
+143. **John Harbison** (b. 1938) — Six symphonies from a leading American composer.
+144. **John Corigliano** (b. 1938) — His First Symphony (an AIDS memorial) is among the most performed of recent decades.
+145. **Ellen Taaffe Zwilich** (b. 1939) — Five symphonies; first woman to win the Pulitzer Prize for Music.
+146. **David Matthews** (b. 1943) — Nine symphonies sustaining the British symphonic line.
+147. **John Adams** (b. 1947) — *Harmonielehre*, the "Doctor Atomic Symphony," and *City Noir* in symphonic scope.
+148. **Kalevi Aho** (b. 1949) — Seventeen-plus symphonies; among today's most prolific symphonists.
+149. **Christopher Rouse** (1949–2019) — Six dramatic, hard-hitting American symphonies.
+150. **Carl Vine** (b. 1954) — Eight symphonies central to contemporary Australian music.
+151. **Magnus Lindberg** (b. 1958) — Large-scale symphonic works from a leading Finnish modernist.
+152. **Esa-Pekka Salonen** (b. 1958) — Symphonic and orchestral works from the composer-conductor.
+153. **James MacMillan** (b. 1959) — Five symphonies of spiritual and dramatic intensity.
+154. **Aaron Jay Kernis** (b. 1960) — Pulitzer-winning symphonist of the contemporary American scene.
+155. **Lera Auerbach** (b. 1973) — A leading symphonist of the current generation, with numbered symphonies including "Chimera" and "Arctica."
 
 ---
 
