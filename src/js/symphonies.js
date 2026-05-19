@@ -70,6 +70,7 @@ function ensureModal() {
       <div class="symphony-modal__live" aria-live="polite">
         <p class="symphony-modal__composer" id="symphony-modal-composer" data-field="composer"></p>
         <h2 class="symphony-modal__work" id="symphony-modal-work" data-field="work"></h2>
+        <p class="symphony-modal__composed" data-field="composed"></p>
         <p class="symphony-modal__recording" data-field="recording"></p>
         <div class="symphony-modal__divider"></div>
         <div data-field="spotify"></div>
@@ -150,6 +151,15 @@ async function showRandom() {
   backdrop.querySelector('[data-field="composer"]').textContent = sym.composer;
   backdrop.querySelector('[data-field="work"]').textContent = sym.work;
 
+  const compEl = backdrop.querySelector('[data-field="composed"]');
+  if (sym.composed) {
+    compEl.textContent = `Composed ${sym.composed}`;
+    compEl.hidden = false;
+  } else {
+    compEl.textContent = '';
+    compEl.hidden = true;
+  }
+
   const recEl = backdrop.querySelector('[data-field="recording"]');
   if (sym.recording) {
     recEl.innerHTML = `<span class="symphony-modal__recording-label">As recorded by</span> ${escapeHTML(sym.recording)}`;
@@ -181,10 +191,12 @@ function rowHTML(sym) {
   } else {
     listen = '<span>—</span>';
   }
-  return `<tr data-search="${escapeHTML((sym.composer + ' ' + sym.work).toLowerCase())}">
+  const search = `${sym.composer} ${sym.work} ${sym.composed}`.toLowerCase();
+  return `<tr data-search="${escapeHTML(search)}">
       <td class="symphony-table__num">${escapeHTML(sym.id)}</td>
       <td class="symphony-table__composer">${escapeHTML(sym.composer)}</td>
       <td class="symphony-table__work">${escapeHTML(sym.work)}</td>
+      <td class="symphony-table__composed">${escapeHTML(sym.composed)}</td>
       <td class="symphony-table__listen">${listen}</td>
     </tr>`;
 }
@@ -201,17 +213,18 @@ async function renderList(container) {
 
   container.innerHTML = `
     <div class="symphony-toolbar">
-      <input class="symphony-search" type="search" placeholder="Search composer or work…"
+      <input class="symphony-search" type="search" placeholder="Search composer, work, or year…"
              aria-label="Search symphonies" />
       <span class="symphony-count" role="status" aria-live="polite"></span>
     </div>
     <table class="symphony-table">
-      <caption class="sr-only">List of ${symphonies.length} symphonies, searchable by composer or work.</caption>
+      <caption class="sr-only">List of ${symphonies.length} symphonies, searchable by composer, work, or year.</caption>
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Composer</th>
           <th scope="col">Symphony</th>
+          <th scope="col">Composed</th>
           <th scope="col"><span class="sr-only">Recording</span></th>
         </tr>
       </thead>

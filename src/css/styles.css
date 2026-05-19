@@ -2684,6 +2684,14 @@ html.dark {
   color: var(--color-primary-accent);
   margin: 0 0 20px;
 }
+.symphony-modal__composed {
+  font: 400 12px/1 var(--font-body);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-text-muted-light);
+  margin: 0 0 20px;
+}
+.symphony-modal__composed[hidden] { display: none; }
 .symphony-modal__recording {
   font: italic 400 16px/26px var(--font-body);
   color: var(--color-text-light);
@@ -2788,6 +2796,12 @@ html.dark {
 .symphony-table__num { color: var(--color-text-muted-light); width: 56px; font-variant-numeric: tabular-nums; }
 .symphony-table__composer { color: var(--color-secondary-accent-dark); white-space: nowrap; }
 .symphony-table__work { font-style: italic; }
+.symphony-table__composed {
+  color: var(--color-text-muted-light);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  width: 96px;
+}
 .symphony-table__listen {
   width: 110px;
   text-align: right;
