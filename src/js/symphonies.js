@@ -246,10 +246,15 @@ async function renderList(container) {
 /* ----- Init --------------------------------------------------------------- */
 
 function updateHeadlineCount() {
-  const el = document.getElementById('symphony-headline-count');
-  if (!el) return;
+  // Any element with [data-symphony-count] gets the live count; its static
+  // text is kept as a fallback if the data never loads.
+  const els = document.querySelectorAll('[data-symphony-count]');
+  if (els.length === 0) return;
   loadSymphonies()
-    .then(symphonies => { el.textContent = symphonies.length.toLocaleString(); })
+    .then(symphonies => {
+      const n = symphonies.length.toLocaleString();
+      els.forEach(el => { el.textContent = n; });
+    })
     .catch(() => { /* keep the static fallback */ });
 }
 

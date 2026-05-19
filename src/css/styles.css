@@ -31,6 +31,18 @@
     --color-secondary-accent: #9C7A2C;
     --color-secondary-accent-dark: #7A5E1F;
 
+    /*
+     * Antique-gold hairline used for UI-control / container borders.
+     * Separate semantic role from the decorative --color-secondary-accent
+     * (which stays for text, rules, and fills). No single gold can clear the
+     * WCAG 1.4.11 3:1 non-text threshold on BOTH the cream and charcoal
+     * grounds, so this token is theme-aware: the light value is tuned dark
+     * enough for the cream paper, and html.dark overrides it with a brighter
+     * gold for the charcoal ground. Light #856526 = 4.3-4.9:1 on cream;
+     * dark #B8923F = 4.4-6.1:1 on charcoal. Both well clear of 3:1.
+     */
+    --color-accent-border: #856526;
+
     /* Neutral & Text Colors */
     --color-background-light: #F4ECD8; /* Warm cream paper ground */
     --color-background-dark: #1F1611; /* Warm charcoal */
@@ -1231,7 +1243,7 @@ textarea::-webkit-scrollbar-thumb {
 .auth-btn {
   background: var(--color-background-light);
   color: var(--color-text-light);
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 2px;
   font: 500 13px/1 var(--font-body);
   letter-spacing: 0.18em;
@@ -1307,8 +1319,8 @@ textarea::-webkit-scrollbar-thumb {
   display: flex;
   gap: 28px;
   padding: 12px 28px;
-  border-left: 1px solid var(--color-secondary-accent);
-  border-right: 1px solid var(--color-secondary-accent);
+  border-left: 1px solid var(--color-accent-border);
+  border-right: 1px solid var(--color-accent-border);
 }
 .hero-status__cell {
   display: flex;
@@ -1467,7 +1479,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 56px 96px;
-  border-top: 1px solid var(--color-secondary-accent);
+  border-top: 1px solid var(--color-accent-border);
   background: transparent;
   scroll-margin-top: 120px;
 }
@@ -1496,7 +1508,7 @@ nav {
   object-position: center top;
   padding: 6px;
   background: #FBF3DF;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   filter: sepia(0.3) contrast(0.95);
 }
 .work__placeholder {
@@ -1505,7 +1517,7 @@ nav {
   padding: 24px;
   box-sizing: border-box;
   background: #FBF3DF;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1649,7 +1661,7 @@ nav {
   width: 100%;
   min-height: 96px;
   background: transparent;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 0;
   padding: 14px;
   font: 400 16px/26px var(--font-body);
@@ -1667,7 +1679,7 @@ nav {
   align-items: center;
   gap: 10px;
   background: transparent;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   cursor: pointer;
   font: italic 400 13px/1 var(--font-body);
   letter-spacing: 0.18em;
@@ -1821,7 +1833,7 @@ nav {
   color: var(--color-primary-accent);
   margin: 0;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--color-secondary-accent);
+  border-bottom: 1px solid var(--color-accent-border);
 }
 .references__list {
   list-style: none;
@@ -1942,7 +1954,7 @@ nav {
 
 #composer-bio-popup {
   background-color: #FBF3DF;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 0;
   z-index: 100;
   opacity: 1;
@@ -1987,7 +1999,7 @@ h3#bio-popup-title {
 #bio-popup-image {
   min-height: 24px;
   min-width: 24px;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 0;
   padding: 4px;
   background: #FBF3DF;
@@ -2001,7 +2013,7 @@ h3#bio-popup-title {
   align-items: center;
   gap: 6px;
   background: transparent !important;
-  border: 1px solid var(--color-secondary-accent) !important;
+  border: 1px solid var(--color-accent-border) !important;
   border-radius: 0 !important;
   color: var(--color-primary-accent) !important;
   font: italic 400 11px/1 var(--font-body) !important;
@@ -2069,7 +2081,7 @@ a[href*="spotify.com"] svg {
 #sync-status {
   background: var(--color-background-light);
   color: var(--color-text-light);
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 0;
   font: italic 400 13px/1 var(--font-body);
   letter-spacing: 0.18em;
@@ -2090,6 +2102,14 @@ a[href*="spotify.com"] svg {
   background-color: var(--color-background-dark);
   color: var(--color-text-dark);
 }
+/*
+ * Theme-aware hairline: brighter antique gold so UI-control / container
+ * borders clear WCAG 1.4.11 (3:1) against the charcoal ground. html.dark
+ * (specificity 0,1,1) reliably overrides the :root light value (0,1,0).
+ */
+html.dark {
+  --color-accent-border: #B8923F;
+}
 .dark nav {
   background: var(--color-surface-dark);
   border-color: var(--color-border-dark);
@@ -2100,7 +2120,7 @@ a[href*="spotify.com"] svg {
 .dark .hero-blurb { color: var(--color-text-dark); opacity: 0.8; }
 .dark .hero-rule { color: var(--color-secondary-accent); }
 .dark .hero-rule__line { background: var(--color-secondary-accent); }
-.dark .hero-status { border-color: var(--color-secondary-accent); }
+.dark .hero-status { border-color: var(--color-accent-border); }
 .dark .hero-status__value { color: var(--color-secondary-accent); }
 .dark .hero-status__label { color: var(--color-text-dark); opacity: 0.7; }
 
@@ -2122,19 +2142,19 @@ a[href*="spotify.com"] svg {
   color: var(--color-secondary-accent);
 }
 .dark .work__heard {
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   color: var(--color-text-dark);
   opacity: 0.85;
 }
 .dark .work__heard:hover {
   background: var(--color-border-dark);
   color: var(--color-secondary-accent);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   opacity: 1;
 }
 .dark .work__heard[aria-pressed="true"] {
   background: var(--color-secondary-accent);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   color: var(--color-background-dark);
   opacity: 1;
 }
@@ -2151,12 +2171,12 @@ a[href*="spotify.com"] svg {
 .dark .work__notes li::before { color: var(--color-secondary-accent); }
 .dark .work__performer { border-top-color: var(--color-border-dark); }
 .dark .work__placeholder,
-.dark .work__portrait { background: var(--color-surface-dark); border-color: var(--color-secondary-accent); }
+.dark .work__portrait { background: var(--color-surface-dark); border-color: var(--color-accent-border); }
 .dark .work__placeholder em { color: var(--color-secondary-accent); }
 .dark .work__personal textarea,
 .dark .item-notes {
   background: var(--color-surface-dark);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   color: var(--color-text-dark);
 }
 .dark .work__heard-disc {
@@ -2165,22 +2185,22 @@ a[href*="spotify.com"] svg {
 }
 .dark .work__heard[aria-pressed="true"] .work__heard-disc {
   background: var(--color-secondary-accent);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   opacity: 1;
 }
 .dark .work.ring-4 {
-  outline-color: var(--color-secondary-accent) !important;
+  outline-color: var(--color-accent-border) !important;
   background: var(--color-surface-dark);
 }
 
 .dark .footer-rule { background: var(--color-secondary-accent); }
 .dark .footer-credit { color: var(--color-text-dark); opacity: 0.8; }
 .dark .footer-links a { color: var(--color-secondary-accent); }
-.dark .footer-links a:hover { border-bottom-color: var(--color-secondary-accent); }
+.dark .footer-links a:hover { border-bottom-color: var(--color-accent-border); }
 .dark .references__rule { background: var(--color-secondary-accent); }
 .dark .references__title { color: var(--color-text-dark); }
 .dark .references__blurb { color: var(--color-text-dark); opacity: 0.75; }
-.dark .references__group-title { color: var(--color-secondary-accent); border-bottom-color: var(--color-secondary-accent); }
+.dark .references__group-title { color: var(--color-secondary-accent); border-bottom-color: var(--color-accent-border); }
 .dark .reference-entry { color: var(--color-text-dark); }
 .dark .reference-entry__author { color: var(--color-text-dark); opacity: 0.7; }
 .dark .reference-entry__title { color: var(--color-text-dark); }
@@ -2202,7 +2222,7 @@ a[href*="spotify.com"] svg {
 
 .dark #composer-bio-popup {
   background-color: var(--color-surface-dark);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
 }
 .dark .bio-popup::before {
   border-color: transparent transparent var(--color-surface-dark) transparent;
@@ -2211,7 +2231,7 @@ a[href*="spotify.com"] svg {
 .dark div#bio-popup-content p { color: var(--color-text-dark); }
 .dark h3#bio-popup-title { color: var(--color-secondary-accent); }
 .dark .composer-bio-btn {
-  border-color: var(--color-secondary-accent) !important;
+  border-color: var(--color-accent-border) !important;
   color: var(--color-secondary-accent) !important;
 }
 .dark .composer-bio-btn:hover { background: var(--color-border-dark) !important; }
@@ -2219,7 +2239,7 @@ a[href*="spotify.com"] svg {
 .dark .auth-btn {
   background: var(--color-surface-dark);
   color: var(--color-text-dark);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
 }
 .dark .auth-btn:hover { background: var(--color-border-dark); }
 
@@ -2619,7 +2639,7 @@ a[href*="spotify.com"] svg {
   width: 560px;
   max-width: 100%;
   background-color: #FBF3DF;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   box-shadow: 0 18px 48px rgba(20, 12, 8, 0.35), 0 4px 12px rgba(20, 12, 8, 0.15);
   padding: 44px 48px 40px;
   text-align: center;
@@ -2683,7 +2703,7 @@ a[href*="spotify.com"] svg {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   padding: 11px 20px;
   font: italic 400 14px/1 var(--font-body);
   letter-spacing: 0.06em;
@@ -2730,7 +2750,7 @@ a[href*="spotify.com"] svg {
 .symphony-search {
   flex: 1 1 320px;
   background: #FBF3DF;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   color: var(--color-text-light);
   font: italic 400 16px/1 var(--font-body);
   padding: 12px 16px;
@@ -2749,7 +2769,7 @@ a[href*="spotify.com"] svg {
   text-transform: uppercase;
   color: var(--color-text-muted-light);
   padding: 10px 14px;
-  border-bottom: 1px solid var(--color-secondary-accent);
+  border-bottom: 1px solid var(--color-accent-border);
 }
 .symphony-table td {
   padding: 12px 14px;
