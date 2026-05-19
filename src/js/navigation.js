@@ -434,14 +434,10 @@ class NavigationManager {
           const targetItem = document.querySelector(`[data-id="${itemId}"]`);
 
           if (targetItem) {
-            // Scroll to the item with smooth behavior and proper offset for fixed header
-            const navHeight = document.querySelector('nav')?.offsetHeight || 0;
-            const targetPosition = targetItem.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-
-            window.scrollTo({
-              top: targetPosition,
-              behavior: Utils.scrollBehavior()
-            });
+            // CSS (html scroll-padding-top + .work scroll-margin-top) handles
+            // the sticky-header offset; the old manual math mis-measured the
+            // full-height side-menu drawer as the header.
+            targetItem.scrollIntoView({ behavior: Utils.scrollBehavior(), block: 'start' });
 
             // Move focus to the destination so keyboard/SR users land there
             // too, not just the viewport (WCAG 2.4.3).
@@ -513,9 +509,7 @@ class NavigationManager {
         this.closeMenu();
         const target = document.getElementById('references-section');
         if (target) {
-          const navHeight = document.querySelector('nav')?.offsetHeight || 0;
-          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-          window.scrollTo({ top: targetPosition, behavior: Utils.scrollBehavior() });
+          target.scrollIntoView({ behavior: Utils.scrollBehavior(), block: 'start' });
           Utils.focusTransient(target);
         }
       });

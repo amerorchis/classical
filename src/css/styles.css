@@ -1479,7 +1479,11 @@ nav {
   padding: 56px 96px;
   border-top: 1px solid var(--color-accent-border);
   background: transparent;
-  scroll-margin-top: 120px;
+  /* Sticky-header clearance comes from html { scroll-padding-top: 110px }
+     (≈ header height + breathing room). This is only a small extra buffer;
+     keeping it large stacked on top of scroll-padding and pushed works
+     ~120px too low for scrollIntoView / hash links. */
+  scroll-margin-top: 16px;
 }
 .work:first-child { border-top: none; }
 .work__head {

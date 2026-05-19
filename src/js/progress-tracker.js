@@ -166,14 +166,12 @@ class ProgressTracker {
     for (const item of syllabusItems) {
       const checkbox = item.querySelector('.item-checkbox');
       if (checkbox && !checkbox.checked) {
-        // Scroll to the item with smooth behavior and proper offset for fixed header
-        const navHeight = document.querySelector('nav')?.offsetHeight || 0;
-        const targetPosition = item.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: Utils.scrollBehavior()
-        });
+        // Scroll the item just below the sticky era header. The offset is
+        // handled in CSS (html { scroll-padding-top } + .work
+        // { scroll-margin-top }); computing it here was buggy because
+        // document.querySelector('nav') matched the full-height side-menu
+        // drawer, not the ~60px header, leaving the work near the bottom edge.
+        item.scrollIntoView({ behavior: Utils.scrollBehavior(), block: 'start' });
 
         // Move focus to the next work so keyboard/SR users are taken there
         // too, not just the viewport (WCAG 2.4.3).
