@@ -48,7 +48,7 @@
     document.documentElement.classList.remove('dark');
   </script>
   <svg style="display: none;">
-    <symbol id="spotify-icon" viewbox="0 0 50 50">
+    <symbol id="spotify-icon" viewBox="0 0 50 50">
       <path
         d="M25.009,1.982c-12.687,0 -23.009,10.322 -23.009,23.009c0,12.687 10.322,23.009 23.009,23.009c12.687,0 23.009,-10.321 23.009,-23.009c0,-12.688 -10.322,-23.009 -23.009,-23.009zM34.748,35.333c-0.289,0.434 -0.765,0.668 -1.25,0.668c-0.286,0 -0.575,-0.081 -0.831,-0.252c-2.473,-1.649 -6.667,-2.749 -10.167,-2.748c-3.714,0.002 -6.498,0.914 -6.526,0.923c-0.784,0.266 -1.635,-0.162 -1.897,-0.948c-0.262,-0.786 0.163,-1.636 0.949,-1.897c0.132,-0.044 3.279,-1.075 7.474,-1.077c3.5,-0.002 8.368,0.942 11.832,3.251c0.69,0.46 0.876,1.391 0.416,2.08zM37.74,29.193c-0.325,0.522 -0.886,0.809 -1.459,0.809c-0.31,0 -0.624,-0.083 -0.906,-0.26c-4.484,-2.794 -9.092,-3.385 -13.062,-3.35c-4.482,0.04 -8.066,0.895 -8.127,0.913c-0.907,0.258 -1.861,-0.272 -2.12,-1.183c-0.259,-0.913 0.272,-1.862 1.184,-2.12c0.277,-0.079 3.854,-0.959 8.751,-1c4.465,-0.037 10.029,0.61 15.191,3.826c0.803,0.5 1.05,1.56 0.548,2.365zM40.725,22.013c-0.373,0.634 -1.041,0.987 -1.727,0.987c-0.344,0 -0.692,-0.089 -1.011,-0.275c-5.226,-3.068 -11.58,-3.719 -15.99,-3.725c-0.021,0 -0.042,0 -0.063,0c-5.333,0 -9.44,0.938 -9.481,0.948c-1.078,0.247 -2.151,-0.419 -2.401,-1.495c-0.25,-1.075 0.417,-2.149 1.492,-2.4c0.185,-0.043 4.573,-1.053 10.39,-1.053c0.023,0 0.046,0 0.069,0c4.905,0.007 12.011,0.753 18.01,4.275c0.952,0.56 1.271,1.786 0.712,2.738z">
       </path>
@@ -63,6 +63,11 @@
   <script type="module">
     import confetti from 'https://cdn.skypack.dev/canvas-confetti';
     window.triggerConfetti = function(element) {
+      // Respect the OS "reduce motion" preference (WCAG 2.3.3).
+      if (window.matchMedia &&
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
       const rect = element.getBoundingClientRect();
       const vw = window.innerWidth;
       const vh = window.innerHeight;
@@ -106,22 +111,27 @@
 </head>
 
 <body>
+  <!-- Skip link: first focusable element, lets keyboard users bypass the
+       menu/auth/timeline chrome (WCAG 2.4.1). -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Menu Toggle Button (Fixed to left edge of screen) -->
-  <button id="menu-toggle"
-    class="fixed left-0 p-2 rounded-r-md shadow-md z-50 focus:outline-none transition-all duration-300 ease-in-out"
+  <button id="menu-toggle" type="button"
+    aria-label="Open works-by-period menu" aria-expanded="false" aria-controls="side-menu"
+    class="fixed left-0 p-2 rounded-r-md shadow-md z-50 transition-all duration-300 ease-in-out"
     style="top: 190px; z-index: 60;">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
     </svg>
   </button>
 
   <!-- Left Side Menu (Initially Hidden) -->
-  <div id="side-menu"
+  <nav id="side-menu" aria-label="Works by period"
     class="fixed left-0 top-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out overflow-auto z-40">
     <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
-      <h3 class="font-bold text-indigo-600 dark:text-indigo-400">Works by Period</h3>
-      <button id="close-menu" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <h2 class="font-bold text-indigo-600 dark:text-indigo-400">Works by Period</h2>
+      <button id="close-menu" type="button" aria-label="Close menu" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
@@ -131,15 +141,15 @@
     <div id="dynamic-menu-content" class="p-4 space-y-2">
       <!-- JS will insert content here -->
     </div>
-  </div>
+  </nav>
 
   <!-- Auth UI Elements -->
   <div class="absolute top-8 right-4 z-50 flex items-center">
     <!-- Login Button (shown when user is not logged in) -->
-    <button id="login-button"
+    <button id="login-button" type="button" aria-label="Log in with Google to sync progress"
       class="hidden auth-btn py-2 px-4 transition-all duration-300 ease-in-out flex items-center">
       <!-- Google "G" Logo SVG -->
-      <svg class="w-5 h-5 min-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 min-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
         <path fill="#4285F4"
           d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
         <path fill="#34A853"
@@ -155,10 +165,10 @@
     </button>
 
     <div id="user-profile" class="hidden flex items-center">
-      <button id="logout-button"
+      <button id="logout-button" type="button"
         class="auth-btn py-2 px-4 transition-all duration-300 ease-in-out flex items-center">
         <!-- Google "G" Logo SVG -->
-        <svg class="w-5 h-5 min-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 min-w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path fill="#4285F4"
             d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
           <path fill="#34A853"
@@ -174,10 +184,10 @@
   </div>
 
   <!-- Sync Status Indicator -->
-  <div id="sync-status"
+  <div id="sync-status" role="status" aria-live="polite"
     class="hidden fixed bottom-6 left-6 z-50 bg-white text-gray-700 py-2 px-4 rounded-md shadow-md flex items-center border border-gray-200">
     <svg class="w-5 h-5 mr-3 text-indigo-600 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
-      viewBox="0 0 24 24">
+      viewBox="0 0 24 24" aria-hidden="true">
       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
       <path class="opacity-75" fill="currentColor"
         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
@@ -223,7 +233,7 @@
       </div>
     </header>
     <!-- Timeline Navigation Bar -->
-    <nav class="sticky top-0 z-50">
+    <nav class="sticky top-0 z-50" aria-label="Musical eras">
       <div class="nav-inner">
         <!-- Left: spacer (dark-mode toggle disabled for now) -->
         <div class="nav-side"></div>
@@ -256,10 +266,10 @@
         </div>
         <!-- Right: Scroll-to-top arrow -->
         <div class="nav-side nav-side--right">
-          <button aria-label="Scroll to top" id="scroll-to-top" class="nav-icon-btn">
+          <button aria-label="Scroll to top" id="scroll-to-top" type="button" class="nav-icon-btn">
             <svg class="feather feather-arrow-up" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
               stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <line x1="12" x2="12" y1="19" y2="5"></line>
               <polyline points="5 12 12 5 19 12"></polyline>
             </svg>
@@ -268,7 +278,7 @@
       </div>
     </nav>
     <!-- Main Content -->
-    <main class="candlelit-main">
+    <main class="candlelit-main" id="main-content" tabindex="-1">
       <!-- Dynamic Syllabus Content -->
       <div id="dynamic-syllabus-container">
         <div class="loading-message">Loading syllabus content&hellip;</div>
@@ -278,7 +288,7 @@
     <footer class="candlelit-footer">
       <div class="footer-rule"></div>
       <div class="footer-links">
-        <a href="#" id="reset-progress" onclick="event.preventDefault(); resetSyllabus();">Reset progress</a>
+        <button type="button" id="reset-progress" class="footer-link-btn" onclick="resetSyllabus();">Reset progress</button>
       </div>
     </footer>
   </div>
@@ -316,14 +326,14 @@
   </script>
 
   <!-- Progress Bubble -->
-  <div aria-label="Track progress and find next item"
+  <button type="button" aria-label="0 of 0 works listened. Activate to jump to your next unlistened work."
     class="fixed bottom-6 right-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-lg p-4 transition transform hover:scale-110 hover:shadow-xl z-50 cursor-pointer"
-    id="progress-bubble" role="button" tabindex="0">
-    <div class="text-center font-bold">
+    id="progress-bubble">
+    <span class="text-center font-bold" aria-hidden="true">
       <span id="completed-count">0</span>/<span id="total-count">0</span>
-      <div class="text-xs mt-1">listened</div>
-    </div>
-  </div>
+      <span class="text-xs mt-1">listened</span>
+    </span>
+  </button>
 </body>
 
 </html>

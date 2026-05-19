@@ -59,7 +59,11 @@
     --font-body: 'EB Garamond', Georgia, serif;
 
     /* Utility Colors */
-    --color-spotify-green: #1DB954;
+    /* Darkened from the #1DB954 brand green: at 22px the icon is a
+       meaningful "Spotify link" affordance, so it must clear the 3:1
+       non-text contrast bar (WCAG 1.4.11). #1A7F3C reaches ~4.3:1 on the
+       cream surface and ~5.1:1 on white. */
+    --color-spotify-green: #1A7F3C;
 
     /* Legacy Tailwind Color Definitions (for utility classes) */
     --color-red-100: oklch(93.6% 0.032 17.717);
@@ -1670,8 +1674,12 @@ nav {
 }
 .work__personal textarea:focus,
 .item-notes:focus {
-  outline: none;
   border-color: var(--color-primary-accent);
+}
+.work__personal textarea:focus-visible,
+.item-notes:focus-visible {
+  outline: 2px solid var(--color-primary-accent);
+  outline-offset: 2px;
 }
 
 .work__heard {
@@ -2059,7 +2067,7 @@ a[href*="spotify.com"] svg {
 #progress-bubble:hover {
   box-shadow: 0 8px 25px color-mix(in srgb, var(--color-primary-accent) 50%, transparent);
 }
-#progress-bubble > div {
+#progress-bubble > span {
   text-align: center;
   line-height: 1.1;
 }
@@ -2846,3 +2854,118 @@ html.dark {
    index page. Dark mode is force-disabled today, but keep the link legible
    if it is ever re-enabled. */
 .dark .symphony-cta-link { color: var(--color-secondary-accent); }
+
+/* ===== Site-wide accessibility ============================================ */
+
+/* Skip link: off-screen until focused, then pinned top-left (WCAG 2.4.1). */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -48px;
+  z-index: 200;
+  padding: 10px 16px;
+  background: var(--color-primary-accent);
+  color: var(--color-background-light);
+  font: 600 14px/1 var(--font-body);
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+/* The skip target shouldn't draw a persistent outline when focused
+   programmatically. */
+#main-content:focus { outline: none; }
+
+/* Global visible focus indicator for every interactive control that did not
+   already have one (WCAG 2.4.7 / 1.4.11). Mirrors the symphony-page pattern. */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible,
+.timeline-link:focus-visible,
+.work__heard:focus-visible,
+.composer-bio-btn:focus-visible,
+.work__performer-link:focus-visible,
+.work-link:focus-visible,
+.menu-section-btn:focus-visible,
+.footer-links a:focus-visible,
+.footer-link-btn:focus-visible,
+.auth-btn:focus-visible,
+.nav-icon-btn:focus-visible,
+#menu-toggle:focus-visible,
+#close-menu:focus-visible,
+#close-bio:focus-visible,
+#progress-bubble:focus-visible,
+#reset-progress:focus-visible {
+  outline: 2px solid var(--color-primary-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* On the dark primary-accent bubble a same-colour outline is invisible —
+   use the light background colour instead. */
+#progress-bubble:focus-visible {
+  outline-color: var(--color-background-light);
+  outline-offset: 3px;
+}
+
+/* "Reset progress" is an action, so it is a <button>; keep it visually
+   identical to the former footer link. */
+.footer-link-btn {
+  appearance: none;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-primary-accent);
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  border-bottom: 1px solid transparent;
+}
+.footer-link-btn:hover { border-bottom-color: var(--color-primary-accent); }
+.dark .footer-link-btn { color: var(--color-secondary-accent); }
+
+/* The progress bubble is now a real <button>; strip native chrome so it
+   keeps the circular pill look. */
+#progress-bubble {
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Composer-bio dialog: stop pinning a fixed 750px width so it reflows at
+   small viewports / 400% zoom (WCAG 1.4.10). */
+.bio-popup {
+  width: min(750px, calc(100vw - 32px));
+  box-sizing: border-box;
+}
+
+/* Honour the OS "reduce motion" setting: neutralise transitions, animations
+   and parallax-y transforms, and stop the spinner (WCAG 2.3.3 / 2.2.2). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+  .animate-spin {
+    animation: none !important;
+  }
+  .timeline-link:hover,
+  .composer-bio-btn:hover,
+  #progress-bubble:hover {
+    transform: none !important;
+  }
+}

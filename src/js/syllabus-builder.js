@@ -44,6 +44,31 @@ function escapeAttr(str) {
   return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 }
 
+/**
+ * Escape a value for use as HTML text content. Prevents stored-XSS and
+ * markup corruption from JSON fields that legitimately contain & < > " '.
+ */
+function escapeHTML(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/**
+ * Allow http(s) absolute URLs and scheme-less relative paths (local images
+ * live at e.g. "src/assets/..."). Any explicit non-http(s) scheme
+ * (javascript:, data:, vbscript:, …) collapses to a harmless anchor.
+ */
+function safeUrl(url) {
+  const s = String(url || '').trim();
+  const scheme = s.match(/^([a-z][a-z0-9+.-]*):/i);
+  if (scheme && !/^https?$/i.test(scheme[1])) return '#';
+  return escapeAttr(s);
+}
+
 function extractYearRange(eraTitle) {
   // "Medieval (500-1400)" -> "500–1400"; "20th Century & Beyond" -> "1900–Present"
   const m = eraTitle.match(/\(([^)]+)\)/);
@@ -55,7 +80,7 @@ function extractYearRange(eraTitle) {
  * Generate HTML for a single syllabus work in candlelit-manuscript style.
  */
 function generateWorkHTML(work, eraName, eraYearRange) {
-  const composerAttribute = work.composer ? `data-composer="${work.composer}"` : '';
+  const composerAttribute = work.composer ? `data-composer="${escapeAttr(work.composer)}"` : '';
   const composer = work.composer && composerLookup ? composerLookup[work.composer] : null;
   const composerDisplayName = composer ? composer.name : '';
   const composerLifespan = composer ? composer.years : '';
@@ -72,16 +97,19 @@ function generateWorkHTML(work, eraName, eraYearRange) {
 
   // Folio: portrait if image, era placeholder if not.
   const captionHTML = folioCaption
-    ? `<span class="work__lifespan">${folioCaption}</span>`
+    ? `<span class="work__lifespan">${escapeHTML(folioCaption)}</span>`
     : '';
+  // Informative portrait gets a descriptive name when we know the composer;
+  // a bare work illustration stays decorative (title/caption are adjacent).
+  const portraitAlt = composer ? `Portrait of ${composer.name}` : '';
   let folioHTML;
   if (folioImage) {
     folioHTML = `
-              <img src="${folioImage}" alt="" class="work__portrait" loading="lazy">
+              <img src="${safeUrl(folioImage)}" alt="${escapeAttr(portraitAlt)}" class="work__portrait" loading="lazy">
               ${captionHTML}`;
   } else {
     folioHTML = `
-              <div class="work__placeholder"><em>${eraName}</em></div>
+              <div class="work__placeholder"><em>${escapeHTML(eraName)}</em></div>
               ${captionHTML}`;
   }
 
@@ -91,35 +119,33 @@ function generateWorkHTML(work, eraName, eraYearRange) {
   const rest = ctx.slice(1);
 
   // Notes list (bulletted).
-  const notesHTML = (work.notes || []).map(n => `<li>${n}</li>`).join('\n                ');
+  const notesHTML = (work.notes || []).map(n => `<li>${escapeHTML(n)}</li>`).join('\n                ');
 
   // Performer line: label + Spotify-linked artist name + Spotify glyph/text link.
   const performerHTML = work.recording
     ? `
               <span class="work__performer-label">As recorded by</span>
-              <a href="${work.recording.url}" class="work__performer-link" rel="noopener noreferrer" target="_blank">
-                <span class="work__performer-name">${work.recording.performer}</span>
-                <svg class="work__performer-spotify-glyph"><use href="#spotify-icon"></use></svg>
+              <a href="${safeUrl(work.recording.url)}" class="work__performer-link" rel="noopener noreferrer" target="_blank">
+                <span class="work__performer-name">${escapeHTML(work.recording.performer)}</span>
+                <svg class="work__performer-spotify-glyph" aria-hidden="true"><use href="#spotify-icon"></use></svg>
               </a>`
     : '<span class="work__performer-label">No recording suggestion available</span>';
 
   const displayTitle = work.displayTitle || work.title;
 
   return `
-          <article class="syllabus-item work" data-id="${work.id}" id="${work.id}">
+          <article class="syllabus-item work" data-id="${escapeAttr(work.id)}" id="${escapeAttr(work.id)}">
             <header class="work__head">
-              <span class="work__period">${eraName}</span>
-              <span class="work__year">${work.year}</span>
+              <span class="work__period">${escapeHTML(eraName)}</span>
+              <span class="work__year">${escapeHTML(work.year)}</span>
             </header>
             <div class="work__layout">
               <aside class="work__folio">${folioHTML}
               </aside>
               <div class="work__body">
-                ${composerDisplayName ? `<p class="work__composer">${composerDisplayName}</p>` : ''}
-                <h3 class="work__title">
-                  <label for="${work.id}-checkbox" ${composerAttribute}>${displayTitle}</label>
-                </h3>
-                <input class="item-checkbox" id="${work.id}-checkbox" type="checkbox" hidden />
+                ${composerDisplayName ? `<p class="work__composer">${escapeHTML(composerDisplayName)}</p>` : ''}
+                <h3 class="work__title" ${composerAttribute}>${escapeHTML(displayTitle)}</h3>
+                <input class="item-checkbox" id="${escapeAttr(work.id)}-checkbox" type="checkbox" hidden />
                 <button class="work__heard" type="button" aria-pressed="false">
                   <span class="work__heard-disc" aria-hidden="true"></span>
                   <span class="work__heard-label">Mark as listened</span>
@@ -128,7 +154,7 @@ function generateWorkHTML(work, eraName, eraYearRange) {
                   ${notesHTML}
                 </ul>
                 <div class="work__essay">
-                  <p class="work__essay-text">${firstChar ? `<span class="work__dropcap">${firstChar}</span>` : ''}${rest}</p>
+                  <p class="work__essay-text">${firstChar ? `<span class="work__dropcap">${escapeHTML(firstChar)}</span>` : ''}${escapeHTML(rest)}</p>
                 </div>
                 <p class="work__performer">${performerHTML}
                 </p>
@@ -152,11 +178,11 @@ function generateEraHTML(eraKey, eraData) {
     .join('\n        ');
 
   return `
-      <section class="era" id="${eraKey}">
+      <section class="era" id="${escapeAttr(eraKey)}">
         <header class="era__head">
           <span class="era__rule"></span>
-          <h2 class="era__title">${eraName}</h2>
-          <span class="era__years">${eraYearRange}</span>
+          <h2 class="era__title">${escapeHTML(eraName)}</h2>
+          <span class="era__years">${escapeHTML(eraYearRange)}</span>
           <span class="era__rule"></span>
         </header>
         <div class="era__works">
@@ -225,7 +251,7 @@ async function initializeSyllabus() {
     if (container) {
       container.innerHTML = `
         <div class="error-message bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-          <strong>Error loading syllabus:</strong> ${error.message}
+          <strong>Error loading syllabus:</strong> ${escapeHTML(error.message)}
         </div>`;
     }
     

@@ -14,6 +14,37 @@ function log(...args) {
 let composerData = null;
 const preloadedImages = {};
 
+// The control that opened the dialog, so focus can be restored on close
+// (WCAG 2.4.3).
+let lastBioTrigger = null;
+
+// Visible, focusable descendants — used for the dialog focus trap.
+function bioTabbables(root) {
+  return Array.from(root.querySelectorAll(
+    'a[href], button:not([disabled]), textarea, input:not([type="hidden"]), [tabindex]:not([tabindex="-1"])'
+  )).filter(el => el.offsetParent !== null);
+}
+
+/**
+ * Make everything except the dialog + its backdrop inert while the modal is
+ * open, so a screen-reader virtual cursor can't wander into the background
+ * (true modality, WCAG 4.1.2 / 2.4.3). `inert` also drops the background out
+ * of the tab order, reinforcing the keyboard trap.
+ */
+function setPageInert(inert) {
+  Array.from(document.body.children).forEach(el => {
+    if (el.id === 'composer-bio-popup' || el.id === 'composer-bio-backdrop') return;
+    if (el.tagName === 'SCRIPT') return;
+    if (inert) {
+      el.setAttribute('inert', '');
+      el.setAttribute('aria-hidden', 'true');
+    } else {
+      el.removeAttribute('inert');
+      el.removeAttribute('aria-hidden');
+    }
+  });
+}
+
 /**
  * Load composer data from JSON file
  */
@@ -87,16 +118,22 @@ function createBioPopupContainer() {
     document.body.appendChild(backdrop);
   }
 
-  // Create container
+  // Create container — exposed to assistive tech as a modal dialog
+  // (WCAG 4.1.2 / 1.3.1); focus management is wired in setupBioPopupHandlers.
   const popupContainer = document.createElement('div');
   popupContainer.id = 'composer-bio-popup';
   popupContainer.className = 'bio-popup rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hidden';
+  popupContainer.setAttribute('role', 'dialog');
+  popupContainer.setAttribute('aria-modal', 'true');
+  popupContainer.setAttribute('aria-labelledby', 'bio-popup-title');
+  popupContainer.setAttribute('aria-describedby', 'bio-popup-content');
+  popupContainer.setAttribute('tabindex', '-1');
   popupContainer.innerHTML = `
     <div class="p-5 max-h-96 overflow-y-auto">
       <div class="flex justify-between items-start mb-3">
         <h3 id="bio-popup-title" class="font-bold text-indigo-800 dark:text-indigo-300 text-lg"></h3>
-        <button id="close-bio" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <button id="close-bio" type="button" aria-label="Close biography" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
@@ -118,12 +155,12 @@ function createBioPopupContainer() {
 function addBioButtonsToComposers() {
   log('Adding bio buttons to composer labels');
 
-  // Find all composer labels
-  const composerLabels = document.querySelectorAll('label[data-composer]');
-  log(`Found ${composerLabels.length} composer labels with data-composer attribute`);
+  // Find all composer titles carrying the data-composer hook
+  const composerLabels = document.querySelectorAll('[data-composer]');
+  log(`Found ${composerLabels.length} elements with data-composer attribute`);
 
   if (composerLabels.length === 0) {
-    log('WARNING: No composer labels found with data-composer attribute');
+    log('WARNING: No elements found with data-composer attribute');
   }
 
   composerLabels.forEach((label, index) => {
@@ -144,9 +181,15 @@ function addBioButtonsToComposers() {
     // Create bio button (inline, attached after the composer name line in candlelit layout)
     const bioButton = document.createElement('button');
     bioButton.className = 'composer-bio-btn';
+    bioButton.type = 'button';
     bioButton.dataset.composer = composerId;
+    bioButton.setAttribute('aria-haspopup', 'dialog');
+    const composerName = composerData[composerId] && composerData[composerId].name
+      ? composerData[composerId].name
+      : 'this composer';
+    bioButton.setAttribute('aria-label', `Read biography of ${composerName}`);
     bioButton.innerHTML = `
-      <svg class="w-4 h-4 mr-2" fill="currentColor" stroke="currentColor" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <svg class="w-4 h-4 mr-2" fill="currentColor" stroke="currentColor" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M111.001 82.058c-4.921-1.406-13.503-1.382-19.757.436-12.727 3.709-21.114 13.309-18.739 21.454 2.376 8.145 14.618 11.757 27.345 8.048 11.709-3.394 19.757-11.854 19.03-19.563V0L47.973 16.387v80.216c-4.921-1.406-13.503-1.382-19.757.436-12.727 3.709-21.114 13.309-18.739 21.454 2.376 8.145 14.618 11.757 27.345 8.048 11.709-3.394 19.757-11.854 19.03-19.563V34.423l55.15-13.284v60.919z" />
       </svg>
       <span>Composer Bio</span>
@@ -201,6 +244,7 @@ function setupBioPopupHandlers() {
   // Hide popup function
   function hidePopup() {
     log('Hiding popup');
+    const wasOpen = !bioPopup.classList.contains('hidden');
     bioPopup.classList.add('hidden');
     if (backdrop) backdrop.classList.add('hidden');
 
@@ -208,6 +252,16 @@ function setupBioPopupHandlers() {
     bioPopupImage.src = '';
     bioPopupImage.alt = '';
     bioPopupImage.classList.add('hidden');
+
+    // Un-inert the page BEFORE restoring focus, or the trigger is still
+    // inert and cannot receive focus.
+    setPageInert(false);
+
+    // Return focus to the bio button that opened the dialog (WCAG 2.4.3).
+    if (wasOpen && lastBioTrigger && typeof lastBioTrigger.focus === 'function') {
+      lastBioTrigger.focus();
+    }
+    lastBioTrigger = null;
 
     log('Image cleared and hidden');
   }
@@ -219,6 +273,9 @@ function setupBioPopupHandlers() {
     if (bioButton) {
       log('Bio button clicked', bioButton);
       event.stopPropagation();
+
+      // Remember the trigger so focus can return here on close.
+      lastBioTrigger = bioButton;
 
       const composerId = bioButton.dataset.composer;
       log(`Composer ID: ${composerId}`);
@@ -236,8 +293,16 @@ function setupBioPopupHandlers() {
         bioPopupImage.alt = '';
         bioPopupImage.classList.add('hidden');
 
+        // Neutralise any markup in the JSON bio before we build HTML
+        // (stored-XSS / parsing safety, WCAG 4.1.1). Quotes are left intact
+        // so the typographic substitution below still matches.
+        const safeBio = String(composer.bio || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+
         // Convert bio text to paragraphs with typographic quotes
-        const withTypographicQuotes = composer.bio
+        const withTypographicQuotes = safeBio
           .replace(/(\s|^)"(\S)/g, '$1&ldquo;$2')  // Opening quotes at start of words
           .replace(/(\S)"(\s|$|[,.;:!?])/g, '$1&rdquo;$2')  // Closing quotes at end of words
           .replace(/(\s|^)'(\S)/g, '$1&lsquo;$2')  // Opening single quotes at start of words
@@ -268,6 +333,20 @@ function setupBioPopupHandlers() {
         // Show backdrop + popup
         if (backdrop) backdrop.classList.remove('hidden');
         bioPopup.classList.remove('hidden');
+
+        // Isolate the background from AT while the dialog is open.
+        setPageInert(true);
+
+        // Move focus into the dialog (WCAG 2.4.3). Wait a frame so the
+        // element is laid out and focusable.
+        requestAnimationFrame(() => {
+          if (closeBioButton && typeof closeBioButton.focus === 'function') {
+            closeBioButton.focus();
+          } else {
+            bioPopup.focus();
+          }
+        });
+
         log('Popup should now be visible');
       } else {
         log(`WARNING: No composer data found for ID "${composerId}"`);
@@ -294,11 +373,38 @@ function setupBioPopupHandlers() {
     }
   });
 
-  // Close popup when pressing Escape key
+  // Escape closes; Tab/Shift+Tab are trapped inside the open dialog
+  // (WCAG 2.1.2 / 2.4.3).
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && !bioPopup.classList.contains('hidden')) {
+    if (bioPopup.classList.contains('hidden')) return;
+
+    if (event.key === 'Escape') {
       log('Escape key pressed, hiding popup');
       hidePopup();
+      return;
+    }
+
+    if (event.key === 'Tab') {
+      const focusable = bioTabbables(bioPopup);
+      if (focusable.length === 0) {
+        event.preventDefault();
+        bioPopup.focus();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+
+      if (event.shiftKey && (active === first || active === bioPopup)) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      } else if (!bioPopup.contains(active)) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
 

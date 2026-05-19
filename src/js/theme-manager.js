@@ -101,6 +101,13 @@ class ThemeManager {
       Storage.setDarkMode(isDark ? 'true' : 'false');
     }
     
+    // Keep an optional toggle's pressed state in sync for assistive tech
+    // (WCAG 4.1.2). No-op while the toggle is intentionally absent.
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (darkModeToggle) {
+      darkModeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    }
+
     // Notify observers
     this.notifyObservers('themeChanged', { theme, isDark });
     }

@@ -118,9 +118,9 @@ class NavigationManager {
   handleScrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: Utils.scrollBehavior()
     });
-    
+
     Utils.log('Scrolled to top');
   }
 
@@ -158,8 +158,54 @@ class NavigationManager {
     // Close menu when clicking outside
     document.removeEventListener('click', this.handleOutsideClick);
     document.addEventListener('click', (e) => this.handleOutsideClick(e));
-    
+
+    // Escape closes the drawer; Tab is trapped inside it while open
+    // (WCAG 2.1.2 / 2.4.3).
+    document.addEventListener('keydown', (e) => this.handleMenuKeydown(e));
+
     Utils.log('Side menu functionality set up');
+  }
+
+  /**
+   * Visible, focusable descendants of an element (for the focus trap).
+   */
+  getFocusable(root) {
+    return Array.from(root.querySelectorAll(
+      'a[href], button:not([disabled]), textarea, input:not([type="hidden"]), [tabindex]:not([tabindex="-1"])'
+    )).filter(el => el.offsetParent !== null);
+  }
+
+  /**
+   * Keyboard handling while the drawer is open.
+   */
+  handleMenuKeydown(event) {
+    const sideMenu = DOM.getElementById('side-menu');
+    if (!sideMenu || sideMenu.classList.contains('-translate-x-full')) return;
+
+    if (event.key === 'Escape') {
+      this.closeMenu();
+      return;
+    }
+
+    if (event.key === 'Tab') {
+      const focusable = this.getFocusable(sideMenu);
+      if (focusable.length === 0) {
+        event.preventDefault();
+        sideMenu.focus();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+
+      if (event.shiftKey && (active === first || !sideMenu.contains(active))) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
   }
 
   /**
@@ -172,14 +218,29 @@ class NavigationManager {
     if (!sideMenu) return;
 
     const isHidden = sideMenu.classList.contains('-translate-x-full');
-    
+
     if (isHidden) {
       // Show menu
       sideMenu.classList.remove('-translate-x-full');
-      
+      sideMenu.setAttribute('tabindex', '-1');
+
+      const menuToggle = DOM.getElementById('menu-toggle');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+
       // Generate/update menu content
       this.generateMenu();
-      
+
+      // Move focus into the drawer (WCAG 2.4.3) — the close button is the
+      // first predictable target.
+      const closeBtn = DOM.getElementById('close-menu');
+      requestAnimationFrame(() => {
+        if (closeBtn && typeof closeBtn.focus === 'function') {
+          closeBtn.focus();
+        } else {
+          sideMenu.focus();
+        }
+      });
+
       Utils.log('Side menu opened');
       this.notifyObservers('menuOpened', {});
     } else {
@@ -200,9 +261,22 @@ class NavigationManager {
    */
   closeMenu() {
     const sideMenu = DOM.getElementById('side-menu');
-    
+
     if (sideMenu && !sideMenu.classList.contains('-translate-x-full')) {
+      // If focus is inside the drawer (keyboard use), return it to the
+      // toggle so it isn't lost when the drawer hides (WCAG 2.4.3).
+      const focusWasInside = sideMenu.contains(document.activeElement);
+
       sideMenu.classList.add('-translate-x-full');
+
+      const menuToggle = DOM.getElementById('menu-toggle');
+      if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        if (focusWasInside && typeof menuToggle.focus === 'function') {
+          menuToggle.focus();
+        }
+      }
+
       Utils.log('Side menu closed');
       this.notifyObservers('menuClosed', {});
     }
@@ -295,19 +369,24 @@ class NavigationManager {
       const sectionDiv = document.createElement('div');
       sectionDiv.className = 'menu-section';
 
-      // Create section header button
-      const sectionButton = document.createElement('button');
-      sectionButton.className = 'w-full flex justify-between items-center py-2 px-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none';
-      sectionButton.innerHTML = `
-        <span class="font-medium text-indigo-600 dark:text-indigo-400">${sectionTitle}</span>
-        <svg class="menu-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
-      `;
-
       // Create content container (initially hidden)
       const contentDiv = document.createElement('div');
       contentDiv.className = 'menu-content hidden pl-4 py-2 space-y-2';
+      contentDiv.id = `menu-content-${sectionId}`;
+
+      // Create section header button — a real disclosure control with
+      // collapsed/expanded state exposed to AT (WCAG 4.1.2).
+      const sectionButton = document.createElement('button');
+      sectionButton.type = 'button';
+      sectionButton.className = 'menu-section-btn w-full flex justify-between items-center py-2 px-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800';
+      sectionButton.setAttribute('aria-expanded', 'false');
+      sectionButton.setAttribute('aria-controls', contentDiv.id);
+      sectionButton.innerHTML = `
+        <span class="font-medium text-indigo-600 dark:text-indigo-400">${sectionTitle}</span>
+        <svg class="menu-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      `;
 
       // Find all syllabus items in this section
       const menuItems = section.querySelectorAll('.syllabus-item');
@@ -322,9 +401,9 @@ class NavigationManager {
       // Add each item to the content
       menuItems.forEach(item => {
         const itemId = item.getAttribute('data-id');
-        const labelElement = item.querySelector('label');
+        const labelElement = item.querySelector('.work__title');
         if (!labelElement || !itemId) return;
-        
+
         const itemTitle = labelElement.textContent.trim();
         const checkbox = item.querySelector('.item-checkbox');
         const isCompleted = checkbox && checkbox.checked;
@@ -361,8 +440,15 @@ class NavigationManager {
 
             window.scrollTo({
               top: targetPosition,
-              behavior: 'smooth'
+              behavior: Utils.scrollBehavior()
             });
+
+            // Move focus to the destination so keyboard/SR users land there
+            // too, not just the viewport (WCAG 2.4.3).
+            if (typeof targetItem.focus === 'function') {
+              targetItem.setAttribute('tabindex', '-1');
+              targetItem.focus({ preventScroll: true });
+            }
 
             // Highlight the item briefly
             targetItem.classList.add('ring-4', 'ring-indigo-500', 'ring-opacity-75');
@@ -381,6 +467,7 @@ class NavigationManager {
         if (!contentDiv.classList.contains('hidden')) {
           contentDiv.classList.add('hidden');
           sectionButton.querySelector('.menu-arrow')?.classList.remove('rotate-180');
+          sectionButton.setAttribute('aria-expanded', 'false');
           this.currentlyExpandedSection = null;
           return;
         }
@@ -389,14 +476,17 @@ class NavigationManager {
         if (this.currentlyExpandedSection) {
           const prevContent = this.currentlyExpandedSection.querySelector('.menu-content');
           const prevArrow = this.currentlyExpandedSection.querySelector('.menu-arrow');
+          const prevButton = this.currentlyExpandedSection.querySelector('.menu-section-btn');
 
           if (prevContent) prevContent.classList.add('hidden');
           if (prevArrow) prevArrow.classList.remove('rotate-180');
+          if (prevButton) prevButton.setAttribute('aria-expanded', 'false');
         }
 
         // Expand this section
         contentDiv.classList.remove('hidden');
         sectionButton.querySelector('.menu-arrow')?.classList.add('rotate-180');
+        sectionButton.setAttribute('aria-expanded', 'true');
         this.currentlyExpandedSection = sectionDiv;
       });
 
@@ -419,7 +509,7 @@ class NavigationManager {
       refsDiv.className = 'menu-section menu-section--standalone';
       const refsButton = document.createElement('a');
       refsButton.href = '#references-section';
-      refsButton.className = 'w-full flex justify-between items-center py-2 px-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none';
+      refsButton.className = 'menu-section-btn w-full flex justify-between items-center py-2 px-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800';
       refsButton.innerHTML = `<span class="font-medium text-indigo-600 dark:text-indigo-400">References</span>`;
       refsButton.addEventListener('click', (e) => {
         e.preventDefault();
@@ -428,7 +518,11 @@ class NavigationManager {
         if (target) {
           const navHeight = document.querySelector('nav')?.offsetHeight || 0;
           const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          window.scrollTo({ top: targetPosition, behavior: Utils.scrollBehavior() });
+          if (typeof target.focus === 'function') {
+            target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
+          }
         }
       });
       refsDiv.appendChild(refsButton);

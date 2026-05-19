@@ -143,6 +143,16 @@ export const Progress = {
     if (completedCount) completedCount.textContent = completed;
     if (totalCount) totalCount.textContent = total;
     if (heroCompleted) heroCompleted.textContent = completed;
+
+    // Keep the bubble's accessible name in sync with the count so screen
+    // readers announce real progress, not a stale "0 of 0" (WCAG 4.1.2).
+    const bubble = DOM.getElementById('progress-bubble');
+    if (bubble) {
+      bubble.setAttribute(
+        'aria-label',
+        `${completed} of ${total} works listened. Activate to jump to your next unlistened work.`
+      );
+    }
   },
 
   /**
@@ -239,9 +249,26 @@ export const Utils = {
   },
 
   /**
-   * Smooth scroll to element
+   * Whether the user asked the OS to minimise motion (WCAG 2.3.3).
    */
-  scrollToElement(element, behavior = 'smooth', block = 'center') {
+  prefersReducedMotion() {
+    return typeof window !== 'undefined'
+      && typeof window.matchMedia === 'function'
+      && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  },
+
+  /**
+   * 'auto' when reduced motion is requested, otherwise 'smooth'. Use for
+   * programmatic scrolling (CSS scroll-behavior does not affect scrollTo()).
+   */
+  scrollBehavior() {
+    return this.prefersReducedMotion() ? 'auto' : 'smooth';
+  },
+
+  /**
+   * Smooth scroll to element (honours reduced-motion).
+   */
+  scrollToElement(element, behavior = this.scrollBehavior(), block = 'center') {
     if (element) {
       element.scrollIntoView({ behavior, block });
     }
