@@ -207,6 +207,20 @@
           <span class="hero-status__value"><span id="hero-completed">0</span> of 50</span>
         </div>
       </div>
+      <div class="symphony-cta-row">
+        <button class="symphony-cta" type="button" data-random-symphony>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.4" fill="currentColor"></circle>
+            <circle cx="15.5" cy="15.5" r="1.4" fill="currentColor"></circle>
+            <circle cx="15.5" cy="8.5" r="1.4" fill="currentColor"></circle>
+            <circle cx="8.5" cy="15.5" r="1.4" fill="currentColor"></circle>
+          </svg>
+          Listen to a random symphony
+        </button>
+        <a class="symphony-cta-link" href="symphonies.html">Browse all <span data-symphony-count>850</span> symphonies &rarr;</a>
+      </div>
     </header>
     <!-- Timeline Navigation Bar -->
     <nav class="sticky top-0 z-50">
@@ -278,6 +292,7 @@
     const { initializeSyllabus } = await import('./src/js/syllabus-builder.js' + v);
     await import('./src/js/syllabus-integration.js' + v);
     const { initializeReferences } = await import('./src/js/references-builder.js' + v);
+    await import('./src/js/symphonies.js' + v);
 
     const loadSEOData = () => import('./src/js/seo-structured-data.js' + v);
 

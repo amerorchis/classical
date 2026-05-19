@@ -31,6 +31,18 @@
     --color-secondary-accent: #9C7A2C;
     --color-secondary-accent-dark: #7A5E1F;
 
+    /*
+     * Antique-gold hairline used for UI-control / container borders.
+     * Separate semantic role from the decorative --color-secondary-accent
+     * (which stays for text, rules, and fills). No single gold can clear the
+     * WCAG 1.4.11 3:1 non-text threshold on BOTH the cream and charcoal
+     * grounds, so this token is theme-aware: the light value is tuned dark
+     * enough for the cream paper, and html.dark overrides it with a brighter
+     * gold for the charcoal ground. Light #856526 = 4.3-4.9:1 on cream;
+     * dark #B8923F = 4.4-6.1:1 on charcoal. Both well clear of 3:1.
+     */
+    --color-accent-border: #856526;
+
     /* Neutral & Text Colors */
     --color-background-light: #F4ECD8; /* Warm cream paper ground */
     --color-background-dark: #1F1611; /* Warm charcoal */
@@ -1231,7 +1243,7 @@ textarea::-webkit-scrollbar-thumb {
 .auth-btn {
   background: var(--color-background-light);
   color: var(--color-text-light);
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 2px;
   font: 500 13px/1 var(--font-body);
   letter-spacing: 0.18em;
@@ -1307,8 +1319,8 @@ textarea::-webkit-scrollbar-thumb {
   display: flex;
   gap: 28px;
   padding: 12px 28px;
-  border-left: 1px solid var(--color-secondary-accent);
-  border-right: 1px solid var(--color-secondary-accent);
+  border-left: 1px solid var(--color-accent-border);
+  border-right: 1px solid var(--color-accent-border);
 }
 .hero-status__cell {
   display: flex;
@@ -1467,7 +1479,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 56px 96px;
-  border-top: 1px solid var(--color-secondary-accent);
+  border-top: 1px solid var(--color-accent-border);
   background: transparent;
   scroll-margin-top: 120px;
 }
@@ -1496,7 +1508,7 @@ nav {
   object-position: center top;
   padding: 6px;
   background: #FBF3DF;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   filter: sepia(0.3) contrast(0.95);
 }
 .work__placeholder {
@@ -1505,7 +1517,7 @@ nav {
   padding: 24px;
   box-sizing: border-box;
   background: #FBF3DF;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1649,7 +1661,7 @@ nav {
   width: 100%;
   min-height: 96px;
   background: transparent;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 0;
   padding: 14px;
   font: 400 16px/26px var(--font-body);
@@ -1667,7 +1679,7 @@ nav {
   align-items: center;
   gap: 10px;
   background: transparent;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   cursor: pointer;
   font: italic 400 13px/1 var(--font-body);
   letter-spacing: 0.18em;
@@ -1821,7 +1833,7 @@ nav {
   color: var(--color-primary-accent);
   margin: 0;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--color-secondary-accent);
+  border-bottom: 1px solid var(--color-accent-border);
 }
 .references__list {
   list-style: none;
@@ -1942,7 +1954,7 @@ nav {
 
 #composer-bio-popup {
   background-color: #FBF3DF;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 0;
   z-index: 100;
   opacity: 1;
@@ -1987,7 +1999,7 @@ h3#bio-popup-title {
 #bio-popup-image {
   min-height: 24px;
   min-width: 24px;
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 0;
   padding: 4px;
   background: #FBF3DF;
@@ -2001,7 +2013,7 @@ h3#bio-popup-title {
   align-items: center;
   gap: 6px;
   background: transparent !important;
-  border: 1px solid var(--color-secondary-accent) !important;
+  border: 1px solid var(--color-accent-border) !important;
   border-radius: 0 !important;
   color: var(--color-primary-accent) !important;
   font: italic 400 11px/1 var(--font-body) !important;
@@ -2069,7 +2081,7 @@ a[href*="spotify.com"] svg {
 #sync-status {
   background: var(--color-background-light);
   color: var(--color-text-light);
-  border: 1px solid var(--color-secondary-accent);
+  border: 1px solid var(--color-accent-border);
   border-radius: 0;
   font: italic 400 13px/1 var(--font-body);
   letter-spacing: 0.18em;
@@ -2090,6 +2102,14 @@ a[href*="spotify.com"] svg {
   background-color: var(--color-background-dark);
   color: var(--color-text-dark);
 }
+/*
+ * Theme-aware hairline: brighter antique gold so UI-control / container
+ * borders clear WCAG 1.4.11 (3:1) against the charcoal ground. html.dark
+ * (specificity 0,1,1) reliably overrides the :root light value (0,1,0).
+ */
+html.dark {
+  --color-accent-border: #B8923F;
+}
 .dark nav {
   background: var(--color-surface-dark);
   border-color: var(--color-border-dark);
@@ -2100,7 +2120,7 @@ a[href*="spotify.com"] svg {
 .dark .hero-blurb { color: var(--color-text-dark); opacity: 0.8; }
 .dark .hero-rule { color: var(--color-secondary-accent); }
 .dark .hero-rule__line { background: var(--color-secondary-accent); }
-.dark .hero-status { border-color: var(--color-secondary-accent); }
+.dark .hero-status { border-color: var(--color-accent-border); }
 .dark .hero-status__value { color: var(--color-secondary-accent); }
 .dark .hero-status__label { color: var(--color-text-dark); opacity: 0.7; }
 
@@ -2122,19 +2142,19 @@ a[href*="spotify.com"] svg {
   color: var(--color-secondary-accent);
 }
 .dark .work__heard {
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   color: var(--color-text-dark);
   opacity: 0.85;
 }
 .dark .work__heard:hover {
   background: var(--color-border-dark);
   color: var(--color-secondary-accent);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   opacity: 1;
 }
 .dark .work__heard[aria-pressed="true"] {
   background: var(--color-secondary-accent);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   color: var(--color-background-dark);
   opacity: 1;
 }
@@ -2151,12 +2171,12 @@ a[href*="spotify.com"] svg {
 .dark .work__notes li::before { color: var(--color-secondary-accent); }
 .dark .work__performer { border-top-color: var(--color-border-dark); }
 .dark .work__placeholder,
-.dark .work__portrait { background: var(--color-surface-dark); border-color: var(--color-secondary-accent); }
+.dark .work__portrait { background: var(--color-surface-dark); border-color: var(--color-accent-border); }
 .dark .work__placeholder em { color: var(--color-secondary-accent); }
 .dark .work__personal textarea,
 .dark .item-notes {
   background: var(--color-surface-dark);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   color: var(--color-text-dark);
 }
 .dark .work__heard-disc {
@@ -2165,22 +2185,22 @@ a[href*="spotify.com"] svg {
 }
 .dark .work__heard[aria-pressed="true"] .work__heard-disc {
   background: var(--color-secondary-accent);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
   opacity: 1;
 }
 .dark .work.ring-4 {
-  outline-color: var(--color-secondary-accent) !important;
+  outline-color: var(--color-accent-border) !important;
   background: var(--color-surface-dark);
 }
 
 .dark .footer-rule { background: var(--color-secondary-accent); }
 .dark .footer-credit { color: var(--color-text-dark); opacity: 0.8; }
 .dark .footer-links a { color: var(--color-secondary-accent); }
-.dark .footer-links a:hover { border-bottom-color: var(--color-secondary-accent); }
+.dark .footer-links a:hover { border-bottom-color: var(--color-accent-border); }
 .dark .references__rule { background: var(--color-secondary-accent); }
 .dark .references__title { color: var(--color-text-dark); }
 .dark .references__blurb { color: var(--color-text-dark); opacity: 0.75; }
-.dark .references__group-title { color: var(--color-secondary-accent); border-bottom-color: var(--color-secondary-accent); }
+.dark .references__group-title { color: var(--color-secondary-accent); border-bottom-color: var(--color-accent-border); }
 .dark .reference-entry { color: var(--color-text-dark); }
 .dark .reference-entry__author { color: var(--color-text-dark); opacity: 0.7; }
 .dark .reference-entry__title { color: var(--color-text-dark); }
@@ -2202,7 +2222,7 @@ a[href*="spotify.com"] svg {
 
 .dark #composer-bio-popup {
   background-color: var(--color-surface-dark);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
 }
 .dark .bio-popup::before {
   border-color: transparent transparent var(--color-surface-dark) transparent;
@@ -2211,7 +2231,7 @@ a[href*="spotify.com"] svg {
 .dark div#bio-popup-content p { color: var(--color-text-dark); }
 .dark h3#bio-popup-title { color: var(--color-secondary-accent); }
 .dark .composer-bio-btn {
-  border-color: var(--color-secondary-accent) !important;
+  border-color: var(--color-accent-border) !important;
   color: var(--color-secondary-accent) !important;
 }
 .dark .composer-bio-btn:hover { background: var(--color-border-dark) !important; }
@@ -2219,7 +2239,7 @@ a[href*="spotify.com"] svg {
 .dark .auth-btn {
   background: var(--color-surface-dark);
   color: var(--color-text-dark);
-  border-color: var(--color-secondary-accent);
+  border-color: var(--color-accent-border);
 }
 .dark .auth-btn:hover { background: var(--color-border-dark); }
 
@@ -2553,3 +2573,276 @@ a[href*="spotify.com"] svg {
   inherits: false;
   initial-value: 1;
 }
+
+/* ===== Symphonies: random popup, CTA button, list page ==================== */
+
+/* ----- "Listen to a random symphony" call-to-action ----------------------- */
+.symphony-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  align-items: center;
+  justify-content: center;
+}
+.symphony-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-primary-accent);
+  border: 1px solid var(--color-primary-accent);
+  color: var(--color-primary-accent-text);
+  font: italic 500 16px/1 var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+.symphony-cta:hover {
+  background: var(--color-primary-accent-dark);
+  transform: translateY(-1px);
+}
+.symphony-cta svg { width: 18px; height: 18px; }
+.symphony-cta-link {
+  font: italic 400 13px/1 var(--font-body);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-primary-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.symphony-cta-link:hover { border-bottom-color: var(--color-primary-accent); }
+
+/* ----- Random-symphony modal --------------------------------------------- */
+#symphony-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 12, 8, 0.45);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#symphony-backdrop.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.symphony-modal {
+  position: relative;
+  width: 560px;
+  max-width: 100%;
+  background-color: #FBF3DF;
+  border: 1px solid var(--color-accent-border);
+  box-shadow: 0 18px 48px rgba(20, 12, 8, 0.35), 0 4px 12px rgba(20, 12, 8, 0.15);
+  padding: 44px 48px 40px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+#symphony-backdrop.hidden .symphony-modal { transform: translateY(-8px); }
+.symphony-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted-light);
+  font: 400 26px/1 var(--font-body);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.symphony-modal__close:hover { color: var(--color-primary-accent); }
+.symphony-modal__eyebrow {
+  font: italic 400 12px/1 var(--font-body);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--color-text-muted-light);
+  margin: 0 0 18px;
+}
+.symphony-modal__composer {
+  font: 500 15px/1.3 var(--font-body);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-secondary-accent-dark);
+  margin: 0 0 8px;
+}
+.symphony-modal__work {
+  font: italic 500 30px/1.25 var(--font-display);
+  color: var(--color-primary-accent);
+  margin: 0 0 20px;
+}
+.symphony-modal__recording {
+  font: italic 400 16px/26px var(--font-body);
+  color: var(--color-text-light);
+  margin: 0 0 24px;
+}
+.symphony-modal__recording[hidden] { display: none; }
+.symphony-modal__recording-label {
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-text-muted-light);
+  display: block;
+  margin-bottom: 6px;
+}
+.symphony-modal__divider {
+  width: 64px;
+  height: 1px;
+  background: var(--color-secondary-accent);
+  margin: 0 auto 24px;
+}
+.symphony-modal__listen-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--color-accent-border);
+  padding: 11px 20px;
+  font: italic 400 14px/1 var(--font-body);
+  letter-spacing: 0.06em;
+  color: var(--color-primary-accent);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.symphony-modal__listen-link:hover {
+  background: var(--color-surface-light);
+  border-color: var(--color-primary-accent);
+}
+.symphony-modal__listen-link svg { width: 20px; height: 20px; }
+.symphony-modal__listen-link--spotify svg { color: var(--color-spotify-green); }
+.symphony-modal__listen-link--youtube svg { color: #C4302B; }
+.symphony-modal__nolink {
+  font: italic 400 14px/1.4 var(--font-body);
+  color: var(--color-text-muted-light);
+}
+.symphony-modal__again {
+  display: block;
+  margin: 26px auto 0;
+  background: none;
+  border: none;
+  font: italic 400 13px/1 var(--font-body);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-primary-accent);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.symphony-modal__again:hover { border-bottom-color: var(--color-primary-accent); }
+
+/* ----- Full symphonies list page ----------------------------------------- */
+.symphony-page-main { padding: 56px 96px 80px; max-width: 1080px; margin: 0 auto; }
+.symphony-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.symphony-search {
+  flex: 1 1 320px;
+  background: #FBF3DF;
+  border: 1px solid var(--color-accent-border);
+  color: var(--color-text-light);
+  font: italic 400 16px/1 var(--font-body);
+  padding: 12px 16px;
+}
+.symphony-search:focus { outline: 1px solid var(--color-primary-accent); }
+.symphony-count {
+  font: italic 400 14px/1 var(--font-body);
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted-light);
+}
+.symphony-table { width: 100%; border-collapse: collapse; }
+.symphony-table th {
+  text-align: left;
+  font: 500 12px/1 var(--font-body);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted-light);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-accent-border);
+}
+.symphony-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border-light);
+  font: 400 16px/22px var(--font-body);
+  color: var(--color-text-light);
+  vertical-align: top;
+}
+.symphony-table tr:hover td { background: var(--color-surface-light); }
+.symphony-table__num { color: var(--color-text-muted-light); width: 56px; font-variant-numeric: tabular-nums; }
+.symphony-table__composer { color: var(--color-secondary-accent-dark); white-space: nowrap; }
+.symphony-table__work { font-style: italic; }
+.symphony-table__listen {
+  width: 110px;
+  text-align: right;
+  white-space: nowrap;
+}
+.symphony-table__listen a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary-accent);
+  text-decoration: none;
+  font: italic 400 13px/1 var(--font-body);
+  border-bottom: 1px solid transparent;
+}
+.symphony-table__listen a:hover { border-bottom-color: var(--color-primary-accent); }
+.symphony-table__listen a svg { width: 16px; height: 16px; }
+.symphony-table__listen--spotify svg { color: var(--color-spotify-green); }
+.symphony-table__listen--youtube svg { color: #C4302B; }
+.symphony-table__listen span {
+  font: italic 400 12px/1 var(--font-body);
+  color: var(--color-text-muted-light);
+}
+.symphony-empty {
+  text-align: center;
+  padding: 60px 20px;
+  font: italic 400 18px/1.4 var(--font-body);
+  color: var(--color-text-muted-light);
+}
+
+@media (max-width: 760px) {
+  .symphony-page-main { padding: 40px 20px 60px; }
+  .symphony-modal { padding: 36px 24px 32px; }
+  .symphony-modal__work { font-size: 24px; }
+  .symphony-table__composer { white-space: normal; }
+  .symphony-table th:nth-child(1), .symphony-table td:nth-child(1) { display: none; }
+}
+
+/* ----- Symphony feature: a11y (sr-only, visible focus, dark fallback) ----- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.symphony-cta:focus-visible,
+.symphony-cta-link:focus-visible,
+.symphony-search:focus-visible,
+.symphony-modal__close:focus-visible,
+.symphony-modal__again:focus-visible,
+.symphony-modal__listen-link:focus-visible,
+.symphony-table__listen a:focus-visible {
+  outline: 2px solid var(--color-primary-accent);
+  outline-offset: 2px;
+}
+.symphony-search:focus { outline: 2px solid var(--color-primary-accent); outline-offset: 2px; }
+/* Defensive: the random-symphony CTA also lives on the dark-mode-capable
+   index page. Dark mode is force-disabled today, but keep the link legible
+   if it is ever re-enabled. */
+.dark .symphony-cta-link { color: var(--color-secondary-accent); }
