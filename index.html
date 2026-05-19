@@ -58,7 +58,12 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-  
+
+  <!-- inert polyfill: makes the composer-bio modal's background isolation
+       work on browsers without native `inert` (Safari < 15.5). Native
+       support short-circuits the polyfill, so it's a no-op elsewhere. -->
+  <script src="https://cdn.jsdelivr.net/npm/wicg-inert@3.1.2/dist/inert.min.js"></script>
+
   <!-- Confetti for celebration when works are completed -->
   <script type="module">
     import confetti from 'https://cdn.skypack.dev/canvas-confetti';
@@ -326,7 +331,7 @@
   </script>
 
   <!-- Progress Bubble -->
-  <button type="button" aria-label="0 of 0 works listened. Activate to jump to your next unlistened work."
+  <button type="button" aria-label="Listening progress. Activate to jump to your next unlistened work."
     class="fixed bottom-6 right-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-lg p-4 transition transform hover:scale-110 hover:shadow-xl z-50 cursor-pointer"
     id="progress-bubble">
     <span class="text-center font-bold" aria-hidden="true">
