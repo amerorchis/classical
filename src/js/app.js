@@ -86,13 +86,26 @@ class ClassicalMusicApp {
    * Set up reset button functionality
    */
   setupResetButton() {
-    // Make reset function globally available
-    window.resetSyllabus = () => {
+    const doReset = () => {
       if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
         resetProgress();
+        // Confirm to screen-reader users that the action took effect
+        // (WCAG 4.1.3) — the visual change alone isn't perceivable to AT.
+        Utils.announce('Progress reset. All works marked as not listened.');
         Utils.log('Syllabus progress reset by user');
       }
     };
+
+    // Keep the global for backward compatibility, but bind the button
+    // directly so behaviour no longer depends on an inline onclick / global
+    // load order.
+    window.resetSyllabus = doReset;
+
+    const resetButton = DOM.getElementById('reset-progress');
+    if (resetButton) {
+      resetButton.removeEventListener('click', doReset);
+      resetButton.addEventListener('click', doReset);
+    }
   }
 
   /**

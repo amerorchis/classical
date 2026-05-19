@@ -445,10 +445,7 @@ class NavigationManager {
 
             // Move focus to the destination so keyboard/SR users land there
             // too, not just the viewport (WCAG 2.4.3).
-            if (typeof targetItem.focus === 'function') {
-              targetItem.setAttribute('tabindex', '-1');
-              targetItem.focus({ preventScroll: true });
-            }
+            Utils.focusTransient(targetItem);
 
             // Highlight the item briefly
             targetItem.classList.add('ring-4', 'ring-indigo-500', 'ring-opacity-75');
@@ -519,10 +516,7 @@ class NavigationManager {
           const navHeight = document.querySelector('nav')?.offsetHeight || 0;
           const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
           window.scrollTo({ top: targetPosition, behavior: Utils.scrollBehavior() });
-          if (typeof target.focus === 'function') {
-            target.setAttribute('tabindex', '-1');
-            target.focus({ preventScroll: true });
-          }
+          Utils.focusTransient(target);
         }
       });
       refsDiv.appendChild(refsButton);

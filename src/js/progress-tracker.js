@@ -177,10 +177,7 @@ class ProgressTracker {
 
         // Move focus to the next work so keyboard/SR users are taken there
         // too, not just the viewport (WCAG 2.4.3).
-        if (typeof item.focus === 'function') {
-          item.setAttribute('tabindex', '-1');
-          item.focus({ preventScroll: true });
-        }
+        Utils.focusTransient(item);
 
         // Highlight the item briefly (same as side navigation)
         item.classList.add('ring-4', 'ring-indigo-500', 'ring-opacity-75');

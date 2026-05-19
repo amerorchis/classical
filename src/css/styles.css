@@ -1036,12 +1036,6 @@
       --tw-ring-color: var(--color-primary-accent);
     }
   }
-  .focus\:outline-none {
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
-    }
-  }
   .xl\:inline-block {
     @media (width >= 80rem) {
       display: inline-block;

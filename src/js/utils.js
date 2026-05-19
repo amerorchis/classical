@@ -274,6 +274,43 @@ export const Utils = {
     }
   },
 
+  /**
+   * Announce a transient message to assistive tech via a shared polite live
+   * region (WCAG 4.1.3). The region is visually hidden and created lazily.
+   */
+  announce(message) {
+    let region = document.getElementById('a11y-live-region');
+    if (!region) {
+      region = document.createElement('div');
+      region.id = 'a11y-live-region';
+      region.className = 'sr-only';
+      region.setAttribute('role', 'status');
+      region.setAttribute('aria-live', 'polite');
+      document.body.appendChild(region);
+    }
+    // Clear first so the same message re-announces if repeated.
+    region.textContent = '';
+    window.setTimeout(() => { region.textContent = message; }, 50);
+  },
+
+  /**
+   * Move focus to an element that isn't normally focusable (e.g. a scroll
+   * destination) without leaving a stray tabindex behind: the temporary
+   * tabindex is removed on blur (WCAG 2.4.3, no tab-order pollution).
+   */
+  focusTransient(element) {
+    if (!element || typeof element.focus !== 'function') return;
+    const hadTabindex = element.hasAttribute('tabindex');
+    if (!hadTabindex) element.setAttribute('tabindex', '-1');
+    element.focus({ preventScroll: true });
+    if (!hadTabindex) {
+      element.addEventListener('blur', function handler() {
+        element.removeAttribute('tabindex');
+        element.removeEventListener('blur', handler);
+      });
+    }
+  },
+
 };
 
 /**
