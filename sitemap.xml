@@ -1,53 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main page -->
+  <!-- 50-work syllabus (home) -->
   <url>
     <loc>https://amerorchis.com/classical/</loc>
-    <lastmod>2024-08-10</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Era sections -->
+
+  <!-- Symphony repertoire list -->
   <url>
-    <loc>https://amerorchis.com/classical/#medieval</loc>
-    <lastmod>2024-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://amerorchis.com/classical/#renaissance</loc>
-    <lastmod>2024-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://amerorchis.com/classical/#baroque</loc>
-    <lastmod>2024-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://amerorchis.com/classical/#classical</loc>
-    <lastmod>2024-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://amerorchis.com/classical/#romantic</loc>
-    <lastmod>2024-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://amerorchis.com/classical/#modern</loc>
-    <lastmod>2024-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://amerorchis.com/classical/symphonies.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
